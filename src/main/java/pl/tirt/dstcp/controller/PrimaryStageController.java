@@ -13,6 +13,7 @@ import pl.tirt.dstcp.service.ContentViewInitValuesProvider;
 /**
  * Created by Dawid on 10.03.2017.
  */
+
 public class PrimaryStageController {
 
     @FXML
