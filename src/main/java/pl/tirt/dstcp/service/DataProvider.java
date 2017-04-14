@@ -10,12 +10,10 @@ public class DataProvider {
     private static DataProvider instance;
 
     public static DataProvider getInstance() {
-        if(instance == null){
+        if(instance == null) {
             instance = new DataProvider();
-            return instance;
-        } else {
-            return instance;
         }
+        return instance;
     }
 
     public ArrayList<String[]> getData() {
