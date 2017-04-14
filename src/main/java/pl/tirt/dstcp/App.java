@@ -4,6 +4,8 @@ import javafx.application.Application;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 import pl.tirt.dstcp.config.StageConfiguration;
+import pl.tirt.dstcp.processors.CompositeDataProcessor;
+import pl.tirt.dstcp.service.DataService;
 import pl.tirt.dstcp.view.ResourceViewLoader;
 
 /**
@@ -21,5 +23,6 @@ public class App extends Application {
 
     public static void main(String[] args) {
         launch(args);
+        new DataService(new CompositeDataProcessor()).run();
     }
 }

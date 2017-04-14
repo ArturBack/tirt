@@ -19,6 +19,7 @@ public class DataService {
         //getData to process
         ArrayList<String[]> data = DataProvider.getInstance().getData();
 
+        //process each item of data with processor
         for(String[] item : data){
             compositeDataProcessor.process(item);
         }
