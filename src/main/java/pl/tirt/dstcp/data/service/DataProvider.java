@@ -1,4 +1,4 @@
-package pl.tirt.dstcp.service;
+package pl.tirt.dstcp.data.service;
 
 import java.io.File;
 import java.io.FileNotFoundException;

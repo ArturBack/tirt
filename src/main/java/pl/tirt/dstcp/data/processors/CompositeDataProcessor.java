@@ -1,4 +1,4 @@
-package pl.tirt.dstcp.processors;
+package pl.tirt.dstcp.data.processors;
 
 import java.util.ArrayList;
 
