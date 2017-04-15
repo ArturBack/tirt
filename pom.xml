@@ -8,5 +8,14 @@
     <artifactId>dstcp</artifactId>
     <version>1.0-SNAPSHOT</version>
 
+    <!-- https://mvnrepository.com/artifact/com.google.guava/guava -->
+    <dependencies>
+        <dependency>
+          <groupId>com.google.guava</groupId>
+          <artifactId>guava</artifactId>
+          <version>21.0</version>
+        </dependency>
+    </dependencies>
+
 
 </project>
