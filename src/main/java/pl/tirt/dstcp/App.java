@@ -4,12 +4,13 @@ import javafx.application.Application;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 import pl.tirt.dstcp.config.StageConfiguration;
+import pl.tirt.dstcp.data.DataChangeWatcher;
+import pl.tirt.dstcp.data.DataUtils;
 import pl.tirt.dstcp.data.service.ProcessDataService;
 import pl.tirt.dstcp.view.ResourceViewLoader;
 
-/**
- * Created by Dawid on 10.03.2017.
- */
+import java.io.IOException;
+
 public class App extends Application {
 
     public void start(Stage primaryStage) throws Exception {
@@ -18,10 +19,28 @@ public class App extends Application {
         primaryStage.setWidth(StageConfiguration.INITIAL_STAGE_WIDTH);
         primaryStage.setHeight(StageConfiguration.INITIAL_STAGE_HEIGHT);
         primaryStage.show();
+
+        getInitialData();
+        registerDataWatcher();
     }
 
     public static void main(String[] args) {
         launch(args);
+    }
+
+    private void registerDataWatcher() {
+        Thread thread = new Thread(new Runnable() {
+            public void run() {
+                try {
+                    DataChangeWatcher.watchFile(DataUtils.DIRECTORY_PATH, DataUtils.FILE_NAME);
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+            }});
+        thread.start();
+    }
+
+    private void getInitialData() {
         ProcessDataService.getInstance().getAndProcessData();
     }
 }
