@@ -29,14 +29,13 @@ public class App extends Application {
     }
 
     private void registerDataWatcher() {
-        Thread thread = new Thread(new Runnable() {
-            public void run() {
+        Thread thread = new Thread(() -> {
                 try {
                     DataChangeWatcher.watchFile(DataUtils.DIRECTORY_PATH, DataUtils.FILE_NAME);
                 } catch (IOException e) {
                     e.printStackTrace();
                 }
-            }});
+            });
         thread.start();
     }
 
