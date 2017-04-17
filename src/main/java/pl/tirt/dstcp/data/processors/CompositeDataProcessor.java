@@ -1,5 +1,7 @@
 package pl.tirt.dstcp.data.processors;
 
+import pl.tirt.dstcp.data.model.StringPacket;
+
 import java.util.ArrayList;
 
 /**
@@ -14,9 +16,9 @@ public class CompositeDataProcessor implements DataProcessor {
     }
 
     @Override
-    public void process(String[] data) {
+    public void process(StringPacket stringPacket) {
         for(DataProcessor dataProcessor : dataProcessors){
-            dataProcessor.process(data);
+            dataProcessor.process(stringPacket);
         }
     }
 }

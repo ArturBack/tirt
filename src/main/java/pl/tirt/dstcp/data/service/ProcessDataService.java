@@ -1,6 +1,7 @@
 package pl.tirt.dstcp.data.service;
 
 import pl.tirt.dstcp.data.DataUtils;
+import pl.tirt.dstcp.data.model.StringPacket;
 import pl.tirt.dstcp.data.processors.CompositeDataProcessor;
 
 import java.util.ArrayList;
@@ -29,10 +30,10 @@ public class ProcessDataService {
     public void getAndProcessData() {
         logger.info("Getting and processing data");
         //getData to process
-        ArrayList<String[]> data = DataProvider.getInstance().getData();
+        ArrayList<StringPacket> data = DataProvider.getInstance().getData();
 
         //process each item of data with processor
-        for(String[] item : data){
+        for(StringPacket item : data){
             compositeDataProcessor.process(item);
         }
         logger.info("Data has been processed successfull");
