@@ -1,13 +1,13 @@
-package pl.tirt.dstcp;
+package pl.tirt.dstcp.gui;
 
 import javafx.application.Application;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
-import pl.tirt.dstcp.config.StageConfiguration;
+import pl.tirt.dstcp.gui.config.StageConfiguration;
 import pl.tirt.dstcp.data.watcher.DataChangeWatcher;
 import pl.tirt.dstcp.data.DataUtils;
 import pl.tirt.dstcp.data.service.ProcessDataService;
-import pl.tirt.dstcp.view.ResourceViewLoader;
+import pl.tirt.dstcp.gui.view.ResourceViewLoader;
 
 import java.io.IOException;
 
@@ -40,6 +40,7 @@ public class App extends Application {
     }
 
     private void getInitialData() {
-        ProcessDataService.getInstance().getAndProcessData();
+        Thread thread = new Thread(() -> { ProcessDataService.getInstance().getAndProcessData(); });
+        thread.start();
     }
 }

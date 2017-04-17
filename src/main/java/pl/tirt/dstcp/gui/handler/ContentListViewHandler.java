@@ -1,4 +1,4 @@
-package pl.tirt.dstcp.handler;
+package pl.tirt.dstcp.gui.handler;
 
 import javafx.event.EventHandler;
 import javafx.scene.control.Label;

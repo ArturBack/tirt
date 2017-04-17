@@ -1,4 +1,4 @@
-package pl.tirt.dstcp.view;
+package pl.tirt.dstcp.gui.view;
 
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;

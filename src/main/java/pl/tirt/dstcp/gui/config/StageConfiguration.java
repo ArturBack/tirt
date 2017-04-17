@@ -1,4 +1,4 @@
-package pl.tirt.dstcp.config;
+package pl.tirt.dstcp.gui.config;
 
 /**
  * Created by Dawid on 10.03.2017.

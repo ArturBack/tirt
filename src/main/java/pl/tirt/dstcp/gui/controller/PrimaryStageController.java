@@ -1,4 +1,4 @@
-package pl.tirt.dstcp.controller;
+package pl.tirt.dstcp.gui.controller;
 
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
@@ -6,9 +6,9 @@ import javafx.scene.control.Label;
 import javafx.scene.control.ListView;
 import javafx.scene.layout.Pane;
 import javafx.scene.paint.Color;
-import pl.tirt.dstcp.handler.ChangeColorButtonHandler;
-import pl.tirt.dstcp.handler.ContentListViewHandler;
-import pl.tirt.dstcp.service.ContentViewInitValuesProvider;
+import pl.tirt.dstcp.gui.handler.ChangeColorButtonHandler;
+import pl.tirt.dstcp.gui.handler.ContentListViewHandler;
+import pl.tirt.dstcp.gui.service.ContentViewInitValuesProvider;
 
 /**
  * Created by Dawid on 10.03.2017.

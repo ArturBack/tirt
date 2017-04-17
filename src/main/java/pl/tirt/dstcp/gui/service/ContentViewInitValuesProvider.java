@@ -1,10 +1,9 @@
-package pl.tirt.dstcp.service;
+package pl.tirt.dstcp.gui.service;
 
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 
 import java.util.Arrays;
-import java.util.Observable;
 
 /**
  * Created by Dawid on 10.03.2017.
