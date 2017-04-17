@@ -13,8 +13,8 @@ import java.util.Scanner;
  */
 public class DataProvider {
 
-    private String PACKET_BEGINING = "No.";
-    public  String FILE_DELIMITER = "\\s+";
+    private  String PACKET_BEGINING = "No.";
+    private  String FILE_DELIMITER = "\\s+";
 
     private static DataProvider instance;
 
