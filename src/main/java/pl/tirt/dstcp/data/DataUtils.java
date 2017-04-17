@@ -7,7 +7,6 @@ public class DataUtils {
 
     public static String DIRECTORY_PATH = "C:\\tirt\\";
     public static String FILE_NAME = "tcpdump.txt";
-    public static String FILE_DELIMITER = "\\s+";
     public static String LOGGER_NAME = "logger";
 
 }

@@ -14,6 +14,7 @@ import java.util.Scanner;
 public class DataProvider {
 
     private String PACKET_BEGINING = "No.";
+    public  String FILE_DELIMITER = "\\s+";
 
     private static DataProvider instance;
 
@@ -51,7 +52,7 @@ public class DataProvider {
 
         while (scanner.hasNextLine()){
             String line = scanner.nextLine();
-            String[] splitedLine = line.split(DataUtils.FILE_DELIMITER);
+            String[] splitedLine = line.split(FILE_DELIMITER);
 
             if(isLinePacketBeginning(splitedLine)) {
                 if(stringPacket != null){
@@ -61,6 +62,7 @@ public class DataProvider {
                 //create new packet for processing
                 stringPacket = new StringPacket();
             } else {
+                //skip empty lines
                 if(!isEmptyLine(splitedLine)) {
                     stringPacket.getData().add(splitedLine);
                 }
