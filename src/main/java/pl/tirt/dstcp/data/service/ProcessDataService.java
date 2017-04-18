@@ -33,9 +33,7 @@ public class ProcessDataService {
         ArrayList<StringPacket> data = DataProvider.getInstance().getData();
 
         //process each item of data with processor
-        for(StringPacket item : data){
-            compositeDataProcessor.process(item);
-        }
+        compositeDataProcessor.process(data);
         logger.info("Data has been processed successfull");
     }
 }
