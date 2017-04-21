@@ -13,6 +13,7 @@ public class CompositeDataProcessor implements DataProcessor {
 
     public CompositeDataProcessor() {
        dataProcessors.add(new BitsInPacketProcessor());
+       dataProcessors.add(new IpProtocolVersionProcessor());
     }
 
     @Override
