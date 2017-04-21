@@ -9,15 +9,15 @@ import java.util.List;
 /**
  * Created by AWALICZE on 18.04.2017.
  */
-public class PhysicalPacketRepository {
+public class BitsInPacketRepository {
 
     private String FILENAME = "BitsInPacketInfo";
 
-    private static PhysicalPacketRepository instance;
+    private static BitsInPacketRepository instance;
 
-    public static PhysicalPacketRepository getInstance() {
+    public static BitsInPacketRepository getInstance() {
         if(instance == null) {
-            instance = new PhysicalPacketRepository();
+            instance = new BitsInPacketRepository();
         }
         return instance;
     }

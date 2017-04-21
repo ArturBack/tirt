@@ -12,7 +12,7 @@ public class CompositeDataProcessor implements DataProcessor {
     private ArrayList<DataProcessor> dataProcessors = new ArrayList<>();
 
     public CompositeDataProcessor() {
-       dataProcessors.add(new BitsOnWireProcessor());
+       dataProcessors.add(new BitsInPacketProcessor());
     }
 
     @Override

@@ -3,14 +3,14 @@ package pl.tirt.dstcp.data.processors;
 import pl.tirt.dstcp.data.DataHelper;
 import pl.tirt.dstcp.data.model.BitsInPacketInfo;
 import pl.tirt.dstcp.data.model.StringPacket;
-import pl.tirt.dstcp.data.repositories.PhysicalPacketRepository;
+import pl.tirt.dstcp.data.repositories.BitsInPacketRepository;
 
 import java.util.ArrayList;
 
 /**
  * Created by AWALICZE on 18.04.2017.
  */
-public class BitsOnWireProcessor implements DataProcessor {
+public class BitsInPacketProcessor implements DataProcessor {
 
     @Override
     public void process(ArrayList<StringPacket> data) {
@@ -22,7 +22,7 @@ public class BitsOnWireProcessor implements DataProcessor {
 
             bitsInPacketInfos.add(new BitsInPacketInfo(id,bits,timestamp));
         }
-        PhysicalPacketRepository.getInstance().saveData(bitsInPacketInfos);
+        BitsInPacketRepository.getInstance().saveData(bitsInPacketInfos);
     }
 
     private int getBitsCountInfo(StringPacket stringPacket) {
