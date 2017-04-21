@@ -5,23 +5,23 @@ import java.io.Serializable;
 /**
  * Created by AWALICZE on 18.04.2017.
  */
-public class PhysicalPacket implements Serializable {
+public class BitsInPacketInfo implements Serializable {
 
     private int id;
-    private int bits;
+    private int bitsCount;
     private String timestamp;
 
-    public PhysicalPacket(int id, int bits, String timestamp) {
+    public BitsInPacketInfo(int id, int bitsCount, String timestamp) {
         this.id = id;
-        this.bits = bits;
+        this.bitsCount = bitsCount;
         this.timestamp = timestamp;
     }
 
     public int getId() {
         return id;
     }
-    public int getBits() {
-        return bits;
+    public int getBitsCount() {
+        return bitsCount;
     }
 
     public String getTimestamp() {
