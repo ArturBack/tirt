@@ -18,24 +18,30 @@ public class IpProtocolVersionProcessor implements DataProcessor {
         ArrayList<IpProtocolVersionInPacketInfo> ipProtocolVersionInPacketInfos = new ArrayList<>();
         for(StringPacket stringPacket : data){
             int id = DataHelper.getID(stringPacket);
-            int version = getIpVersionInfo(stringPacket);
             String timestamp = DataHelper.getTimestamp(stringPacket);
+            String[] ipInfo = getIpInfo(stringPacket);
 
-            ipProtocolVersionInPacketInfos.add(new IpProtocolVersionInPacketInfo(id,version,timestamp));
+            int version = -1;
+            String source = "";
+            String destination = "";
+            if(ipInfo != null){
+                version = Integer.parseInt(String.valueOf(ipInfo[3].charAt(0)));
+                source = ipInfo[5].substring(0,ipInfo[5].length()-1);
+                destination = ipInfo[7];
+            }
+            ipProtocolVersionInPacketInfos.add(new IpProtocolVersionInPacketInfo(id,version,source,destination,timestamp));
         }
         IpProtocolVersionRepository.getInstance().saveData(ipProtocolVersionInPacketInfos);
     }
 
-    private int getIpVersionInfo(StringPacket stringPacket) {
-        int version = -1;
+    private String[] getIpInfo(StringPacket stringPacket) {
         List<String[]> packetData = stringPacket.getData();
         for(String[] packetInfo: packetData){
             if(isInfoAboutIpProtocol(packetInfo)){
-                version = Integer.parseInt(String.valueOf(packetInfo[3].charAt(0)));
-                break;
+                return packetInfo;
             }
         }
-        return version;
+        return null;
     }
 
     private boolean isInfoAboutIpProtocol(String[] packetInfo) {
