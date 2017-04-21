@@ -19,8 +19,9 @@ public class IpProtocolVersionProcessor implements DataProcessor {
         for(StringPacket stringPacket : data){
             int id = DataHelper.getID(stringPacket);
             int version = getIpVersionInfo(stringPacket);
+            String timestamp = DataHelper.getTimestamp(stringPacket);
 
-            ipProtocolVersionInPacketInfos.add(new IpProtocolVersionInPacketInfo(id,version));
+            ipProtocolVersionInPacketInfos.add(new IpProtocolVersionInPacketInfo(id,version,timestamp));
         }
         IpProtocolVersionRepository.getInstance().saveData(ipProtocolVersionInPacketInfos);
     }
