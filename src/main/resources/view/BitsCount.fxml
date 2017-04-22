@@ -11,7 +11,7 @@
          <children>
             <LineChart fx:id="bitsChart" layoutX="27.0" layoutY="21.0" prefHeight="800.0" prefWidth="1024.0" title="Liczba bitów (t)" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
               <xAxis>
-                <NumberAxis label="Czas (s)" prefWidth="439.0" side="BOTTOM" fx:id="xAxis" />
+                <NumberAxis label="Czas" prefWidth="439.0" side="BOTTOM" fx:id="xAxis" />
               </xAxis>
               <yAxis>
                 <NumberAxis label="Liczba bitów" side="LEFT" />

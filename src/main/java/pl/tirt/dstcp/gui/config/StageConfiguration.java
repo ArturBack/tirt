@@ -5,6 +5,6 @@ package pl.tirt.dstcp.gui.config;
  */
 public abstract class StageConfiguration {
     public static final String PRIMARY_STAGE_TITLE = "Data Streams Time Characteristics Presentation";
-    public static final double INITIAL_STAGE_WIDTH = 800.0;
-    public static final double INITIAL_STAGE_HEIGHT = 600.0;
+    public static final double INITIAL_STAGE_WIDTH = 1024.0;
+    public static final double INITIAL_STAGE_HEIGHT = 800.0;
 }

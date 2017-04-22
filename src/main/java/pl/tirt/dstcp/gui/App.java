@@ -14,7 +14,8 @@ import java.io.IOException;
 public class App extends Application {
 
     public void start(Stage primaryStage) throws Exception {
-        primaryStage.setScene(new Scene(ResourceViewLoader.loadViewFromFile("PrimaryStage.fxml")));
+        //primaryStage.setScene(new Scene(ResourceViewLoader.loadViewFromFile("BitsCount.fxml")));
+        primaryStage.setScene(new Scene(ResourceViewLoader.loadViewFromFile("IpVersionRatio.fxml")));
         primaryStage.setTitle(StageConfiguration.PRIMARY_STAGE_TITLE);
         primaryStage.setWidth(StageConfiguration.INITIAL_STAGE_WIDTH);
         primaryStage.setHeight(StageConfiguration.INITIAL_STAGE_HEIGHT);
