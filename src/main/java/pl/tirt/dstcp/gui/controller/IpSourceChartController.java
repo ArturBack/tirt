@@ -41,15 +41,12 @@ public class IpSourceChartController {
     }
 
     private void fillChartWithData() {
-        int defaultColorsDefined = 8 ;
         for(String key: ipSourcesMap.keySet()) {
             XYChart.Series<String, Integer> series = new XYChart.Series<>();
             series.setName(key);
-            List<XYChart.Data> dataList = new ArrayList<>();
             for (int i = 0; i < timeValues.size(); i++) {
                 XYChart.Data data = new XYChart.Data(timeValues.get(i).toString(), ipSourcesMap.get(key).get(i));
                 series.getData().add(data);
-                dataList.add(data);
             }
             ipSourceChart.getData().add(series);
         }

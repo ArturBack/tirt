@@ -44,7 +44,7 @@ public class TimestampUtils {
 
     private static Integer getSecond(String timestamp){
         String[] splitedTimestamp = timestamp.split("\\.");
-        return Integer.parseInt(splitedTimestamp[0]);
+        return Integer.parseInt(splitedTimestamp[0])+1;
     }
 
     private static Integer getMiliseconds(String timestamp){
