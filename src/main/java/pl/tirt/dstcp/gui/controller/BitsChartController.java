@@ -3,6 +3,7 @@ package pl.tirt.dstcp.gui.controller;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
+import javafx.scene.chart.CategoryAxis;
 import javafx.scene.chart.LineChart;
 import javafx.scene.chart.NumberAxis;
 import javafx.scene.chart.XYChart;
@@ -17,15 +18,15 @@ import java.util.List;
 public class BitsChartController {
 
     @FXML
-    private LineChart<Integer, Integer> bitsChart;
+    private LineChart<String, Integer> bitsChart;
 
     @FXML
-    private NumberAxis xAxis;
+    private CategoryAxis categoryAxis;
 
     private ObservableList<Integer> bitsValues = FXCollections.observableArrayList();
     private ObservableList<Integer> timeValues = FXCollections.observableArrayList();
 
-    private TimestampType timestampType = TimestampType.SECOND;
+    private TimestampType timestampType = TimestampType.MILISECOND;
 
 
     @FXML
@@ -38,12 +39,23 @@ public class BitsChartController {
     }
 
     private void fillChartWithData() {
+        switch(timestampType){
+            case SECOND:
+                fillChartWithProperData(0);
+                break;
+            case MILISECOND:
+                fillChartWithProperData(TimestampUtils.getStartIndexOfMiliTimeValues(timeValues));
+                break;
+            default:
+        }
+    }
+
+    private void fillChartWithProperData(int startIndex) {
         XYChart.Series series = new XYChart.Series();
-        for(int i = 0; i < timeValues.size(); i++){
-            series.getData().add(new XYChart.Data(timeValues.get(i), bitsValues.get(i)));
+        for(int i = startIndex; i < timeValues.size(); i++){
+            series.getData().add(new XYChart.Data(timeValues.get(i).toString(), bitsValues.get(i)));
         }
         bitsChart.getData().add(series);
-        xAxis.setTickUnit(2.0);
     }
 
     private ObservableList<Integer> createBitsValues(List<BitsInPacketInfo> data) {
@@ -79,7 +91,4 @@ public class BitsChartController {
         }
         return timestamps;
     }
-    
-
-
 }

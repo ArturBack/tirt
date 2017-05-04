@@ -27,7 +27,7 @@ public class IpVersionChartController {
     private ObservableList<Integer> packetValuesWithIPV6 = FXCollections.observableArrayList();
     private ObservableList<Integer> timeValues = FXCollections.observableArrayList();
 
-    private TimestampType timestampType = TimestampType.SECOND;
+    private TimestampType timestampType = TimestampType.MILISECOND;
 
 
     @FXML
@@ -41,15 +41,27 @@ public class IpVersionChartController {
     }
 
     private void fillChartWithData() {
+        switch(timestampType){
+            case SECOND:
+                fillChartWithProperData(0);
+                break;
+            case MILISECOND:
+                fillChartWithProperData(TimestampUtils.getStartIndexOfMiliTimeValues(timeValues));
+                break;
+            default:
+        }
+    }
+
+    private void fillChartWithProperData(int startIndex) {
         XYChart.Series<String, Integer> seriesIPV4 = new XYChart.Series<>();
         seriesIPV4.setName("IPV4");
-        for(int i = 0; i < timeValues.size(); i++){
+        for(int i = startIndex; i < timeValues.size(); i++){
             seriesIPV4.getData().add(new XYChart.Data(timeValues.get(i).toString(), packetValuesWithIPV4.get(i)));
         }
 
         XYChart.Series<String, Integer> seriesIPV6 = new XYChart.Series<>();
         seriesIPV6.setName("IPV6");
-        for(int i = 0; i < timeValues.size(); i++){
+        for(int i = startIndex; i < timeValues.size(); i++){
             seriesIPV6.getData().add(new XYChart.Data(timeValues.get(i).toString(), packetValuesWithIPV6.get(i)));
         }
 
