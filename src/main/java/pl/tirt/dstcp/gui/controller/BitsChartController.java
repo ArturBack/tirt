@@ -1,5 +1,7 @@
 package pl.tirt.dstcp.gui.controller;
 
+import javafx.beans.value.ChangeListener;
+import javafx.beans.value.ObservableValue;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
@@ -7,6 +9,7 @@ import javafx.scene.chart.CategoryAxis;
 import javafx.scene.chart.LineChart;
 import javafx.scene.chart.NumberAxis;
 import javafx.scene.chart.XYChart;
+import javafx.scene.control.ComboBox;
 import pl.tirt.dstcp.data.model.BitsInPacketInfo;
 import pl.tirt.dstcp.data.repositories.BitsInPacketRepository;
 import pl.tirt.dstcp.gui.utils.TimestampType;
@@ -21,21 +24,55 @@ public class BitsChartController {
     private LineChart<String, Integer> bitsChart;
 
     @FXML
-    private CategoryAxis categoryAxis;
+    private ComboBox<String> scale_type_combo;
 
-    private ObservableList<Integer> bitsValues = FXCollections.observableArrayList();
-    private ObservableList<Integer> timeValues = FXCollections.observableArrayList();
-
-    private TimestampType timestampType = TimestampType.MILISECOND;
+    private ObservableList<Integer> bitsValues;
+    private ObservableList<Integer> timeValues;
+    private List<BitsInPacketInfo>  data;
+    private TimestampType timestampType = TimestampType.SECOND;
 
 
     @FXML
     private void initialize() {
-        List<BitsInPacketInfo> data = BitsInPacketRepository.getInstance().getData();
+        data = BitsInPacketRepository.getInstance().getData();
+        setData(data);
+        initScaleTypes();
+    }
+
+    private void setData(List<BitsInPacketInfo> data){
         timeValues = TimestampUtils.createTimeValues(timestampType,getTimestamps(data));
         bitsValues = createBitsValues(data);
         fillChartWithData();
+    }
 
+    private void initScaleTypes() {
+        String[] options = {TimestampType.SECOND.name(), TimestampType.MILISECOND.name()};
+        scale_type_combo.getItems().addAll(options);
+        //default value
+        scale_type_combo.getSelectionModel().select(0);
+
+        scale_type_combo.getSelectionModel().selectedItemProperty().addListener(new ChangeListener<String>() {
+            @Override
+            public void changed(ObservableValue<? extends String> observable, String oldValue, String newValue) {
+                if(newValue.equals(TimestampType.SECOND.name())){
+                    setTimestampType(TimestampType.SECOND);
+                    reloadData();
+
+                } else if(newValue.equals(TimestampType.MILISECOND.name())){
+                    setTimestampType(TimestampType.MILISECOND);
+                    reloadData();
+                }
+            }
+        });
+    }
+
+    private void reloadData() {
+        bitsChart.getData().clear();
+        setData(data);
+    }
+
+    public void setTimestampType(TimestampType timestampType) {
+        this.timestampType = timestampType;
     }
 
     private void fillChartWithData() {
