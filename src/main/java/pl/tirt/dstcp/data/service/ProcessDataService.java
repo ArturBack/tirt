@@ -35,5 +35,7 @@ public class ProcessDataService {
         //process each item of data with processor
         compositeDataProcessor.process(data);
         logger.info("Data has been processed successfull");
+
+        //test
     }
 }
