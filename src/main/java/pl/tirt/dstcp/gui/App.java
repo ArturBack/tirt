@@ -15,8 +15,8 @@ public class App extends Application {
 
     public void start(Stage primaryStage) throws Exception {
         //Scene scene = new Scene(ResourceViewLoader.loadViewFromFile("BitsCount.fxml"));
-        Scene scene = new Scene(ResourceViewLoader.loadViewFromFile("IpVersionRatio.fxml"));
-        //Scene scene = new Scene(ResourceViewLoader.loadViewFromFile("IpSource.fxml"));
+        // Scene scene = new Scene(ResourceViewLoader.loadViewFromFile("IpVersionRatio.fxml"));
+        Scene scene = new Scene(ResourceViewLoader.loadViewFromFile("IpSource.fxml"));
         primaryStage.setScene(scene);
         primaryStage.setTitle(StageConfiguration.PRIMARY_STAGE_TITLE);
         primaryStage.setWidth(StageConfiguration.INITIAL_STAGE_WIDTH);
