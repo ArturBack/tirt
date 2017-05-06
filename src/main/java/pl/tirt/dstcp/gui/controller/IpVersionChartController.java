@@ -1,9 +1,12 @@
 package pl.tirt.dstcp.gui.controller;
 
+import javafx.beans.value.ChangeListener;
+import javafx.beans.value.ObservableValue;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
 import javafx.scene.chart.*;
+import javafx.scene.control.ComboBox;
 import pl.tirt.dstcp.data.model.IpProtocolVersionInPacketInfo;
 import pl.tirt.dstcp.data.repositories.IpProtocolVersionRepository;
 import pl.tirt.dstcp.gui.utils.TimestampType;
@@ -21,18 +24,54 @@ public class IpVersionChartController {
     private StackedBarChart<String, Integer> ipVersionChart;
 
     @FXML
-    private CategoryAxis xAxis;
+    private ComboBox<String> scale_type_combo;
 
-    private ObservableList<Integer> packetValuesWithIPV4 = FXCollections.observableArrayList();
-    private ObservableList<Integer> packetValuesWithIPV6 = FXCollections.observableArrayList();
-    private ObservableList<Integer> timeValues = FXCollections.observableArrayList();
+    private ObservableList<Integer> packetValuesWithIPV4;
+    private ObservableList<Integer> packetValuesWithIPV6;
+    private ObservableList<Integer> timeValues;
+    private List<IpProtocolVersionInPacketInfo> data;
 
-    private TimestampType timestampType = TimestampType.MILISECOND;
+    private TimestampType timestampType = TimestampType.SECOND;
 
 
     @FXML
     private void initialize() {
-        List<IpProtocolVersionInPacketInfo> data = IpProtocolVersionRepository.getInstance().getData();
+        data = IpProtocolVersionRepository.getInstance().getData();
+        setData(data);
+        initScaleTypes();
+    }
+
+    private void initScaleTypes() {
+        String[] options = {TimestampType.SECOND.name(), TimestampType.MILISECOND.name()};
+        scale_type_combo.getItems().addAll(options);
+        //default value
+        scale_type_combo.getSelectionModel().select(0);
+
+        scale_type_combo.getSelectionModel().selectedItemProperty().addListener(new ChangeListener<String>() {
+            @Override
+            public void changed(ObservableValue<? extends String> observable, String oldValue, String newValue) {
+                if(newValue.equals(TimestampType.SECOND.name())){
+                    setTimestampType(TimestampType.SECOND);
+                    reloadData();
+
+                } else if(newValue.equals(TimestampType.MILISECOND.name())){
+                    setTimestampType(TimestampType.MILISECOND);
+                    reloadData();
+                }
+            }
+        });
+    }
+
+    private void reloadData() {
+        ipVersionChart.getData().clear();
+        setData(data);
+    }
+
+    public void setTimestampType(TimestampType timestampType) {
+        this.timestampType = timestampType;
+    }
+
+    private void setData(List<IpProtocolVersionInPacketInfo> data){
         timeValues = TimestampUtils.createTimeValues(timestampType,getTimestamps(data));
         packetValuesWithIPV4 = getListWithInitValues();
         packetValuesWithIPV6 = getListWithInitValues();
