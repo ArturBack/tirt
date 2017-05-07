@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+
+<MenuBar
+        xmlns="http://javafx.com/javafx/8.0.40"
+        xmlns:fx="http://javafx.com/fxml/1"
+        fx:controller="pl.tirt.dstcp.gui.controller.MenuController">
+    <menus>
+        <Menu
+                mnemonicParsing="false"
+                text="Menu">
+            <items>
+                <MenuItem
+                        fx:id="idBits"
+                        mnemonicParsing="false"
+                        onAction="#switchToBits"
+                        text="Bits count" />
+                <MenuItem
+                        fx:id="idIpSource"
+                        mnemonicParsing="false"
+                        onAction="#switchToIpSource"
+                        text="IP source" />
+                <MenuItem
+                        fx:id="idIpRatio"
+                        mnemonicParsing="false"
+                        onAction="#switchToIpRatio"
+                        text="IP versions ratio" />
+            </items>
+        </Menu>
+    </menus>
+</MenuBar>

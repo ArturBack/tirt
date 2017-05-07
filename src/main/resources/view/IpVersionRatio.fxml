@@ -6,31 +6,27 @@
 <?import javafx.scene.chart.StackedBarChart?>
 <?import javafx.scene.control.ComboBox?>
 <?import javafx.scene.layout.AnchorPane?>
-<?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.layout.HBox?>
 
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="pl.tirt.dstcp.gui.controller.IpVersionChartController">
-   <center>
-      <AnchorPane prefHeight="800.0" prefWidth="1024.0" BorderPane.alignment="CENTER">
-         <children>
-            <StackedBarChart fx:id="ipVersionChart" layoutX="66.0" layoutY="91.0" prefHeight="736.0" prefWidth="1024.0" title="Użycie IPV4 i IPV6" AnchorPane.bottomAnchor="64.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
-              <xAxis>
+
+<AnchorPane prefHeight="800.0" prefWidth="1024.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="pl.tirt.dstcp.gui.controller.IpVersionChartController">
+    <children>
+        <StackedBarChart fx:id="ipVersionChart" layoutX="66.0" layoutY="91.0" prefHeight="736.0" prefWidth="1024.0" title="Użycie IPV4 i IPV6" AnchorPane.bottomAnchor="64.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+            <xAxis>
                 <CategoryAxis side="BOTTOM" fx:id="xAxis" />
-              </xAxis>
-              <yAxis>
+            </xAxis>
+            <yAxis>
                 <NumberAxis side="LEFT" />
-              </yAxis>
-            </StackedBarChart>
-            <HBox alignment="BOTTOM_RIGHT" layoutX="762.0" layoutY="686.0" prefHeight="800.0" prefWidth="1024.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
-               <children>
-                  <ComboBox fx:id="scale_type_combo" prefHeight="42.0" prefWidth="183.0">
-                     <HBox.margin>
+            </yAxis>
+        </StackedBarChart>
+        <HBox alignment="BOTTOM_RIGHT" layoutX="762.0" layoutY="686.0" prefHeight="800.0" prefWidth="1024.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+            <children>
+                <ComboBox fx:id="scale_type_combo" prefHeight="42.0" prefWidth="183.0">
+                    <HBox.margin>
                         <Insets bottom="25.0" right="15.0" />
-                     </HBox.margin>
-                  </ComboBox>
-               </children>
-            </HBox>
-         </children>
-      </AnchorPane>
-   </center>
-</BorderPane>
+                    </HBox.margin>
+                </ComboBox>
+            </children>
+        </HBox>
+    </children>
+</AnchorPane>
