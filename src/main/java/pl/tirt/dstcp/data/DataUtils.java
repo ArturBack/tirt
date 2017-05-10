@@ -6,7 +6,8 @@ package pl.tirt.dstcp.data;
 public class DataUtils {
 
     public static String DIRECTORY_PATH = "";
-    public static String FILE_NAME = "packets.txt";
+    public static String PACKETS_FILE_NAME = "packets.txt";
+    public static String STREAM_PACKETS_FILE_NAME = "packets_to_stream.txt";
     public static String LOGGER_NAME = "logger";
 
 }

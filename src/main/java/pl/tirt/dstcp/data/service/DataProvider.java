@@ -26,7 +26,7 @@ public class DataProvider {
     }
 
     public ArrayList<StringPacket> getData() {
-        File dataSource = getDataSource(DataUtils.DIRECTORY_PATH + DataUtils.FILE_NAME);
+        File dataSource = getDataSource(DataUtils.DIRECTORY_PATH + DataUtils.PACKETS_FILE_NAME);
 
         Scanner scanner = null;
         try {

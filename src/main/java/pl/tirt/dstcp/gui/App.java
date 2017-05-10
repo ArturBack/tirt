@@ -8,6 +8,7 @@ import javafx.scene.control.*;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.BorderPane;
 import javafx.stage.Stage;
+import pl.tirt.dstcp.data.service.StreamDataService;
 import pl.tirt.dstcp.data.watcher.DataChangeWatcher;
 import pl.tirt.dstcp.data.DataUtils;
 import pl.tirt.dstcp.data.service.ProcessDataService;
@@ -40,21 +41,21 @@ public class App extends Application {
         primaryStage.show();
 
         getInitialData();
-        registerDataWatcher();
+       // startStreaming();
     }
 
     public static void main(String[] args) {
         launch(args);
     }
 
-    private void registerDataWatcher() {
+    private void startStreaming() {
         Thread thread = new Thread(() -> {
                 try {
-                    DataChangeWatcher.watchFile(DataUtils.DIRECTORY_PATH, DataUtils.FILE_NAME);
-                } catch (IOException e) {
+                    StreamDataService.startStreaming();
+                } catch (InterruptedException e) {
                     e.printStackTrace();
                 }
-            });
+        });
         thread.start();
     }
 
