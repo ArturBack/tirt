@@ -15,7 +15,7 @@ public class StreamDataService {
 
     private static Logger logger = Logger.getLogger(DataUtils.LOGGER_NAME);
     private static String PACKET_BEGINING = "No.";
-    private static int NUMBER_OF_PACKETS_TO_STREAM = 10;
+    private static int NUMBER_OF_PACKETS_TO_STREAM = 100;
     private static int SLEEP_TIME = 1000;
     private static int LAST_SAVED_PACKET_INDEX = -1;
 
@@ -62,6 +62,7 @@ public class StreamDataService {
                 streamStringPacket.getData().add(line);
             }
         }
+        streamData(data);
     }
 
     private static void streamData(ArrayList<StreamStringPacket> data) {
@@ -75,7 +76,6 @@ public class StreamDataService {
                 LAST_SAVED_PACKET_INDEX++;
             }
             logger.info("Next packtes has been streamed!");
-
          } catch (IOException e) {
             e.printStackTrace();
          } finally {
@@ -83,6 +83,7 @@ public class StreamDataService {
                 fileWriter.close();
             }
         }
+        ProcessDataService.getInstance().getAndProcessData();
     }
 
     private static void streamPacket(PrintWriter fileWriter, StreamStringPacket streamStringPacket) {

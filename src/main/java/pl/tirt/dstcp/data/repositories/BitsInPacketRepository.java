@@ -35,10 +35,18 @@ public class BitsInPacketRepository {
     }
 
     public void saveData(List<BitsInPacketInfo> bitsInPacketInfos){
-       try {
+        List<BitsInPacketInfo> data = getData();
+        if(data != null) {
+            data.addAll(bitsInPacketInfos);
+        }
+        try {
             FileOutputStream fout = new FileOutputStream(DataUtils.DIRECTORY_PATH + FILENAME);
             ObjectOutputStream oos = new ObjectOutputStream(fout);
-            oos.writeObject(bitsInPacketInfos);
+            if(data != null){
+                oos.writeObject(data);
+            } else {
+                oos.writeObject(bitsInPacketInfos);
+            }
         } catch (Exception e) {
            e.printStackTrace();
        }

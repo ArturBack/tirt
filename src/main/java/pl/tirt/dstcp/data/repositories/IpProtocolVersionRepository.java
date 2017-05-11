@@ -37,11 +37,19 @@ public class IpProtocolVersionRepository {
         return data;
     }
 
-    public void saveData(List<IpProtocolVersionInPacketInfo> bitsInPacketInfos){
+    public void saveData(List<IpProtocolVersionInPacketInfo> ipProtocolVersionInPacketInfos){
+        List<IpProtocolVersionInPacketInfo> data = getData();
+        if(data != null) {
+            data.addAll(ipProtocolVersionInPacketInfos);
+        }
         try {
             FileOutputStream fout = new FileOutputStream(DataUtils.DIRECTORY_PATH + FILENAME);
             ObjectOutputStream oos = new ObjectOutputStream(fout);
-            oos.writeObject(bitsInPacketInfos);
+            if(data != null){
+                oos.writeObject(data);
+            } else {
+                oos.writeObject(ipProtocolVersionInPacketInfos);
+            }
         } catch (Exception e) {
             e.printStackTrace();
         }
