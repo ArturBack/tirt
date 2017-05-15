@@ -24,6 +24,8 @@ public class App extends Application {
 
     public void start(Stage primaryStage) throws Exception {
 
+        getInitialData();
+
         FXMLLoader f = new FXMLLoader();
         MenuBar menuBar = f.load(new FileInputStream(new File("src/main/resources/view/Menu.fxml")));
 
@@ -40,7 +42,7 @@ public class App extends Application {
         primaryStage.setHeight(StageConfiguration.INITIAL_STAGE_HEIGHT);
         primaryStage.show();
 
-        getInitialData();
+
        // startStreaming();
     }
 
