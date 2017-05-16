@@ -9,5 +9,6 @@ public class DataUtils {
     public static String PACKETS_FILE_NAME = "packets1.txt";
     public static String STREAM_PACKETS_FILE_NAME = "packets_to_stream.txt";
     public static String LOGGER_NAME = "logger";
+    public static String HOME_ADDRESS = "192.168.1.44";
 
 }

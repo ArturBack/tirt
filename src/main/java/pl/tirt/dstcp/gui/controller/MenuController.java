@@ -14,12 +14,12 @@ import java.io.IOException;
 public class MenuController {
 
     @FXML
-    void switchToBits(ActionEvent event) {
+    void switchToBitsOut(ActionEvent event) {
         BorderPane rootPane = App.getRootPane();
 
         FXMLLoader f = new FXMLLoader();
         try {
-            AnchorPane anchorPane = f.load(new FileInputStream(new File("src/main/resources/view/BitsCount.fxml")));
+            AnchorPane anchorPane = f.load(new FileInputStream(new File("src/main/resources/view/TotalBytesOut.fxml")));
             rootPane.setCenter(anchorPane);
         } catch (IOException e) {
             e.printStackTrace();
@@ -27,12 +27,38 @@ public class MenuController {
     }
 
     @FXML
-    void switchToIpSource(ActionEvent event) {
+    void switchToBitsIn(ActionEvent event) {
         BorderPane rootPane = App.getRootPane();
 
         FXMLLoader f = new FXMLLoader();
         try {
-            AnchorPane anchorPane = f.load(new FileInputStream(new File("src/main/resources/view/IpSource.fxml")));
+            AnchorPane anchorPane = f.load(new FileInputStream(new File("src/main/resources/view/TotalBytesIn.fxml")));
+            rootPane.setCenter(anchorPane);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+    @FXML
+    void switchToIpSourceOut(ActionEvent event) {
+        BorderPane rootPane = App.getRootPane();
+
+        FXMLLoader f = new FXMLLoader();
+        try {
+            AnchorPane anchorPane = f.load(new FileInputStream(new File("src/main/resources/view/IpSourcesOut.fxml")));
+            rootPane.setCenter(anchorPane);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+    @FXML
+    void switchToIpSourceIn(ActionEvent event) {
+        BorderPane rootPane = App.getRootPane();
+
+        FXMLLoader f = new FXMLLoader();
+        try {
+            AnchorPane anchorPane = f.load(new FileInputStream(new File("src/main/resources/view/IpSourcesIn.fxml")));
             rootPane.setCenter(anchorPane);
         } catch (IOException e) {
             e.printStackTrace();

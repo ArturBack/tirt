@@ -10,6 +10,7 @@ import javafx.scene.chart.LineChart;
 import javafx.scene.chart.NumberAxis;
 import javafx.scene.chart.XYChart;
 import javafx.scene.control.ComboBox;
+import pl.tirt.dstcp.data.DataUtils;
 import pl.tirt.dstcp.data.model.BitsInPacketInfo;
 import pl.tirt.dstcp.data.repositories.BitsInPacketRepository;
 import pl.tirt.dstcp.gui.utils.TimestampType;
@@ -18,7 +19,7 @@ import pl.tirt.dstcp.gui.utils.TimestampUtils;
 import java.util.ArrayList;
 import java.util.List;
 
-public class BitsChartController {
+public class TotalBytesOutController {
 
     @FXML
     private LineChart<String, Integer> bitsChart;
@@ -99,15 +100,18 @@ public class BitsChartController {
         ObservableList<Integer> bitsValues = getListWithInitBitsValues();
         for(BitsInPacketInfo info : data){
             Integer time = TimestampUtils.getTime(timestampType,info.getTimestamp());
-            for(int i = 0; i < timeValues.size(); i++){
-                Integer timeValue = timeValues.get(i);
-                if(time <= timeValue){
-                    Integer newBitsCount = bitsValues.get(i) + info.getBitsCount();
-                    bitsValues.remove(i);
-                    bitsValues.add(i,newBitsCount);
-                    break;
+            if(info.getSource().equals(DataUtils.HOME_ADDRESS)) {
+                for(int i = 0; i < timeValues.size(); i++){
+                    Integer timeValue = timeValues.get(i);
+                    if(time <= timeValue){
+                        Integer newBitsCount = bitsValues.get(i) + info.getBitsCount();
+                        bitsValues.remove(i);
+                        bitsValues.add(i,newBitsCount);
+                        break;
+                    }
                 }
             }
+
         }
         return bitsValues;
     }

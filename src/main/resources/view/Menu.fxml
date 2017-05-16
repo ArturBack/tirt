@@ -9,23 +9,88 @@
     <menus>
         <Menu
                 mnemonicParsing="false"
-                text="Menu">
+                text="Warstwa IV">
             <items>
                 <MenuItem
-                        fx:id="idBits"
+                        fx:id="idBitsLIV"
                         mnemonicParsing="false"
-                        onAction="#switchToBits"
-                        text="Bits count" />
+                        onAction="#switchToBitsOut"
+                        text="Suma bajtów wychodzących" />
+                <!--text="Bits count" />-->
                 <MenuItem
-                        fx:id="idIpSource"
+                        fx:id="idIpSourceLIV"
                         mnemonicParsing="false"
-                        onAction="#switchToIpSource"
+                        onAction="#switchToIpSourceOut"
                         text="IP source" />
+                <!--text="IP source" />-->
                 <MenuItem
-                        fx:id="idIpRatio"
+                        fx:id="idIpRatioLIV"
                         mnemonicParsing="false"
                         onAction="#switchToIpRatio"
                         text="IP versions ratio" />
+            </items>
+        </Menu>
+
+        <Menu
+                mnemonicParsing="false"
+                text="Warstwa V">
+            <items>
+                <MenuItem
+                        fx:id="idBitsLV"
+                        mnemonicParsing="false"
+                        onAction="#switchToBitsOut"
+                        text="Bits count" />
+                <MenuItem
+                        fx:id="idIpSourceLV"
+                        mnemonicParsing="false"
+                        onAction="#switchToIpSourceOut"
+                        text="IP source" />
+                <MenuItem
+                        fx:id="idIpRatioLV"
+                        mnemonicParsing="false"
+                        onAction="#switchToIpRatio"
+                        text="IP versions ratio" />
+            </items>
+        </Menu>
+
+        <Menu
+                mnemonicParsing="false"
+                text="Warstwa VI">
+            <items>
+                <MenuItem
+                        fx:id="idBitsOutLVI"
+                        mnemonicParsing="false"
+                        onAction="#switchToBitsOut"
+                        text="Suma bajtów wychodzących" />
+                <!--text="Bits count" />-->
+                <MenuItem
+                        fx:id="idBitsInLVI"
+                        mnemonicParsing="false"
+                        onAction="#switchToBitsIn"
+                        text="Suma bajtów przychodzących" />
+                <!--text="Bits count" />-->
+                <MenuItem
+                        fx:id="idProtocolInLVI"
+                        mnemonicParsing="false"
+                        onAction="#switchToIpSourceOut"
+                        text="Ilość ramek przesyłanych z wybranego źródła do badanego węzła z podziałem na protokoły" />
+                <!--text="IP source" />-->
+                <MenuItem
+                        fx:id="idProtocolOutLVI"
+                        mnemonicParsing="false"
+                        onAction="#switchToIpSourceIn"
+                        text="Ilość ramek przesyłanych z badanego węzła do wybranego odbiorcy z podziałem na protokoły"/>
+                <!--text="IP source" />-->
+                <MenuItem
+                        fx:id="idProtocolRatioOutLVI"
+                        mnemonicParsing="false"
+                        onAction="#switchToIpRatio"
+                        text="Stosunek użytych protokołów w ruchu wychodzącym " />
+                <MenuItem
+                        fx:id="idProtocolRatioLInVI"
+                        mnemonicParsing="false"
+                        onAction="#switchToIpRatio"
+                        text="Stosunek użytych protokołów w ruchu przyychodzącym " />
             </items>
         </Menu>
     </menus>

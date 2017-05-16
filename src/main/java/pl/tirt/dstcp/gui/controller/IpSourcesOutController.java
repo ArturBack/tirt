@@ -10,6 +10,7 @@ import javafx.scene.chart.LineChart;
 import javafx.scene.chart.StackedBarChart;
 import javafx.scene.chart.XYChart;
 import javafx.scene.control.ComboBox;
+import pl.tirt.dstcp.data.DataUtils;
 import pl.tirt.dstcp.data.model.BitsInPacketInfo;
 import pl.tirt.dstcp.data.model.IpProtocolVersionInPacketInfo;
 import pl.tirt.dstcp.data.repositories.IpProtocolVersionRepository;
@@ -23,7 +24,7 @@ import java.util.List;
 /**
  * Created by AWALICZE on 22.04.2017.
  */
-public class IpSourceChartController {
+public class IpSourcesOutController {
 
     @FXML
     private LineChart<String, Integer> ipSourceChart;
@@ -129,25 +130,29 @@ public class IpSourceChartController {
         for(IpProtocolVersionInPacketInfo info : data){
             Integer time = TimestampUtils.getTime(timestampType,info.getTimestamp());
 
-            for(int i = 0; i < timeValues.size(); i++){
-                Integer timeValue = timeValues.get(i);
-                if(time <= timeValue){
-                    String sourceIp = info.getSource();
-                    if(sourceIp.isEmpty()){
+            if(info.getSource().equals(DataUtils.HOME_ADDRESS)) {
+
+                for (int i = 0; i < timeValues.size(); i++) {
+                    Integer timeValue = timeValues.get(i);
+                    if (time <= timeValue) {
+                        String destinationIP = info.getDestination();
+                        if (destinationIP.isEmpty()) {
+                            break;
+                        }
+
+                        if (!ipSourcesMap.containsKey(destinationIP)) {
+                            ipSourcesMap.put(destinationIP, getListWithInitValues());
+                        }
+                        ObservableList<Integer> values = ipSourcesMap.get(destinationIP);
+                        Integer newCount = values.get(i) + 1;
+                        values.remove(i);
+                        values.add(i, newCount);
                         break;
                     }
-
-                    if(!ipSourcesMap.containsKey(sourceIp)){
-                        ipSourcesMap.put(sourceIp, getListWithInitValues());
-                    }
-                    ObservableList<Integer> values = ipSourcesMap.get(sourceIp);
-                    Integer newCount = values.get(i) + 1;
-                    values.remove(i);
-                    values.add(i,newCount);
-                    break;
                 }
             }
         }
+        System.out.println("Dupa");
     }
 
     private ObservableList<Integer>  getListWithInitValues() {
