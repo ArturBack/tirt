@@ -5,9 +5,7 @@ import javafx.beans.value.ObservableValue;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
-import javafx.scene.chart.CategoryAxis;
 import javafx.scene.chart.LineChart;
-import javafx.scene.chart.NumberAxis;
 import javafx.scene.chart.XYChart;
 import javafx.scene.control.ComboBox;
 import pl.tirt.dstcp.data.DataUtils;
@@ -100,7 +98,7 @@ public class TotalBytesOutController {
         ObservableList<Integer> bitsValues = getListWithInitBitsValues();
         for(BitsInPacketInfo info : data){
             Integer time = TimestampUtils.getTime(timestampType,info.getTimestamp());
-            if(info.getSource().equals(DataUtils.HOME_ADDRESS)) {
+            if(info.getSourceIP().equals(DataUtils.HOME_ADDRESS)) {
                 for(int i = 0; i < timeValues.size(); i++){
                     Integer timeValue = timeValues.get(i);
                     if(time <= timeValue){

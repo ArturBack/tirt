@@ -11,26 +11,35 @@ public class BitsInPacketInfo implements Serializable {
     private int bitsCount;
     private String timestamp;
 
-    private String source;
-    private String destination;
+    private String sourceIP;
+    private String destinationIP;
 
-    private String protocol;
+    private String sourcePort;
+    private String destinationPort;
 
-    public BitsInPacketInfo(int id, int bitsCount, String timestamp, String source, String destination, String protocol) {
+    private String protocolII;
+    private String protocolIII;
+    private String protocolIV;
+
+    public BitsInPacketInfo(int id, int bitsCount, String timestamp, String sourceIP, String destinationIP, String sourcePort, String destinationPort, String protocolII, String protocolIII, String protocolIV) {
         this.id = id;
         this.bitsCount = bitsCount;
         this.timestamp = timestamp;
-        this.source = source;
-        this.destination = destination;
-        this.protocol = protocol;
+        this.sourceIP = sourceIP;
+        this.destinationIP = destinationIP;
+        this.sourcePort = sourcePort;
+        this.destinationPort = destinationPort;
+        this.protocolII = protocolII;
+        this.protocolIII = protocolIII;
+        this.protocolIV = protocolIV;
     }
 
     public BitsInPacketInfo(int id, int bitsCount, String timestamp, String source, String destination) {
         this.id = id;
         this.bitsCount = bitsCount;
         this.timestamp = timestamp;
-        this.source = source;
-        this.destination = destination;
+        this.sourceIP = source;
+        this.destinationIP = destination;
     }
 
     public BitsInPacketInfo(int id, int bitsCount, String timestamp) {
@@ -39,12 +48,12 @@ public class BitsInPacketInfo implements Serializable {
         this.timestamp = timestamp;
     }
 
-    public String getSource() {
-        return source;
+    public String getSourceIP() {
+        return sourceIP;
     }
 
-    public String getDestination() {
-        return destination;
+    public String getDestinationIP() {
+        return destinationIP;
     }
 
     public int getId() {

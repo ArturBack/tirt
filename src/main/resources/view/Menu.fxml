@@ -7,55 +7,10 @@
         xmlns:fx="http://javafx.com/fxml/1"
         fx:controller="pl.tirt.dstcp.gui.controller.MenuController">
     <menus>
-        <Menu
-                mnemonicParsing="false"
-                text="Warstwa IV">
-            <items>
-                <MenuItem
-                        fx:id="idBitsLIV"
-                        mnemonicParsing="false"
-                        onAction="#switchToBitsOut"
-                        text="Suma bajtów wychodzących" />
-                <!--text="Bits count" />-->
-                <MenuItem
-                        fx:id="idIpSourceLIV"
-                        mnemonicParsing="false"
-                        onAction="#switchToIpSourceOut"
-                        text="IP source" />
-                <!--text="IP source" />-->
-                <MenuItem
-                        fx:id="idIpRatioLIV"
-                        mnemonicParsing="false"
-                        onAction="#switchToIpRatio"
-                        text="IP versions ratio" />
-            </items>
-        </Menu>
 
         <Menu
                 mnemonicParsing="false"
-                text="Warstwa V">
-            <items>
-                <MenuItem
-                        fx:id="idBitsLV"
-                        mnemonicParsing="false"
-                        onAction="#switchToBitsOut"
-                        text="Bits count" />
-                <MenuItem
-                        fx:id="idIpSourceLV"
-                        mnemonicParsing="false"
-                        onAction="#switchToIpSourceOut"
-                        text="IP source" />
-                <MenuItem
-                        fx:id="idIpRatioLV"
-                        mnemonicParsing="false"
-                        onAction="#switchToIpRatio"
-                        text="IP versions ratio" />
-            </items>
-        </Menu>
-
-        <Menu
-                mnemonicParsing="false"
-                text="Warstwa VI">
+                text="Warstwa II">
             <items>
                 <MenuItem
                         fx:id="idBitsOutLVI"
@@ -93,5 +48,55 @@
                         text="Stosunek użytych protokołów w ruchu przyychodzącym " />
             </items>
         </Menu>
+
+        <Menu
+                mnemonicParsing="false"
+                text="Warstwa III">
+            <items>
+                <MenuItem
+                        fx:id="idBitsLV"
+                        mnemonicParsing="false"
+                        onAction="#switchToBitsOut"
+                        text="Bits count" />
+                <MenuItem
+                        fx:id="idIpSourceLV"
+                        mnemonicParsing="false"
+                        onAction="#switchToIpSourceOut"
+                        text="IP source" />
+                <MenuItem
+                        fx:id="idIpRatioLV"
+                        mnemonicParsing="false"
+                        onAction="#switchToIpRatio"
+                        text="IP versions ratio" />
+            </items>
+        </Menu>
+
+        <Menu
+                mnemonicParsing="false"
+                text="Warstwa IV">
+            <items>
+                <MenuItem
+                        fx:id="idBitsLIV"
+                        mnemonicParsing="false"
+                        onAction="#switchToBitsOut"
+                        text="Suma bajtów wychodzących" />
+                <!--text="Bits count" />-->
+                <MenuItem
+                        fx:id="idIpSourceLIV"
+                        mnemonicParsing="false"
+                        onAction="#switchToIpSourceOut"
+                        text="IP source" />
+                <!--text="IP source" />-->
+                <MenuItem
+                        fx:id="idIpRatioLIV"
+                        mnemonicParsing="false"
+                        onAction="#switchToIpRatio"
+                        text="IP versions ratio" />
+            </items>
+        </Menu>
+
+
+
+
     </menus>
 </MenuBar>
