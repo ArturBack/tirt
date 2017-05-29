@@ -66,4 +66,24 @@ public class BitsInPacketInfo implements Serializable {
     public String getTimestamp() {
         return timestamp;
     }
+
+    public String getSourcePort() {
+        return sourcePort;
+    }
+
+    public String getDestinationPort() {
+        return destinationPort;
+    }
+
+    public String getProtocolII() {
+        return protocolII;
+    }
+
+    public String getProtocolIII() {
+        return protocolIII;
+    }
+
+    public String getProtocolIV() {
+        return protocolIV;
+    }
 }

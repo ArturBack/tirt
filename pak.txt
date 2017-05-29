@@ -1,0 +1,1989 @@
+No.     Time           Source                Destination           Protocol Length Info
+      3 1.844282       31.13.92.10           192.168.1.44          TLSv1.2  312    Application Data
+
+Frame 3: 312 bytes on wire (2496 bits), 312 bytes captured (2496 bits) on interface 0
+Ethernet II, Src: Sagemcom_7e:6c:ee (84:a4:23:7e:6c:ee), Dst: Apple_1d:4a:73 (a0:99:9b:1d:4a:73)
+    Destination: Apple_1d:4a:73 (a0:99:9b:1d:4a:73)
+    Source: Sagemcom_7e:6c:ee (84:a4:23:7e:6c:ee)
+    Type: IPv4 (0x0800)
+Internet Protocol Version 4, Src: 31.13.92.10, Dst: 192.168.1.44
+Transmission Control Protocol, Src Port: 443, Dst Port: 59313, Seq: 1, Ack: 1, Len: 246
+Secure Sockets Layer
+    TLSv1.2 Record Layer: Application Data Protocol: http-over-tls
+        Content Type: Application Data (23)
+        Version: TLS 1.2 (0x0303)
+        Length: 241
+        Encrypted Application Data: 6b6adfb71475e039210e2b30cd9832595b025473a3cc7e2a...
+
+No.     Time           Source                Destination           Protocol Length Info
+      4 1.844365       192.168.1.44          31.13.92.10           TCP      66     59313→443 [ACK] Seq=1 Ack=247 Win=4088 Len=0 TSval=862807169 TSecr=1871688598
+
+Frame 4: 66 bytes on wire (528 bits), 66 bytes captured (528 bits) on interface 0
+Ethernet II, Src: Apple_1d:4a:73 (a0:99:9b:1d:4a:73), Dst: Sagemcom_7e:6c:ee (84:a4:23:7e:6c:ee)
+    Destination: Sagemcom_7e:6c:ee (84:a4:23:7e:6c:ee)
+    Source: Apple_1d:4a:73 (a0:99:9b:1d:4a:73)
+    Type: IPv4 (0x0800)
+Internet Protocol Version 4, Src: 192.168.1.44, Dst: 31.13.92.10
+Transmission Control Protocol, Src Port: 59313, Dst Port: 443, Seq: 1, Ack: 247, Len: 0
+
+No.     Time           Source                Destination           Protocol Length Info
+      5 1.856190       192.168.1.44          31.13.92.10           TLSv1.2  511    Application Data
+
+Frame 5: 511 bytes on wire (4088 bits), 511 bytes captured (4088 bits) on interface 0
+Ethernet II, Src: Apple_1d:4a:73 (a0:99:9b:1d:4a:73), Dst: Sagemcom_7e:6c:ee (84:a4:23:7e:6c:ee)
+    Destination: Sagemcom_7e:6c:ee (84:a4:23:7e:6c:ee)
+    Source: Apple_1d:4a:73 (a0:99:9b:1d:4a:73)
+    Type: IPv4 (0x0800)
+Internet Protocol Version 4, Src: 192.168.1.44, Dst: 31.13.92.10
+Transmission Control Protocol, Src Port: 59313, Dst Port: 443, Seq: 1, Ack: 247, Len: 445
+Secure Sockets Layer
+    TLSv1.2 Record Layer: Application Data Protocol: http-over-tls
+        Content Type: Application Data (23)
+        Version: TLS 1.2 (0x0303)
+        Length: 440
+        Encrypted Application Data: 4acf3b33cd586cc3cc2cd4d3bfdf121645c59849639e2c00...
+
+No.     Time           Source                Destination           Protocol Length Info
+      6 1.887431       31.13.92.10           192.168.1.44          TLSv1.2  108    Application Data
+
+Frame 6: 108 bytes on wire (864 bits), 108 bytes captured (864 bits) on interface 0
+Ethernet II, Src: Sagemcom_7e:6c:ee (84:a4:23:7e:6c:ee), Dst: Apple_1d:4a:73 (a0:99:9b:1d:4a:73)
+    Destination: Apple_1d:4a:73 (a0:99:9b:1d:4a:73)
+    Source: Sagemcom_7e:6c:ee (84:a4:23:7e:6c:ee)
+    Type: IPv4 (0x0800)
+Internet Protocol Version 4, Src: 31.13.92.10, Dst: 192.168.1.44
+Transmission Control Protocol, Src Port: 443, Dst Port: 59313, Seq: 247, Ack: 446, Len: 42
+Secure Sockets Layer
+    TLSv1.2 Record Layer: Application Data Protocol: http-over-tls
+        Content Type: Application Data (23)
+        Version: TLS 1.2 (0x0303)
+        Length: 37
+        Encrypted Application Data: 6b6adfb71475e03acbe709c3c87137b6e6943c5b8fdcc881...
+
+No.     Time           Source                Destination           Protocol Length Info
+      7 1.887503       192.168.1.44          31.13.92.10           TCP      66     59313→443 [ACK] Seq=446 Ack=289 Win=4094 Len=0 TSval=862807210 TSecr=1871688695
+
+Frame 7: 66 bytes on wire (528 bits), 66 bytes captured (528 bits) on interface 0
+Ethernet II, Src: Apple_1d:4a:73 (a0:99:9b:1d:4a:73), Dst: Sagemcom_7e:6c:ee (84:a4:23:7e:6c:ee)
+    Destination: Sagemcom_7e:6c:ee (84:a4:23:7e:6c:ee)
+    Source: Apple_1d:4a:73 (a0:99:9b:1d:4a:73)
+    Type: IPv4 (0x0800)
+Internet Protocol Version 4, Src: 192.168.1.44, Dst: 31.13.92.10
+Transmission Control Protocol, Src Port: 59313, Dst Port: 443, Seq: 446, Ack: 289, Len: 0
+
+No.     Time           Source                Destination           Protocol Length Info
+      8 3.379773       31.13.92.10           192.168.1.44          TLSv1.2  312    Application Data
+
+Frame 8: 312 bytes on wire (2496 bits), 312 bytes captured (2496 bits) on interface 0
+Ethernet II, Src: Sagemcom_7e:6c:ee (84:a4:23:7e:6c:ee), Dst: Apple_1d:4a:73 (a0:99:9b:1d:4a:73)
+    Destination: Apple_1d:4a:73 (a0:99:9b:1d:4a:73)
+    Source: Sagemcom_7e:6c:ee (84:a4:23:7e:6c:ee)
+    Type: IPv4 (0x0800)
+Internet Protocol Version 4, Src: 31.13.92.10, Dst: 192.168.1.44
+Transmission Control Protocol, Src Port: 443, Dst Port: 59313, Seq: 289, Ack: 446, Len: 246
+Secure Sockets Layer
+    TLSv1.2 Record Layer: Application Data Protocol: http-over-tls
+        Content Type: Application Data (23)
+        Version: TLS 1.2 (0x0303)
+        Length: 241
+        Encrypted Application Data: 6b6adfb71475e03b55d358dfec696eeba57e2db7e2e855c9...
+
+No.     Time           Source                Destination           Protocol Length Info
+      9 3.379852       192.168.1.44          31.13.92.10           TCP      66     59313→443 [ACK] Seq=446 Ack=535 Win=4088 Len=0 TSval=862808698 TSecr=1871689621
+
+Frame 9: 66 bytes on wire (528 bits), 66 bytes captured (528 bits) on interface 0
+Ethernet II, Src: Apple_1d:4a:73 (a0:99:9b:1d:4a:73), Dst: Sagemcom_7e:6c:ee (84:a4:23:7e:6c:ee)
+    Destination: Sagemcom_7e:6c:ee (84:a4:23:7e:6c:ee)
+    Source: Apple_1d:4a:73 (a0:99:9b:1d:4a:73)
+    Type: IPv4 (0x0800)
+Internet Protocol Version 4, Src: 192.168.1.44, Dst: 31.13.92.10
+Transmission Control Protocol, Src Port: 59313, Dst Port: 443, Seq: 446, Ack: 535, Len: 0
+
+No.     Time           Source                Destination           Protocol Length Info
+     10 3.380792       31.13.92.10           192.168.1.44          TLSv1.2  312    [TCP Spurious Retransmission] Application Data
+
+Frame 10: 312 bytes on wire (2496 bits), 312 bytes captured (2496 bits) on interface 0
+Ethernet II, Src: Sagemcom_7e:6c:ee (84:a4:23:7e:6c:ee), Dst: Apple_1d:4a:73 (a0:99:9b:1d:4a:73)
+    Destination: Apple_1d:4a:73 (a0:99:9b:1d:4a:73)
+    Source: Sagemcom_7e:6c:ee (84:a4:23:7e:6c:ee)
+    Type: IPv4 (0x0800)
+Internet Protocol Version 4, Src: 31.13.92.10, Dst: 192.168.1.44
+Transmission Control Protocol, Src Port: 443, Dst Port: 59313, Seq: 289, Ack: 446, Len: 246
+Secure Sockets Layer
+    TLSv1.2 Record Layer: Application Data Protocol: http-over-tls
+        Content Type: Application Data (23)
+        Version: TLS 1.2 (0x0303)
+        Length: 241
+        Encrypted Application Data: 6b6adfb71475e03b55d358dfec696eeba57e2db7e2e855c9...
+
+No.     Time           Source                Destination           Protocol Length Info
+     11 3.380861       192.168.1.44          31.13.92.10           TCP      78     [TCP Window Update] 59313→443 [ACK] Seq=446 Ack=535 Win=4096 Len=0 TSval=862808699 TSecr=1871689964 SLE=289 SRE=535
+
+Frame 11: 78 bytes on wire (624 bits), 78 bytes captured (624 bits) on interface 0
+Ethernet II, Src: Apple_1d:4a:73 (a0:99:9b:1d:4a:73), Dst: Sagemcom_7e:6c:ee (84:a4:23:7e:6c:ee)
+    Destination: Sagemcom_7e:6c:ee (84:a4:23:7e:6c:ee)
+    Source: Apple_1d:4a:73 (a0:99:9b:1d:4a:73)
+    Type: IPv4 (0x0800)
+Internet Protocol Version 4, Src: 192.168.1.44, Dst: 31.13.92.10
+Transmission Control Protocol, Src Port: 59313, Dst Port: 443, Seq: 446, Ack: 535, Len: 0
+
+No.     Time           Source                Destination           Protocol Length Info
+     12 3.383890       192.168.1.44          31.13.92.10           TLSv1.2  510    Application Data
+
+Frame 12: 510 bytes on wire (4080 bits), 510 bytes captured (4080 bits) on interface 0
+Ethernet II, Src: Apple_1d:4a:73 (a0:99:9b:1d:4a:73), Dst: Sagemcom_7e:6c:ee (84:a4:23:7e:6c:ee)
+    Destination: Sagemcom_7e:6c:ee (84:a4:23:7e:6c:ee)
+    Source: Apple_1d:4a:73 (a0:99:9b:1d:4a:73)
+    Type: IPv4 (0x0800)
+Internet Protocol Version 4, Src: 192.168.1.44, Dst: 31.13.92.10
+Transmission Control Protocol, Src Port: 59313, Dst Port: 443, Seq: 446, Ack: 535, Len: 444
+Secure Sockets Layer
+    TLSv1.2 Record Layer: Application Data Protocol: http-over-tls
+        Content Type: Application Data (23)
+        Version: TLS 1.2 (0x0303)
+        Length: 439
+        Encrypted Application Data: 4acf3b33cd586cc450bf8cc938418ef6f8ef7d2e5c21f0f6...
+
+No.     Time           Source                Destination           Protocol Length Info
+     13 3.413150       31.13.92.10           192.168.1.44          TLSv1.2  108    Application Data
+
+Frame 13: 108 bytes on wire (864 bits), 108 bytes captured (864 bits) on interface 0
+Ethernet II, Src: Sagemcom_7e:6c:ee (84:a4:23:7e:6c:ee), Dst: Apple_1d:4a:73 (a0:99:9b:1d:4a:73)
+    Destination: Apple_1d:4a:73 (a0:99:9b:1d:4a:73)
+    Source: Sagemcom_7e:6c:ee (84:a4:23:7e:6c:ee)
+    Type: IPv4 (0x0800)
+Internet Protocol Version 4, Src: 31.13.92.10, Dst: 192.168.1.44
+Transmission Control Protocol, Src Port: 443, Dst Port: 59313, Seq: 535, Ack: 890, Len: 42
+Secure Sockets Layer
+    TLSv1.2 Record Layer: Application Data Protocol: http-over-tls
+        Content Type: Application Data (23)
+        Version: TLS 1.2 (0x0303)
+        Length: 37
+        Encrypted Application Data: 6b6adfb71475e03cd1c2efa57b5219dcec461adee29ddc77...
+
+No.     Time           Source                Destination           Protocol Length Info
+     14 3.413206       192.168.1.44          31.13.92.10           TCP      66     59313→443 [ACK] Seq=890 Ack=577 Win=4094 Len=0 TSval=862808730 TSecr=1871690221
+
+Frame 14: 66 bytes on wire (528 bits), 66 bytes captured (528 bits) on interface 0
+Ethernet II, Src: Apple_1d:4a:73 (a0:99:9b:1d:4a:73), Dst: Sagemcom_7e:6c:ee (84:a4:23:7e:6c:ee)
+    Destination: Sagemcom_7e:6c:ee (84:a4:23:7e:6c:ee)
+    Source: Apple_1d:4a:73 (a0:99:9b:1d:4a:73)
+    Type: IPv4 (0x0800)
+Internet Protocol Version 4, Src: 192.168.1.44, Dst: 31.13.92.10
+Transmission Control Protocol, Src Port: 59313, Dst Port: 443, Seq: 890, Ack: 577, Len: 0
+
+No.     Time           Source                Destination           Protocol Length Info
+     15 3.510870       31.13.92.10           192.168.1.44          TLSv1.2  312    Application Data
+
+Frame 15: 312 bytes on wire (2496 bits), 312 bytes captured (2496 bits) on interface 0
+Ethernet II, Src: Sagemcom_7e:6c:ee (84:a4:23:7e:6c:ee), Dst: Apple_1d:4a:73 (a0:99:9b:1d:4a:73)
+    Destination: Apple_1d:4a:73 (a0:99:9b:1d:4a:73)
+    Source: Sagemcom_7e:6c:ee (84:a4:23:7e:6c:ee)
+    Type: IPv4 (0x0800)
+Internet Protocol Version 4, Src: 31.13.92.10, Dst: 192.168.1.44
+Transmission Control Protocol, Src Port: 443, Dst Port: 59313, Seq: 577, Ack: 890, Len: 246
+Secure Sockets Layer
+    TLSv1.2 Record Layer: Application Data Protocol: http-over-tls
+        Content Type: Application Data (23)
+        Version: TLS 1.2 (0x0303)
+        Length: 241
+        Encrypted Application Data: 6b6adfb71475e03d25fb65e5ea7353d9992587f2488792a1...
+
+No.     Time           Source                Destination           Protocol Length Info
+     16 3.510919       192.168.1.44          31.13.92.10           TCP      66     59313→443 [ACK] Seq=890 Ack=823 Win=4088 Len=0 TSval=862808826 TSecr=1871690319
+
+Frame 16: 66 bytes on wire (528 bits), 66 bytes captured (528 bits) on interface 0
+Ethernet II, Src: Apple_1d:4a:73 (a0:99:9b:1d:4a:73), Dst: Sagemcom_7e:6c:ee (84:a4:23:7e:6c:ee)
+    Destination: Sagemcom_7e:6c:ee (84:a4:23:7e:6c:ee)
+    Source: Apple_1d:4a:73 (a0:99:9b:1d:4a:73)
+    Type: IPv4 (0x0800)
+Internet Protocol Version 4, Src: 192.168.1.44, Dst: 31.13.92.10
+Transmission Control Protocol, Src Port: 59313, Dst Port: 443, Seq: 890, Ack: 823, Len: 0
+
+No.     Time           Source                Destination           Protocol Length Info
+     17 3.515825       192.168.1.44          31.13.92.10           TLSv1.2  510    Application Data
+
+Frame 17: 510 bytes on wire (4080 bits), 510 bytes captured (4080 bits) on interface 0
+Ethernet II, Src: Apple_1d:4a:73 (a0:99:9b:1d:4a:73), Dst: Sagemcom_7e:6c:ee (84:a4:23:7e:6c:ee)
+    Destination: Sagemcom_7e:6c:ee (84:a4:23:7e:6c:ee)
+    Source: Apple_1d:4a:73 (a0:99:9b:1d:4a:73)
+    Type: IPv4 (0x0800)
+Internet Protocol Version 4, Src: 192.168.1.44, Dst: 31.13.92.10
+Transmission Control Protocol, Src Port: 59313, Dst Port: 443, Seq: 890, Ack: 823, Len: 444
+Secure Sockets Layer
+    TLSv1.2 Record Layer: Application Data Protocol: http-over-tls
+        Content Type: Application Data (23)
+        Version: TLS 1.2 (0x0303)
+        Length: 439
+        Encrypted Application Data: 4acf3b33cd586cc5417362a8adf9ec002f1ab156c4037b79...
+
+No.     Time           Source                Destination           Protocol Length Info
+     18 3.548897       31.13.92.10           192.168.1.44          TLSv1.2  108    Application Data
+
+Frame 18: 108 bytes on wire (864 bits), 108 bytes captured (864 bits) on interface 0
+Ethernet II, Src: Sagemcom_7e:6c:ee (84:a4:23:7e:6c:ee), Dst: Apple_1d:4a:73 (a0:99:9b:1d:4a:73)
+    Destination: Apple_1d:4a:73 (a0:99:9b:1d:4a:73)
+    Source: Sagemcom_7e:6c:ee (84:a4:23:7e:6c:ee)
+    Type: IPv4 (0x0800)
+Internet Protocol Version 4, Src: 31.13.92.10, Dst: 192.168.1.44
+Transmission Control Protocol, Src Port: 443, Dst Port: 59313, Seq: 823, Ack: 1334, Len: 42
+Secure Sockets Layer
+    TLSv1.2 Record Layer: Application Data Protocol: http-over-tls
+        Content Type: Application Data (23)
+        Version: TLS 1.2 (0x0303)
+        Length: 37
+        Encrypted Application Data: 6b6adfb71475e03edf172cddfca6d4319ee5064e00a21888...
+
+No.     Time           Source                Destination           Protocol Length Info
+     19 3.548989       192.168.1.44          31.13.92.10           TCP      66     59313→443 [ACK] Seq=1334 Ack=865 Win=4094 Len=0 TSval=862808863 TSecr=1871690356
+
+Frame 19: 66 bytes on wire (528 bits), 66 bytes captured (528 bits) on interface 0
+Ethernet II, Src: Apple_1d:4a:73 (a0:99:9b:1d:4a:73), Dst: Sagemcom_7e:6c:ee (84:a4:23:7e:6c:ee)
+    Destination: Sagemcom_7e:6c:ee (84:a4:23:7e:6c:ee)
+    Source: Apple_1d:4a:73 (a0:99:9b:1d:4a:73)
+    Type: IPv4 (0x0800)
+Internet Protocol Version 4, Src: 192.168.1.44, Dst: 31.13.92.10
+Transmission Control Protocol, Src Port: 59313, Dst Port: 443, Seq: 1334, Ack: 865, Len: 0
+
+No.     Time           Source                Destination           Protocol Length Info
+     20 6.609055       192.168.1.44          54.239.192.53         TCP      54     59912→80 [ACK] Seq=1 Ack=1 Win=4101 Len=0
+
+Frame 20: 54 bytes on wire (432 bits), 54 bytes captured (432 bits) on interface 0
+Ethernet II, Src: Apple_1d:4a:73 (a0:99:9b:1d:4a:73), Dst: Sagemcom_7e:6c:ee (84:a4:23:7e:6c:ee)
+    Destination: Sagemcom_7e:6c:ee (84:a4:23:7e:6c:ee)
+    Source: Apple_1d:4a:73 (a0:99:9b:1d:4a:73)
+    Type: IPv4 (0x0800)
+Internet Protocol Version 4, Src: 192.168.1.44, Dst: 54.239.192.53
+Transmission Control Protocol, Src Port: 59912, Dst Port: 80, Seq: 1, Ack: 1, Len: 0
+
+No.     Time           Source                Destination           Protocol Length Info
+     21 6.633939       54.239.192.53         192.168.1.44          TCP      66     [TCP ACKed unseen segment] 80→59912 [ACK] Seq=1 Ack=2 Win=118 Len=0 TSval=2331608691 TSecr=862751767
+
+Frame 21: 66 bytes on wire (528 bits), 66 bytes captured (528 bits) on interface 0
+Ethernet II, Src: Sagemcom_7e:6c:ee (84:a4:23:7e:6c:ee), Dst: Apple_1d:4a:73 (a0:99:9b:1d:4a:73)
+    Destination: Apple_1d:4a:73 (a0:99:9b:1d:4a:73)
+    Source: Sagemcom_7e:6c:ee (84:a4:23:7e:6c:ee)
+    Type: IPv4 (0x0800)
+Internet Protocol Version 4, Src: 54.239.192.53, Dst: 192.168.1.44
+Transmission Control Protocol, Src Port: 80, Dst Port: 59912, Seq: 1, Ack: 2, Len: 0
+
+No.     Time           Source                Destination           Protocol Length Info
+     22 9.422533       162.125.18.133        192.168.1.44          TLSv1.2  323    Application Data
+
+Frame 22: 323 bytes on wire (2584 bits), 323 bytes captured (2584 bits) on interface 0
+Ethernet II, Src: Sagemcom_7e:6c:ee (84:a4:23:7e:6c:ee), Dst: Apple_1d:4a:73 (a0:99:9b:1d:4a:73)
+    Destination: Apple_1d:4a:73 (a0:99:9b:1d:4a:73)
+    Source: Sagemcom_7e:6c:ee (84:a4:23:7e:6c:ee)
+    Type: IPv4 (0x0800)
+Internet Protocol Version 4, Src: 162.125.18.133, Dst: 192.168.1.44
+Transmission Control Protocol, Src Port: 443, Dst Port: 59260, Seq: 1, Ack: 1, Len: 257
+Secure Sockets Layer
+    TLSv1.2 Record Layer: Application Data Protocol: http-over-tls
+        Content Type: Application Data (23)
+        Version: TLS 1.2 (0x0303)
+        Length: 252
+        Encrypted Application Data: 1fa0705d91345ce40077e94bde68fdc0bd3501b5be6e03a6...
+
+No.     Time           Source                Destination           Protocol Length Info
+     23 9.422631       192.168.1.44          162.125.18.133        TCP      66     59260→443 [ACK] Seq=1 Ack=258 Win=4087 Len=0 TSval=862814732 TSecr=1352364289
+
+Frame 23: 66 bytes on wire (528 bits), 66 bytes captured (528 bits) on interface 0
+Ethernet II, Src: Apple_1d:4a:73 (a0:99:9b:1d:4a:73), Dst: Sagemcom_7e:6c:ee (84:a4:23:7e:6c:ee)
+    Destination: Sagemcom_7e:6c:ee (84:a4:23:7e:6c:ee)
+    Source: Apple_1d:4a:73 (a0:99:9b:1d:4a:73)
+    Type: IPv4 (0x0800)
+Internet Protocol Version 4, Src: 192.168.1.44, Dst: 162.125.18.133
+Transmission Control Protocol, Src Port: 59260, Dst Port: 443, Seq: 1, Ack: 258, Len: 0
+
+No.     Time           Source                Destination           Protocol Length Info
+     24 9.422909       162.125.18.133        192.168.1.44          TLSv1.2  323    [TCP Spurious Retransmission] Application Data
+
+Frame 24: 323 bytes on wire (2584 bits), 323 bytes captured (2584 bits) on interface 0
+Ethernet II, Src: Sagemcom_7e:6c:ee (84:a4:23:7e:6c:ee), Dst: Apple_1d:4a:73 (a0:99:9b:1d:4a:73)
+    Destination: Apple_1d:4a:73 (a0:99:9b:1d:4a:73)
+    Source: Sagemcom_7e:6c:ee (84:a4:23:7e:6c:ee)
+    Type: IPv4 (0x0800)
+Internet Protocol Version 4, Src: 162.125.18.133, Dst: 192.168.1.44
+Transmission Control Protocol, Src Port: 443, Dst Port: 59260, Seq: 1, Ack: 1, Len: 257
+Secure Sockets Layer
+    TLSv1.2 Record Layer: Application Data Protocol: http-over-tls
+        Content Type: Application Data (23)
+        Version: TLS 1.2 (0x0303)
+        Length: 252
+        Encrypted Application Data: 1fa0705d91345ce40077e94bde68fdc0bd3501b5be6e03a6...
+
+No.     Time           Source                Destination           Protocol Length Info
+     25 9.422986       192.168.1.44          162.125.18.133        TCP      78     [TCP Dup ACK 23#1] 59260→443 [ACK] Seq=1 Ack=258 Win=4087 Len=0 TSval=862814732 TSecr=1352364468 SLE=1 SRE=258
+
+Frame 25: 78 bytes on wire (624 bits), 78 bytes captured (624 bits) on interface 0
+Ethernet II, Src: Apple_1d:4a:73 (a0:99:9b:1d:4a:73), Dst: Sagemcom_7e:6c:ee (84:a4:23:7e:6c:ee)
+    Destination: Sagemcom_7e:6c:ee (84:a4:23:7e:6c:ee)
+    Source: Apple_1d:4a:73 (a0:99:9b:1d:4a:73)
+    Type: IPv4 (0x0800)
+Internet Protocol Version 4, Src: 192.168.1.44, Dst: 162.125.18.133
+Transmission Control Protocol, Src Port: 59260, Dst Port: 443, Seq: 1, Ack: 258, Len: 0
+
+No.     Time           Source                Destination           Protocol Length Info
+     26 9.427212       192.168.1.44          162.125.18.133        TCP      1494   [TCP segment of a reassembled PDU]
+
+Frame 26: 1494 bytes on wire (11952 bits), 1494 bytes captured (11952 bits) on interface 0
+Ethernet II, Src: Apple_1d:4a:73 (a0:99:9b:1d:4a:73), Dst: Sagemcom_7e:6c:ee (84:a4:23:7e:6c:ee)
+    Destination: Sagemcom_7e:6c:ee (84:a4:23:7e:6c:ee)
+    Source: Apple_1d:4a:73 (a0:99:9b:1d:4a:73)
+    Type: IPv4 (0x0800)
+Internet Protocol Version 4, Src: 192.168.1.44, Dst: 162.125.18.133
+Transmission Control Protocol, Src Port: 59260, Dst Port: 443, Seq: 1, Ack: 258, Len: 1428
+
+No.     Time           Source                Destination           Protocol Length Info
+     27 9.427213       192.168.1.44          162.125.18.133        TLSv1.2  239    Application Data
+
+Frame 27: 239 bytes on wire (1912 bits), 239 bytes captured (1912 bits) on interface 0
+Ethernet II, Src: Apple_1d:4a:73 (a0:99:9b:1d:4a:73), Dst: Sagemcom_7e:6c:ee (84:a4:23:7e:6c:ee)
+    Destination: Sagemcom_7e:6c:ee (84:a4:23:7e:6c:ee)
+    Source: Apple_1d:4a:73 (a0:99:9b:1d:4a:73)
+    Type: IPv4 (0x0800)
+Internet Protocol Version 4, Src: 192.168.1.44, Dst: 162.125.18.133
+Transmission Control Protocol, Src Port: 59260, Dst Port: 443, Seq: 1429, Ack: 258, Len: 173
+[2 Reassembled TCP Segments (1601 bytes): #26(1428), #27(173)]
+Secure Sockets Layer
+    TLSv1.2 Record Layer: Application Data Protocol: http-over-tls
+        Content Type: Application Data (23)
+        Version: TLS 1.2 (0x0303)
+        Length: 1596
+        Encrypted Application Data: ccede5fe6f812f531fcb25f48be4051a5718b916d5c2b2d5...
+
+No.     Time           Source                Destination           Protocol Length Info
+     28 9.582151       162.125.18.133        192.168.1.44          TCP      66     443→59260 [ACK] Seq=258 Ack=1429 Win=360 Len=0 TSval=1352364538 TSecr=862814736
+
+Frame 28: 66 bytes on wire (528 bits), 66 bytes captured (528 bits) on interface 0
+Ethernet II, Src: Sagemcom_7e:6c:ee (84:a4:23:7e:6c:ee), Dst: Apple_1d:4a:73 (a0:99:9b:1d:4a:73)
+    Destination: Apple_1d:4a:73 (a0:99:9b:1d:4a:73)
+    Source: Sagemcom_7e:6c:ee (84:a4:23:7e:6c:ee)
+    Type: IPv4 (0x0800)
+Internet Protocol Version 4, Src: 162.125.18.133, Dst: 192.168.1.44
+Transmission Control Protocol, Src Port: 443, Dst Port: 59260, Seq: 258, Ack: 1429, Len: 0
+
+No.     Time           Source                Destination           Protocol Length Info
+     29 9.585434       162.125.18.133        192.168.1.44          TCP      66     443→59260 [ACK] Seq=258 Ack=1602 Win=360 Len=0 TSval=1352364538 TSecr=862814736
+
+Frame 29: 66 bytes on wire (528 bits), 66 bytes captured (528 bits) on interface 0
+Ethernet II, Src: Sagemcom_7e:6c:ee (84:a4:23:7e:6c:ee), Dst: Apple_1d:4a:73 (a0:99:9b:1d:4a:73)
+    Destination: Apple_1d:4a:73 (a0:99:9b:1d:4a:73)
+    Source: Sagemcom_7e:6c:ee (84:a4:23:7e:6c:ee)
+    Type: IPv4 (0x0800)
+Internet Protocol Version 4, Src: 162.125.18.133, Dst: 192.168.1.44
+Transmission Control Protocol, Src Port: 443, Dst Port: 59260, Seq: 258, Ack: 1602, Len: 0
+
+No.     Time           Source                Destination           Protocol Length Info
+     30 10.446969      192.168.1.57          224.0.0.251           IGMPv2   46     Membership Report group 224.0.0.251
+
+Frame 30: 46 bytes on wire (368 bits), 46 bytes captured (368 bits) on interface 0
+Ethernet II, Src: Azurewav_27:b3:af (24:0a:64:27:b3:af), Dst: IPv4mcast_fb (01:00:5e:00:00:fb)
+    Destination: IPv4mcast_fb (01:00:5e:00:00:fb)
+    Source: Azurewav_27:b3:af (24:0a:64:27:b3:af)
+    Type: IPv4 (0x0800)
+Internet Protocol Version 4, Src: 192.168.1.57, Dst: 224.0.0.251
+Internet Group Management Protocol
+
+No.     Time           Source                Destination           Protocol Length Info
+     31 11.140412      192.168.1.44          131.253.14.227        TCP      78     59920→443 [SYN] Seq=0 Win=65535 Len=0 MSS=1460 WS=32 TSval=862816443 TSecr=0 SACK_PERM=1
+
+Frame 31: 78 bytes on wire (624 bits), 78 bytes captured (624 bits) on interface 0
+Ethernet II, Src: Apple_1d:4a:73 (a0:99:9b:1d:4a:73), Dst: Sagemcom_7e:6c:ee (84:a4:23:7e:6c:ee)
+    Destination: Sagemcom_7e:6c:ee (84:a4:23:7e:6c:ee)
+    Source: Apple_1d:4a:73 (a0:99:9b:1d:4a:73)
+    Type: IPv4 (0x0800)
+Internet Protocol Version 4, Src: 192.168.1.44, Dst: 131.253.14.227
+Transmission Control Protocol, Src Port: 59920, Dst Port: 443, Seq: 0, Len: 0
+
+No.     Time           Source                Destination           Protocol Length Info
+     32 11.266872      131.253.14.227        192.168.1.44          TCP      74     443→59920 [SYN, ACK] Seq=0 Ack=1 Win=8192 Len=0 MSS=1440 WS=256 SACK_PERM=1 TSval=121018697 TSecr=862816443
+
+Frame 32: 74 bytes on wire (592 bits), 74 bytes captured (592 bits) on interface 0
+Ethernet II, Src: Sagemcom_7e:6c:ee (84:a4:23:7e:6c:ee), Dst: Apple_1d:4a:73 (a0:99:9b:1d:4a:73)
+    Destination: Apple_1d:4a:73 (a0:99:9b:1d:4a:73)
+    Source: Sagemcom_7e:6c:ee (84:a4:23:7e:6c:ee)
+    Type: IPv4 (0x0800)
+Internet Protocol Version 4, Src: 131.253.14.227, Dst: 192.168.1.44
+Transmission Control Protocol, Src Port: 443, Dst Port: 59920, Seq: 0, Ack: 1, Len: 0
+
+No.     Time           Source                Destination           Protocol Length Info
+     33 11.266969      192.168.1.44          131.253.14.227        TCP      66     59920→443 [ACK] Seq=1 Ack=1 Win=131360 Len=0 TSval=862816569 TSecr=121018697
+
+Frame 33: 66 bytes on wire (528 bits), 66 bytes captured (528 bits) on interface 0
+Ethernet II, Src: Apple_1d:4a:73 (a0:99:9b:1d:4a:73), Dst: Sagemcom_7e:6c:ee (84:a4:23:7e:6c:ee)
+    Destination: Sagemcom_7e:6c:ee (84:a4:23:7e:6c:ee)
+    Source: Apple_1d:4a:73 (a0:99:9b:1d:4a:73)
+    Type: IPv4 (0x0800)
+Internet Protocol Version 4, Src: 192.168.1.44, Dst: 131.253.14.227
+Transmission Control Protocol, Src Port: 59920, Dst Port: 443, Seq: 1, Ack: 1, Len: 0
+
+No.     Time           Source                Destination           Protocol Length Info
+     34 11.267778      192.168.1.44          131.253.14.227        TLSv1.2  273    Client Hello
+
+Frame 34: 273 bytes on wire (2184 bits), 273 bytes captured (2184 bits) on interface 0
+Ethernet II, Src: Apple_1d:4a:73 (a0:99:9b:1d:4a:73), Dst: Sagemcom_7e:6c:ee (84:a4:23:7e:6c:ee)
+    Destination: Sagemcom_7e:6c:ee (84:a4:23:7e:6c:ee)
+    Source: Apple_1d:4a:73 (a0:99:9b:1d:4a:73)
+    Type: IPv4 (0x0800)
+Internet Protocol Version 4, Src: 192.168.1.44, Dst: 131.253.14.227
+Transmission Control Protocol, Src Port: 59920, Dst Port: 443, Seq: 1, Ack: 1, Len: 207
+Secure Sockets Layer
+    TLSv1.2 Record Layer: Handshake Protocol: Client Hello
+        Content Type: Handshake (22)
+        Version: TLS 1.0 (0x0301)
+        Length: 202
+        Handshake Protocol: Client Hello
+
+No.     Time           Source                Destination           Protocol Length Info
+     35 11.398190      131.253.14.227        192.168.1.44          TCP      1514   [TCP segment of a reassembled PDU]
+
+Frame 35: 1514 bytes on wire (12112 bits), 1514 bytes captured (12112 bits) on interface 0
+Ethernet II, Src: Sagemcom_7e:6c:ee (84:a4:23:7e:6c:ee), Dst: Apple_1d:4a:73 (a0:99:9b:1d:4a:73)
+    Destination: Apple_1d:4a:73 (a0:99:9b:1d:4a:73)
+    Source: Sagemcom_7e:6c:ee (84:a4:23:7e:6c:ee)
+    Type: IPv4 (0x0800)
+Internet Protocol Version 4, Src: 131.253.14.227, Dst: 192.168.1.44
+Transmission Control Protocol, Src Port: 443, Dst Port: 59920, Seq: 1, Ack: 208, Len: 1448
+
+No.     Time           Source                Destination           Protocol Length Info
+     36 11.399014      131.253.14.227        192.168.1.44          TCP      1514   [TCP segment of a reassembled PDU]
+
+Frame 36: 1514 bytes on wire (12112 bits), 1514 bytes captured (12112 bits) on interface 0
+Ethernet II, Src: Sagemcom_7e:6c:ee (84:a4:23:7e:6c:ee), Dst: Apple_1d:4a:73 (a0:99:9b:1d:4a:73)
+    Destination: Apple_1d:4a:73 (a0:99:9b:1d:4a:73)
+    Source: Sagemcom_7e:6c:ee (84:a4:23:7e:6c:ee)
+    Type: IPv4 (0x0800)
+Internet Protocol Version 4, Src: 131.253.14.227, Dst: 192.168.1.44
+Transmission Control Protocol, Src Port: 443, Dst Port: 59920, Seq: 1449, Ack: 208, Len: 1448
+
+No.     Time           Source                Destination           Protocol Length Info
+     37 11.399021      131.253.14.227        192.168.1.44          TCP      1514   [TCP segment of a reassembled PDU]
+
+Frame 37: 1514 bytes on wire (12112 bits), 1514 bytes captured (12112 bits) on interface 0
+Ethernet II, Src: Sagemcom_7e:6c:ee (84:a4:23:7e:6c:ee), Dst: Apple_1d:4a:73 (a0:99:9b:1d:4a:73)
+    Destination: Apple_1d:4a:73 (a0:99:9b:1d:4a:73)
+    Source: Sagemcom_7e:6c:ee (84:a4:23:7e:6c:ee)
+    Type: IPv4 (0x0800)
+Internet Protocol Version 4, Src: 131.253.14.227, Dst: 192.168.1.44
+Transmission Control Protocol, Src Port: 443, Dst Port: 59920, Seq: 2897, Ack: 208, Len: 1448
+
+No.     Time           Source                Destination           Protocol Length Info
+     38 11.399106      192.168.1.44          131.253.14.227        TCP      66     59920→443 [ACK] Seq=208 Ack=2897 Win=129600 Len=0 TSval=862816699 TSecr=121018709
+
+Frame 38: 66 bytes on wire (528 bits), 66 bytes captured (528 bits) on interface 0
+Ethernet II, Src: Apple_1d:4a:73 (a0:99:9b:1d:4a:73), Dst: Sagemcom_7e:6c:ee (84:a4:23:7e:6c:ee)
+    Destination: Sagemcom_7e:6c:ee (84:a4:23:7e:6c:ee)
+    Source: Apple_1d:4a:73 (a0:99:9b:1d:4a:73)
+    Type: IPv4 (0x0800)
+Internet Protocol Version 4, Src: 192.168.1.44, Dst: 131.253.14.227
+Transmission Control Protocol, Src Port: 59920, Dst Port: 443, Seq: 208, Ack: 2897, Len: 0
+
+No.     Time           Source                Destination           Protocol Length Info
+     39 11.399257      192.168.1.44          131.253.14.227        TCP      66     59920→443 [ACK] Seq=208 Ack=4345 Win=131072 Len=0 TSval=862816699 TSecr=121018709
+
+Frame 39: 66 bytes on wire (528 bits), 66 bytes captured (528 bits) on interface 0
+Ethernet II, Src: Apple_1d:4a:73 (a0:99:9b:1d:4a:73), Dst: Sagemcom_7e:6c:ee (84:a4:23:7e:6c:ee)
+    Destination: Sagemcom_7e:6c:ee (84:a4:23:7e:6c:ee)
+    Source: Apple_1d:4a:73 (a0:99:9b:1d:4a:73)
+    Type: IPv4 (0x0800)
+Internet Protocol Version 4, Src: 192.168.1.44, Dst: 131.253.14.227
+Transmission Control Protocol, Src Port: 59920, Dst Port: 443, Seq: 208, Ack: 4345, Len: 0
+
+No.     Time           Source                Destination           Protocol Length Info
+     40 11.417784      131.253.14.227        192.168.1.44          TCP      1514   [TCP segment of a reassembled PDU]
+
+Frame 40: 1514 bytes on wire (12112 bits), 1514 bytes captured (12112 bits) on interface 0
+Ethernet II, Src: Sagemcom_7e:6c:ee (84:a4:23:7e:6c:ee), Dst: Apple_1d:4a:73 (a0:99:9b:1d:4a:73)
+    Destination: Apple_1d:4a:73 (a0:99:9b:1d:4a:73)
+    Source: Sagemcom_7e:6c:ee (84:a4:23:7e:6c:ee)
+    Type: IPv4 (0x0800)
+Internet Protocol Version 4, Src: 131.253.14.227, Dst: 192.168.1.44
+Transmission Control Protocol, Src Port: 443, Dst Port: 59920, Seq: 4345, Ack: 208, Len: 1448
+
+No.     Time           Source                Destination           Protocol Length Info
+     41 11.519591      192.168.1.44          131.253.14.227        TCP      66     59920→443 [ACK] Seq=208 Ack=5793 Win=131072 Len=0 TSval=862816819 TSecr=121018709
+
+Frame 41: 66 bytes on wire (528 bits), 66 bytes captured (528 bits) on interface 0
+Ethernet II, Src: Apple_1d:4a:73 (a0:99:9b:1d:4a:73), Dst: Sagemcom_7e:6c:ee (84:a4:23:7e:6c:ee)
+    Destination: Sagemcom_7e:6c:ee (84:a4:23:7e:6c:ee)
+    Source: Apple_1d:4a:73 (a0:99:9b:1d:4a:73)
+    Type: IPv4 (0x0800)
+Internet Protocol Version 4, Src: 192.168.1.44, Dst: 131.253.14.227
+Transmission Control Protocol, Src Port: 59920, Dst Port: 443, Seq: 208, Ack: 5793, Len: 0
+
+No.     Time           Source                Destination           Protocol Length Info
+     42 11.551946      131.253.14.227        192.168.1.44          TCP      1514   [TCP segment of a reassembled PDU]
+
+Frame 42: 1514 bytes on wire (12112 bits), 1514 bytes captured (12112 bits) on interface 0
+Ethernet II, Src: Sagemcom_7e:6c:ee (84:a4:23:7e:6c:ee), Dst: Apple_1d:4a:73 (a0:99:9b:1d:4a:73)
+    Destination: Apple_1d:4a:73 (a0:99:9b:1d:4a:73)
+    Source: Sagemcom_7e:6c:ee (84:a4:23:7e:6c:ee)
+    Type: IPv4 (0x0800)
+Internet Protocol Version 4, Src: 131.253.14.227, Dst: 192.168.1.44
+Transmission Control Protocol, Src Port: 443, Dst Port: 59920, Seq: 5793, Ack: 208, Len: 1448
+
+No.     Time           Source                Destination           Protocol Length Info
+     43 11.574966      131.253.14.227        192.168.1.44          TLSv1.2  1413   Server Hello, Certificate, Certificate Status, Server Key Exchange, Server Hello Done
+
+Frame 43: 1413 bytes on wire (11304 bits), 1413 bytes captured (11304 bits) on interface 0
+Ethernet II, Src: Sagemcom_7e:6c:ee (84:a4:23:7e:6c:ee), Dst: Apple_1d:4a:73 (a0:99:9b:1d:4a:73)
+    Destination: Apple_1d:4a:73 (a0:99:9b:1d:4a:73)
+    Source: Sagemcom_7e:6c:ee (84:a4:23:7e:6c:ee)
+    Type: IPv4 (0x0800)
+Internet Protocol Version 4, Src: 131.253.14.227, Dst: 192.168.1.44
+Transmission Control Protocol, Src Port: 443, Dst Port: 59920, Seq: 7241, Ack: 208, Len: 1347
+[6 Reassembled TCP Segments (8587 bytes): #35(1448), #36(1448), #37(1448), #40(1448), #42(1448), #43(1347)]
+Secure Sockets Layer
+    TLSv1.2 Record Layer: Handshake Protocol: Multiple Handshake Messages
+        Content Type: Handshake (22)
+        Version: TLS 1.2 (0x0303)
+        Length: 8582
+        Handshake Protocol: Server Hello
+        Handshake Protocol: Certificate
+        Handshake Protocol: Certificate Status
+        Handshake Protocol: Server Key Exchange
+        Handshake Protocol: Server Hello Done
+
+No.     Time           Source                Destination           Protocol Length Info
+     44 11.575051      192.168.1.44          131.253.14.227        TCP      66     59920→443 [ACK] Seq=208 Ack=8588 Win=129696 Len=0 TSval=862816874 TSecr=121018726
+
+Frame 44: 66 bytes on wire (528 bits), 66 bytes captured (528 bits) on interface 0
+Ethernet II, Src: Apple_1d:4a:73 (a0:99:9b:1d:4a:73), Dst: Sagemcom_7e:6c:ee (84:a4:23:7e:6c:ee)
+    Destination: Sagemcom_7e:6c:ee (84:a4:23:7e:6c:ee)
+    Source: Apple_1d:4a:73 (a0:99:9b:1d:4a:73)
+    Type: IPv4 (0x0800)
+Internet Protocol Version 4, Src: 192.168.1.44, Dst: 131.253.14.227
+Transmission Control Protocol, Src Port: 59920, Dst Port: 443, Seq: 208, Ack: 8588, Len: 0
+
+No.     Time           Source                Destination           Protocol Length Info
+     45 11.591096      192.168.1.44          131.253.14.227        TLSv1.2  173    Client Key Exchange
+
+Frame 45: 173 bytes on wire (1384 bits), 173 bytes captured (1384 bits) on interface 0
+Ethernet II, Src: Apple_1d:4a:73 (a0:99:9b:1d:4a:73), Dst: Sagemcom_7e:6c:ee (84:a4:23:7e:6c:ee)
+    Destination: Sagemcom_7e:6c:ee (84:a4:23:7e:6c:ee)
+    Source: Apple_1d:4a:73 (a0:99:9b:1d:4a:73)
+    Type: IPv4 (0x0800)
+Internet Protocol Version 4, Src: 192.168.1.44, Dst: 131.253.14.227
+Transmission Control Protocol, Src Port: 59920, Dst Port: 443, Seq: 208, Ack: 8588, Len: 107
+Secure Sockets Layer
+    TLSv1.2 Record Layer: Handshake Protocol: Client Key Exchange
+        Content Type: Handshake (22)
+        Version: TLS 1.2 (0x0303)
+        Length: 102
+        Handshake Protocol: Client Key Exchange
+
+No.     Time           Source                Destination           Protocol Length Info
+     46 11.591097      192.168.1.44          131.253.14.227        TLSv1.2  72     Change Cipher Spec
+
+Frame 46: 72 bytes on wire (576 bits), 72 bytes captured (576 bits) on interface 0
+Ethernet II, Src: Apple_1d:4a:73 (a0:99:9b:1d:4a:73), Dst: Sagemcom_7e:6c:ee (84:a4:23:7e:6c:ee)
+    Destination: Sagemcom_7e:6c:ee (84:a4:23:7e:6c:ee)
+    Source: Apple_1d:4a:73 (a0:99:9b:1d:4a:73)
+    Type: IPv4 (0x0800)
+Internet Protocol Version 4, Src: 192.168.1.44, Dst: 131.253.14.227
+Transmission Control Protocol, Src Port: 59920, Dst Port: 443, Seq: 315, Ack: 8588, Len: 6
+Secure Sockets Layer
+    TLSv1.2 Record Layer: Change Cipher Spec Protocol: Change Cipher Spec
+        Content Type: Change Cipher Spec (20)
+        Version: TLS 1.2 (0x0303)
+        Length: 1
+        Change Cipher Spec Message
+
+No.     Time           Source                Destination           Protocol Length Info
+     47 11.591098      192.168.1.44          131.253.14.227        TLSv1.2  167    Encrypted Handshake Message
+
+Frame 47: 167 bytes on wire (1336 bits), 167 bytes captured (1336 bits) on interface 0
+Ethernet II, Src: Apple_1d:4a:73 (a0:99:9b:1d:4a:73), Dst: Sagemcom_7e:6c:ee (84:a4:23:7e:6c:ee)
+    Destination: Sagemcom_7e:6c:ee (84:a4:23:7e:6c:ee)
+    Source: Apple_1d:4a:73 (a0:99:9b:1d:4a:73)
+    Type: IPv4 (0x0800)
+Internet Protocol Version 4, Src: 192.168.1.44, Dst: 131.253.14.227
+Transmission Control Protocol, Src Port: 59920, Dst Port: 443, Seq: 321, Ack: 8588, Len: 101
+Secure Sockets Layer
+    TLSv1.2 Record Layer: Handshake Protocol: Encrypted Handshake Message
+        Content Type: Handshake (22)
+        Version: TLS 1.2 (0x0303)
+        Length: 96
+        Handshake Protocol: Encrypted Handshake Message
+
+No.     Time           Source                Destination           Protocol Length Info
+     48 11.760130      131.253.14.227        192.168.1.44          TCP      66     443→59920 [ACK] Seq=8588 Ack=321 Win=131584 Len=0 TSval=121018746 TSecr=862816890
+
+Frame 48: 66 bytes on wire (528 bits), 66 bytes captured (528 bits) on interface 0
+Ethernet II, Src: Sagemcom_7e:6c:ee (84:a4:23:7e:6c:ee), Dst: Apple_1d:4a:73 (a0:99:9b:1d:4a:73)
+    Destination: Apple_1d:4a:73 (a0:99:9b:1d:4a:73)
+    Source: Sagemcom_7e:6c:ee (84:a4:23:7e:6c:ee)
+    Type: IPv4 (0x0800)
+Internet Protocol Version 4, Src: 131.253.14.227, Dst: 192.168.1.44
+Transmission Control Protocol, Src Port: 443, Dst Port: 59920, Seq: 8588, Ack: 321, Len: 0
+
+No.     Time           Source                Destination           Protocol Length Info
+     49 11.761513      131.253.14.227        192.168.1.44          TLSv1.2  173    Change Cipher Spec, Encrypted Handshake Message
+
+Frame 49: 173 bytes on wire (1384 bits), 173 bytes captured (1384 bits) on interface 0
+Ethernet II, Src: Sagemcom_7e:6c:ee (84:a4:23:7e:6c:ee), Dst: Apple_1d:4a:73 (a0:99:9b:1d:4a:73)
+    Destination: Apple_1d:4a:73 (a0:99:9b:1d:4a:73)
+    Source: Sagemcom_7e:6c:ee (84:a4:23:7e:6c:ee)
+    Type: IPv4 (0x0800)
+Internet Protocol Version 4, Src: 131.253.14.227, Dst: 192.168.1.44
+Transmission Control Protocol, Src Port: 443, Dst Port: 59920, Seq: 8588, Ack: 422, Len: 107
+Secure Sockets Layer
+    TLSv1.2 Record Layer: Change Cipher Spec Protocol: Change Cipher Spec
+        Content Type: Change Cipher Spec (20)
+        Version: TLS 1.2 (0x0303)
+        Length: 1
+        Change Cipher Spec Message
+    TLSv1.2 Record Layer: Handshake Protocol: Encrypted Handshake Message
+        Content Type: Handshake (22)
+        Version: TLS 1.2 (0x0303)
+        Length: 96
+        Handshake Protocol: Encrypted Handshake Message
+
+No.     Time           Source                Destination           Protocol Length Info
+     50 11.761606      192.168.1.44          131.253.14.227        TCP      66     59920→443 [ACK] Seq=422 Ack=8695 Win=130944 Len=0 TSval=862817059 TSecr=121018747
+
+Frame 50: 66 bytes on wire (528 bits), 66 bytes captured (528 bits) on interface 0
+Ethernet II, Src: Apple_1d:4a:73 (a0:99:9b:1d:4a:73), Dst: Sagemcom_7e:6c:ee (84:a4:23:7e:6c:ee)
+    Destination: Sagemcom_7e:6c:ee (84:a4:23:7e:6c:ee)
+    Source: Apple_1d:4a:73 (a0:99:9b:1d:4a:73)
+    Type: IPv4 (0x0800)
+Internet Protocol Version 4, Src: 192.168.1.44, Dst: 131.253.14.227
+Transmission Control Protocol, Src Port: 59920, Dst Port: 443, Seq: 422, Ack: 8695, Len: 0
+
+No.     Time           Source                Destination           Protocol Length Info
+     51 11.762088      192.168.1.44          131.253.14.227        TCP      1494   [TCP segment of a reassembled PDU]
+
+Frame 51: 1494 bytes on wire (11952 bits), 1494 bytes captured (11952 bits) on interface 0
+Ethernet II, Src: Apple_1d:4a:73 (a0:99:9b:1d:4a:73), Dst: Sagemcom_7e:6c:ee (84:a4:23:7e:6c:ee)
+    Destination: Sagemcom_7e:6c:ee (84:a4:23:7e:6c:ee)
+    Source: Apple_1d:4a:73 (a0:99:9b:1d:4a:73)
+    Type: IPv4 (0x0800)
+Internet Protocol Version 4, Src: 192.168.1.44, Dst: 131.253.14.227
+Transmission Control Protocol, Src Port: 59920, Dst Port: 443, Seq: 422, Ack: 8695, Len: 1428
+
+No.     Time           Source                Destination           Protocol Length Info
+     52 11.762089      192.168.1.44          131.253.14.227        TCP      1494   [TCP segment of a reassembled PDU]
+
+Frame 52: 1494 bytes on wire (11952 bits), 1494 bytes captured (11952 bits) on interface 0
+Ethernet II, Src: Apple_1d:4a:73 (a0:99:9b:1d:4a:73), Dst: Sagemcom_7e:6c:ee (84:a4:23:7e:6c:ee)
+    Destination: Sagemcom_7e:6c:ee (84:a4:23:7e:6c:ee)
+    Source: Apple_1d:4a:73 (a0:99:9b:1d:4a:73)
+    Type: IPv4 (0x0800)
+Internet Protocol Version 4, Src: 192.168.1.44, Dst: 131.253.14.227
+Transmission Control Protocol, Src Port: 59920, Dst Port: 443, Seq: 1850, Ack: 8695, Len: 1428
+
+No.     Time           Source                Destination           Protocol Length Info
+     53 11.762090      192.168.1.44          131.253.14.227        TLSv1.2  623    Application Data
+
+Frame 53: 623 bytes on wire (4984 bits), 623 bytes captured (4984 bits) on interface 0
+Ethernet II, Src: Apple_1d:4a:73 (a0:99:9b:1d:4a:73), Dst: Sagemcom_7e:6c:ee (84:a4:23:7e:6c:ee)
+    Destination: Sagemcom_7e:6c:ee (84:a4:23:7e:6c:ee)
+    Source: Apple_1d:4a:73 (a0:99:9b:1d:4a:73)
+    Type: IPv4 (0x0800)
+Internet Protocol Version 4, Src: 192.168.1.44, Dst: 131.253.14.227
+Transmission Control Protocol, Src Port: 59920, Dst Port: 443, Seq: 3278, Ack: 8695, Len: 557
+[3 Reassembled TCP Segments (3413 bytes): #51(1428), #52(1428), #53(557)]
+Secure Sockets Layer
+    TLSv1.2 Record Layer: Application Data Protocol: http-over-tls
+        Content Type: Application Data (23)
+        Version: TLS 1.2 (0x0303)
+        Length: 3408
+        Encrypted Application Data: ef9cd12a95d338f9defe65e180beed323c94c3949043c1a4...
+
+No.     Time           Source                Destination           Protocol Length Info
+     54 11.762190      192.168.1.44          131.253.14.227        TLSv1.2  359    Application Data
+
+Frame 54: 359 bytes on wire (2872 bits), 359 bytes captured (2872 bits) on interface 0
+Ethernet II, Src: Apple_1d:4a:73 (a0:99:9b:1d:4a:73), Dst: Sagemcom_7e:6c:ee (84:a4:23:7e:6c:ee)
+    Destination: Sagemcom_7e:6c:ee (84:a4:23:7e:6c:ee)
+    Source: Apple_1d:4a:73 (a0:99:9b:1d:4a:73)
+    Type: IPv4 (0x0800)
+Internet Protocol Version 4, Src: 192.168.1.44, Dst: 131.253.14.227
+Transmission Control Protocol, Src Port: 59920, Dst Port: 443, Seq: 3835, Ack: 8695, Len: 293
+Secure Sockets Layer
+    TLSv1.2 Record Layer: Application Data Protocol: http-over-tls
+        Content Type: Application Data (23)
+        Version: TLS 1.2 (0x0303)
+        Length: 288
+        Encrypted Application Data: fad0b3cee3c6b59de0d0b55cba398f9db1588e8c6d5eba80...
+
+No.     Time           Source                Destination           Protocol Length Info
+     55 11.900913      131.253.14.227        192.168.1.44          TCP      66     443→59920 [ACK] Seq=8695 Ack=3278 Win=131584 Len=0 TSval=121018761 TSecr=862817059
+
+Frame 55: 66 bytes on wire (528 bits), 66 bytes captured (528 bits) on interface 0
+Ethernet II, Src: Sagemcom_7e:6c:ee (84:a4:23:7e:6c:ee), Dst: Apple_1d:4a:73 (a0:99:9b:1d:4a:73)
+    Destination: Apple_1d:4a:73 (a0:99:9b:1d:4a:73)
+    Source: Sagemcom_7e:6c:ee (84:a4:23:7e:6c:ee)
+    Type: IPv4 (0x0800)
+Internet Protocol Version 4, Src: 131.253.14.227, Dst: 192.168.1.44
+Transmission Control Protocol, Src Port: 443, Dst Port: 59920, Seq: 8695, Ack: 3278, Len: 0
+
+No.     Time           Source                Destination           Protocol Length Info
+     56 11.908909      131.253.14.227        192.168.1.44          TCP      66     443→59920 [ACK] Seq=8695 Ack=4128 Win=130816 Len=0 TSval=121018761 TSecr=862817059
+
+Frame 56: 66 bytes on wire (528 bits), 66 bytes captured (528 bits) on interface 0
+Ethernet II, Src: Sagemcom_7e:6c:ee (84:a4:23:7e:6c:ee), Dst: Apple_1d:4a:73 (a0:99:9b:1d:4a:73)
+    Destination: Apple_1d:4a:73 (a0:99:9b:1d:4a:73)
+    Source: Sagemcom_7e:6c:ee (84:a4:23:7e:6c:ee)
+    Type: IPv4 (0x0800)
+Internet Protocol Version 4, Src: 131.253.14.227, Dst: 192.168.1.44
+Transmission Control Protocol, Src Port: 443, Dst Port: 59920, Seq: 8695, Ack: 4128, Len: 0
+
+No.     Time           Source                Destination           Protocol Length Info
+     57 11.959586      131.253.14.227        192.168.1.44          TLSv1.2  935    Application Data
+
+Frame 57: 935 bytes on wire (7480 bits), 935 bytes captured (7480 bits) on interface 0
+Ethernet II, Src: Sagemcom_7e:6c:ee (84:a4:23:7e:6c:ee), Dst: Apple_1d:4a:73 (a0:99:9b:1d:4a:73)
+    Destination: Apple_1d:4a:73 (a0:99:9b:1d:4a:73)
+    Source: Sagemcom_7e:6c:ee (84:a4:23:7e:6c:ee)
+    Type: IPv4 (0x0800)
+Internet Protocol Version 4, Src: 131.253.14.227, Dst: 192.168.1.44
+Transmission Control Protocol, Src Port: 443, Dst Port: 59920, Seq: 8695, Ack: 4128, Len: 869
+Secure Sockets Layer
+    TLSv1.2 Record Layer: Application Data Protocol: http-over-tls
+        Content Type: Application Data (23)
+        Version: TLS 1.2 (0x0303)
+        Length: 864
+        Encrypted Application Data: c51259716992b5930c32e0c6a60579e86022df8a24a8bc13...
+
+No.     Time           Source                Destination           Protocol Length Info
+     58 11.959677      192.168.1.44          131.253.14.227        TCP      66     59920→443 [ACK] Seq=4128 Ack=9564 Win=130176 Len=0 TSval=862817255 TSecr=121018765
+
+Frame 58: 66 bytes on wire (528 bits), 66 bytes captured (528 bits) on interface 0
+Ethernet II, Src: Apple_1d:4a:73 (a0:99:9b:1d:4a:73), Dst: Sagemcom_7e:6c:ee (84:a4:23:7e:6c:ee)
+    Destination: Sagemcom_7e:6c:ee (84:a4:23:7e:6c:ee)
+    Source: Apple_1d:4a:73 (a0:99:9b:1d:4a:73)
+    Type: IPv4 (0x0800)
+Internet Protocol Version 4, Src: 192.168.1.44, Dst: 131.253.14.227
+Transmission Control Protocol, Src Port: 59920, Dst Port: 443, Seq: 4128, Ack: 9564, Len: 0
+
+No.     Time           Source                Destination           Protocol Length Info
+     59 11.960617      192.168.1.44          131.253.14.227        TCP      66     59920→443 [FIN, ACK] Seq=4128 Ack=9564 Win=131072 Len=0 TSval=862817255 TSecr=121018765
+
+Frame 59: 66 bytes on wire (528 bits), 66 bytes captured (528 bits) on interface 0
+Ethernet II, Src: Apple_1d:4a:73 (a0:99:9b:1d:4a:73), Dst: Sagemcom_7e:6c:ee (84:a4:23:7e:6c:ee)
+    Destination: Sagemcom_7e:6c:ee (84:a4:23:7e:6c:ee)
+    Source: Apple_1d:4a:73 (a0:99:9b:1d:4a:73)
+    Type: IPv4 (0x0800)
+Internet Protocol Version 4, Src: 192.168.1.44, Dst: 131.253.14.227
+Transmission Control Protocol, Src Port: 59920, Dst Port: 443, Seq: 4128, Ack: 9564, Len: 0
+
+No.     Time           Source                Destination           Protocol Length Info
+     60 12.084790      131.253.14.227        192.168.1.44          TCP      66     443→59920 [FIN, ACK] Seq=9564 Ack=4129 Win=130816 Len=0 TSval=121018779 TSecr=862817255
+
+Frame 60: 66 bytes on wire (528 bits), 66 bytes captured (528 bits) on interface 0
+Ethernet II, Src: Sagemcom_7e:6c:ee (84:a4:23:7e:6c:ee), Dst: Apple_1d:4a:73 (a0:99:9b:1d:4a:73)
+    Destination: Apple_1d:4a:73 (a0:99:9b:1d:4a:73)
+    Source: Sagemcom_7e:6c:ee (84:a4:23:7e:6c:ee)
+    Type: IPv4 (0x0800)
+Internet Protocol Version 4, Src: 131.253.14.227, Dst: 192.168.1.44
+Transmission Control Protocol, Src Port: 443, Dst Port: 59920, Seq: 9564, Ack: 4129, Len: 0
+
+No.     Time           Source                Destination           Protocol Length Info
+     61 12.084894      192.168.1.44          131.253.14.227        TCP      66     59920→443 [ACK] Seq=4129 Ack=9565 Win=131072 Len=0 TSval=862817380 TSecr=121018779
+
+Frame 61: 66 bytes on wire (528 bits), 66 bytes captured (528 bits) on interface 0
+Ethernet II, Src: Apple_1d:4a:73 (a0:99:9b:1d:4a:73), Dst: Sagemcom_7e:6c:ee (84:a4:23:7e:6c:ee)
+    Destination: Sagemcom_7e:6c:ee (84:a4:23:7e:6c:ee)
+    Source: Apple_1d:4a:73 (a0:99:9b:1d:4a:73)
+    Type: IPv4 (0x0800)
+Internet Protocol Version 4, Src: 192.168.1.44, Dst: 131.253.14.227
+Transmission Control Protocol, Src Port: 59920, Dst Port: 443, Seq: 4129, Ack: 9565, Len: 0
+
+No.     Time           Source                Destination           Protocol Length Info
+     62 12.554891      192.168.1.44          31.13.92.10           TLSv1.2  397    Application Data
+
+Frame 62: 397 bytes on wire (3176 bits), 397 bytes captured (3176 bits) on interface 0
+Ethernet II, Src: Apple_1d:4a:73 (a0:99:9b:1d:4a:73), Dst: Sagemcom_7e:6c:ee (84:a4:23:7e:6c:ee)
+    Destination: Sagemcom_7e:6c:ee (84:a4:23:7e:6c:ee)
+    Source: Apple_1d:4a:73 (a0:99:9b:1d:4a:73)
+    Type: IPv4 (0x0800)
+Internet Protocol Version 4, Src: 192.168.1.44, Dst: 31.13.92.10
+Transmission Control Protocol, Src Port: 59844, Dst Port: 443, Seq: 1, Ack: 1, Len: 331
+Secure Sockets Layer
+    TLSv1.2 Record Layer: Application Data Protocol: http-over-tls
+        Content Type: Application Data (23)
+        Version: TLS 1.2 (0x0303)
+        Length: 326
+        Encrypted Application Data: 5a2f9dc40384884a58c8f2e642ade5c6721d1163849b32d1...
+
+No.     Time           Source                Destination           Protocol Length Info
+     63 12.555783      192.168.1.44          31.13.92.10           TLSv1.2  1047   Application Data
+
+Frame 63: 1047 bytes on wire (8376 bits), 1047 bytes captured (8376 bits) on interface 0
+Ethernet II, Src: Apple_1d:4a:73 (a0:99:9b:1d:4a:73), Dst: Sagemcom_7e:6c:ee (84:a4:23:7e:6c:ee)
+    Destination: Sagemcom_7e:6c:ee (84:a4:23:7e:6c:ee)
+    Source: Apple_1d:4a:73 (a0:99:9b:1d:4a:73)
+    Type: IPv4 (0x0800)
+Internet Protocol Version 4, Src: 192.168.1.44, Dst: 31.13.92.10
+Transmission Control Protocol, Src Port: 59844, Dst Port: 443, Seq: 332, Ack: 1, Len: 981
+Secure Sockets Layer
+    TLSv1.2 Record Layer: Application Data Protocol: http-over-tls
+        Content Type: Application Data (23)
+        Version: TLS 1.2 (0x0303)
+        Length: 976
+        Encrypted Application Data: 5a2f9dc40384884bf0d6f6311fbc747049780010e9cd69f8...
+
+No.     Time           Source                Destination           Protocol Length Info
+     64 12.587318      31.13.92.10           192.168.1.44          TLSv1.2  108    Application Data
+
+Frame 64: 108 bytes on wire (864 bits), 108 bytes captured (864 bits) on interface 0
+Ethernet II, Src: Sagemcom_7e:6c:ee (84:a4:23:7e:6c:ee), Dst: Apple_1d:4a:73 (a0:99:9b:1d:4a:73)
+    Destination: Apple_1d:4a:73 (a0:99:9b:1d:4a:73)
+    Source: Sagemcom_7e:6c:ee (84:a4:23:7e:6c:ee)
+    Type: IPv4 (0x0800)
+Internet Protocol Version 4, Src: 31.13.92.10, Dst: 192.168.1.44
+Transmission Control Protocol, Src Port: 443, Dst Port: 59844, Seq: 1, Ack: 332, Len: 42
+Secure Sockets Layer
+    TLSv1.2 Record Layer: Application Data Protocol: http-over-tls
+        Content Type: Application Data (23)
+        Version: TLS 1.2 (0x0303)
+        Length: 37
+        Encrypted Application Data: e1643aad16836332e2fce7fb0890dc0011d9f9993eaf23eb...
+
+No.     Time           Source                Destination           Protocol Length Info
+     65 12.587415      192.168.1.44          31.13.92.10           TCP      66     59844→443 [ACK] Seq=1313 Ack=43 Win=4094 Len=0 TSval=862817880 TSecr=3510823530
+
+Frame 65: 66 bytes on wire (528 bits), 66 bytes captured (528 bits) on interface 0
+Ethernet II, Src: Apple_1d:4a:73 (a0:99:9b:1d:4a:73), Dst: Sagemcom_7e:6c:ee (84:a4:23:7e:6c:ee)
+    Destination: Sagemcom_7e:6c:ee (84:a4:23:7e:6c:ee)
+    Source: Apple_1d:4a:73 (a0:99:9b:1d:4a:73)
+    Type: IPv4 (0x0800)
+Internet Protocol Version 4, Src: 192.168.1.44, Dst: 31.13.92.10
+Transmission Control Protocol, Src Port: 59844, Dst Port: 443, Seq: 1313, Ack: 43, Len: 0
+
+No.     Time           Source                Destination           Protocol Length Info
+     66 12.624947      31.13.92.10           192.168.1.44          TCP      66     443→59844 [ACK] Seq=43 Ack=1313 Win=1043 Len=0 TSval=3510823568 TSecr=862817848
+
+Frame 66: 66 bytes on wire (528 bits), 66 bytes captured (528 bits) on interface 0
+Ethernet II, Src: Sagemcom_7e:6c:ee (84:a4:23:7e:6c:ee), Dst: Apple_1d:4a:73 (a0:99:9b:1d:4a:73)
+    Destination: Apple_1d:4a:73 (a0:99:9b:1d:4a:73)
+    Source: Sagemcom_7e:6c:ee (84:a4:23:7e:6c:ee)
+    Type: IPv4 (0x0800)
+Internet Protocol Version 4, Src: 31.13.92.10, Dst: 192.168.1.44
+Transmission Control Protocol, Src Port: 443, Dst Port: 59844, Seq: 43, Ack: 1313, Len: 0
+
+No.     Time           Source                Destination           Protocol Length Info
+     67 12.708787      31.13.92.10           192.168.1.44          TLSv1.2  559    Application Data
+
+Frame 67: 559 bytes on wire (4472 bits), 559 bytes captured (4472 bits) on interface 0
+Ethernet II, Src: Sagemcom_7e:6c:ee (84:a4:23:7e:6c:ee), Dst: Apple_1d:4a:73 (a0:99:9b:1d:4a:73)
+    Destination: Apple_1d:4a:73 (a0:99:9b:1d:4a:73)
+    Source: Sagemcom_7e:6c:ee (84:a4:23:7e:6c:ee)
+    Type: IPv4 (0x0800)
+Internet Protocol Version 4, Src: 31.13.92.10, Dst: 192.168.1.44
+Transmission Control Protocol, Src Port: 443, Dst Port: 59844, Seq: 43, Ack: 1313, Len: 493
+Secure Sockets Layer
+    TLSv1.2 Record Layer: Application Data Protocol: http-over-tls
+        Content Type: Application Data (23)
+        Version: TLS 1.2 (0x0303)
+        Length: 488
+        Encrypted Application Data: e1643aad16836333d8fd8593152eabb39a114b656a7258e3...
+
+No.     Time           Source                Destination           Protocol Length Info
+     68 12.708879      192.168.1.44          31.13.92.10           TCP      66     59844→443 [ACK] Seq=1313 Ack=536 Win=4080 Len=0 TSval=862817999 TSecr=3510823653
+
+Frame 68: 66 bytes on wire (528 bits), 66 bytes captured (528 bits) on interface 0
+Ethernet II, Src: Apple_1d:4a:73 (a0:99:9b:1d:4a:73), Dst: Sagemcom_7e:6c:ee (84:a4:23:7e:6c:ee)
+    Destination: Sagemcom_7e:6c:ee (84:a4:23:7e:6c:ee)
+    Source: Apple_1d:4a:73 (a0:99:9b:1d:4a:73)
+    Type: IPv4 (0x0800)
+Internet Protocol Version 4, Src: 192.168.1.44, Dst: 31.13.92.10
+Transmission Control Protocol, Src Port: 59844, Dst Port: 443, Seq: 1313, Ack: 536, Len: 0
+
+No.     Time           Source                Destination           Protocol Length Info
+     69 12.903634      192.168.1.57          192.168.1.255         BROWSER  243    Host Announcement WOJCIECH, Workstation, Server, Print Queue Server, NT Workstation, Potential Browser
+
+Frame 69: 243 bytes on wire (1944 bits), 243 bytes captured (1944 bits) on interface 0
+Ethernet II, Src: Azurewav_27:b3:af (24:0a:64:27:b3:af), Dst: Broadcast (ff:ff:ff:ff:ff:ff)
+    Destination: Broadcast (ff:ff:ff:ff:ff:ff)
+    Source: Azurewav_27:b3:af (24:0a:64:27:b3:af)
+    Type: IPv4 (0x0800)
+Internet Protocol Version 4, Src: 192.168.1.57, Dst: 192.168.1.255
+User Datagram Protocol, Src Port: 138, Dst Port: 138
+NetBIOS Datagram Service
+SMB (Server Message Block Protocol)
+SMB MailSlot Protocol
+Microsoft Windows Browser Protocol
+
+No.     Time           Source                Destination           Protocol Length Info
+     70 15.668042      192.168.1.57          239.255.255.250       IGMPv2   46     Membership Report group 239.255.255.250
+
+Frame 70: 46 bytes on wire (368 bits), 46 bytes captured (368 bits) on interface 0
+Ethernet II, Src: Azurewav_27:b3:af (24:0a:64:27:b3:af), Dst: IPv4mcast_7f:ff:fa (01:00:5e:7f:ff:fa)
+    Destination: IPv4mcast_7f:ff:fa (01:00:5e:7f:ff:fa)
+    Source: Azurewav_27:b3:af (24:0a:64:27:b3:af)
+    Type: IPv4 (0x0800)
+Internet Protocol Version 4, Src: 192.168.1.57, Dst: 239.255.255.250
+Internet Group Management Protocol
+
+No.     Time           Source                Destination           Protocol Length Info
+     71 16.656872      192.168.1.44          54.239.192.53         TCP      54     [TCP Dup ACK 20#1] 59912→80 [ACK] Seq=1 Ack=1 Win=4101 Len=0
+
+Frame 71: 54 bytes on wire (432 bits), 54 bytes captured (432 bits) on interface 0
+Ethernet II, Src: Apple_1d:4a:73 (a0:99:9b:1d:4a:73), Dst: Sagemcom_7e:6c:ee (84:a4:23:7e:6c:ee)
+    Destination: Sagemcom_7e:6c:ee (84:a4:23:7e:6c:ee)
+    Source: Apple_1d:4a:73 (a0:99:9b:1d:4a:73)
+    Type: IPv4 (0x0800)
+Internet Protocol Version 4, Src: 192.168.1.44, Dst: 54.239.192.53
+Transmission Control Protocol, Src Port: 59912, Dst Port: 80, Seq: 1, Ack: 1, Len: 0
+
+No.     Time           Source                Destination           Protocol Length Info
+     72 16.690623      54.239.192.53         192.168.1.44          TCP      66     [TCP Dup ACK 21#1] [TCP ACKed unseen segment] 80→59912 [ACK] Seq=1 Ack=2 Win=118 Len=0 TSval=2331609696 TSecr=862751767
+
+Frame 72: 66 bytes on wire (528 bits), 66 bytes captured (528 bits) on interface 0
+Ethernet II, Src: Sagemcom_7e:6c:ee (84:a4:23:7e:6c:ee), Dst: Apple_1d:4a:73 (a0:99:9b:1d:4a:73)
+    Destination: Apple_1d:4a:73 (a0:99:9b:1d:4a:73)
+    Source: Sagemcom_7e:6c:ee (84:a4:23:7e:6c:ee)
+    Type: IPv4 (0x0800)
+Internet Protocol Version 4, Src: 54.239.192.53, Dst: 192.168.1.44
+Transmission Control Protocol, Src Port: 80, Dst Port: 59912, Seq: 1, Ack: 2, Len: 0
+
+No.     Time           Source                Destination           Protocol Length Info
+     73 16.898949      192.168.1.44          255.255.255.255       DB-LSP-DISC 222    Dropbox LAN sync Discovery Protocol
+
+Frame 73: 222 bytes on wire (1776 bits), 222 bytes captured (1776 bits) on interface 0
+Ethernet II, Src: Apple_1d:4a:73 (a0:99:9b:1d:4a:73), Dst: Broadcast (ff:ff:ff:ff:ff:ff)
+    Destination: Broadcast (ff:ff:ff:ff:ff:ff)
+    Source: Apple_1d:4a:73 (a0:99:9b:1d:4a:73)
+    Type: IPv4 (0x0800)
+Internet Protocol Version 4, Src: 192.168.1.44, Dst: 255.255.255.255
+User Datagram Protocol, Src Port: 17500, Dst Port: 17500
+Dropbox LAN sync Discovery Protocol
+
+No.     Time           Source                Destination           Protocol Length Info
+     74 16.899222      192.168.1.44          192.168.1.255         DB-LSP-DISC 222    Dropbox LAN sync Discovery Protocol
+
+Frame 74: 222 bytes on wire (1776 bits), 222 bytes captured (1776 bits) on interface 0
+Ethernet II, Src: Apple_1d:4a:73 (a0:99:9b:1d:4a:73), Dst: Broadcast (ff:ff:ff:ff:ff:ff)
+    Destination: Broadcast (ff:ff:ff:ff:ff:ff)
+    Source: Apple_1d:4a:73 (a0:99:9b:1d:4a:73)
+    Type: IPv4 (0x0800)
+Internet Protocol Version 4, Src: 192.168.1.44, Dst: 192.168.1.255
+User Datagram Protocol, Src Port: 17500, Dst Port: 17500
+Dropbox LAN sync Discovery Protocol
+
+No.     Time           Source                Destination           Protocol Length Info
+     75 20.894372      162.125.18.133        192.168.1.44          TLSv1.2  323    Application Data
+
+Frame 75: 323 bytes on wire (2584 bits), 323 bytes captured (2584 bits) on interface 0
+Ethernet II, Src: Sagemcom_7e:6c:ee (84:a4:23:7e:6c:ee), Dst: Apple_1d:4a:73 (a0:99:9b:1d:4a:73)
+    Destination: Apple_1d:4a:73 (a0:99:9b:1d:4a:73)
+    Source: Sagemcom_7e:6c:ee (84:a4:23:7e:6c:ee)
+    Type: IPv4 (0x0800)
+Internet Protocol Version 4, Src: 162.125.18.133, Dst: 192.168.1.44
+Transmission Control Protocol, Src Port: 443, Dst Port: 59322, Seq: 1, Ack: 1, Len: 257
+Secure Sockets Layer
+    TLSv1.2 Record Layer: Application Data Protocol: http-over-tls
+        Content Type: Application Data (23)
+        Version: TLS 1.2 (0x0303)
+        Length: 252
+        Encrypted Application Data: cf828ad153d32afd8e64e175af5a393980caa9626259447c...
+
+No.     Time           Source                Destination           Protocol Length Info
+     76 20.894451      192.168.1.44          162.125.18.133        TCP      66     59322→443 [ACK] Seq=1 Ack=258 Win=4087 Len=0 TSval=862826180 TSecr=213215543
+
+Frame 76: 66 bytes on wire (528 bits), 66 bytes captured (528 bits) on interface 0
+Ethernet II, Src: Apple_1d:4a:73 (a0:99:9b:1d:4a:73), Dst: Sagemcom_7e:6c:ee (84:a4:23:7e:6c:ee)
+    Destination: Sagemcom_7e:6c:ee (84:a4:23:7e:6c:ee)
+    Source: Apple_1d:4a:73 (a0:99:9b:1d:4a:73)
+    Type: IPv4 (0x0800)
+Internet Protocol Version 4, Src: 192.168.1.44, Dst: 162.125.18.133
+Transmission Control Protocol, Src Port: 59322, Dst Port: 443, Seq: 1, Ack: 258, Len: 0
+
+No.     Time           Source                Destination           Protocol Length Info
+     77 20.898440      192.168.1.44          162.125.18.133        TLSv1.2  1077   Application Data
+
+Frame 77: 1077 bytes on wire (8616 bits), 1077 bytes captured (8616 bits) on interface 0
+Ethernet II, Src: Apple_1d:4a:73 (a0:99:9b:1d:4a:73), Dst: Sagemcom_7e:6c:ee (84:a4:23:7e:6c:ee)
+    Destination: Sagemcom_7e:6c:ee (84:a4:23:7e:6c:ee)
+    Source: Apple_1d:4a:73 (a0:99:9b:1d:4a:73)
+    Type: IPv4 (0x0800)
+Internet Protocol Version 4, Src: 192.168.1.44, Dst: 162.125.18.133
+Transmission Control Protocol, Src Port: 59322, Dst Port: 443, Seq: 1, Ack: 258, Len: 1011
+Secure Sockets Layer
+    TLSv1.2 Record Layer: Application Data Protocol: http-over-tls
+        Content Type: Application Data (23)
+        Version: TLS 1.2 (0x0303)
+        Length: 1006
+        Encrypted Application Data: 1779971fd6831811fb38a03f398592f2fdd6dfafade424f4...
+
+No.     Time           Source                Destination           Protocol Length Info
+     78 21.062732      162.125.18.133        192.168.1.44          TCP      66     443→59322 [ACK] Seq=258 Ack=1012 Win=307 Len=0 TSval=213215655 TSecr=862826183
+
+Frame 78: 66 bytes on wire (528 bits), 66 bytes captured (528 bits) on interface 0
+Ethernet II, Src: Sagemcom_7e:6c:ee (84:a4:23:7e:6c:ee), Dst: Apple_1d:4a:73 (a0:99:9b:1d:4a:73)
+    Destination: Apple_1d:4a:73 (a0:99:9b:1d:4a:73)
+    Source: Sagemcom_7e:6c:ee (84:a4:23:7e:6c:ee)
+    Type: IPv4 (0x0800)
+Internet Protocol Version 4, Src: 162.125.18.133, Dst: 192.168.1.44
+Transmission Control Protocol, Src Port: 443, Dst Port: 59322, Seq: 258, Ack: 1012, Len: 0
+
+No.     Time           Source                Destination           Protocol Length Info
+     79 21.189065      192.168.1.44          17.253.54.253         NTP      90     NTP Version 4, client
+
+Frame 79: 90 bytes on wire (720 bits), 90 bytes captured (720 bits) on interface 0
+Ethernet II, Src: Apple_1d:4a:73 (a0:99:9b:1d:4a:73), Dst: Sagemcom_7e:6c:ee (84:a4:23:7e:6c:ee)
+    Destination: Sagemcom_7e:6c:ee (84:a4:23:7e:6c:ee)
+    Source: Apple_1d:4a:73 (a0:99:9b:1d:4a:73)
+    Type: IPv4 (0x0800)
+Internet Protocol Version 4, Src: 192.168.1.44, Dst: 17.253.54.253
+User Datagram Protocol, Src Port: 123, Dst Port: 123
+Network Time Protocol (NTP Version 4, client)
+
+No.     Time           Source                Destination           Protocol Length Info
+     80 21.228734      17.253.54.253         192.168.1.44          NTP      90     NTP Version 4, server
+
+Frame 80: 90 bytes on wire (720 bits), 90 bytes captured (720 bits) on interface 0
+Ethernet II, Src: Sagemcom_7e:6c:ee (84:a4:23:7e:6c:ee), Dst: Apple_1d:4a:73 (a0:99:9b:1d:4a:73)
+    Destination: Apple_1d:4a:73 (a0:99:9b:1d:4a:73)
+    Source: Sagemcom_7e:6c:ee (84:a4:23:7e:6c:ee)
+    Type: IPv4 (0x0800)
+Internet Protocol Version 4, Src: 17.253.54.253, Dst: 192.168.1.44
+User Datagram Protocol, Src Port: 123, Dst Port: 123
+Network Time Protocol (NTP Version 4, server)
+
+No.     Time           Source                Destination           Protocol Length Info
+     81 23.962572      Azurewav_27:b3:af     Broadcast             ARP      42     Who has 192.168.1.191? Tell 192.168.1.57
+
+Frame 81: 42 bytes on wire (336 bits), 42 bytes captured (336 bits) on interface 0
+Ethernet II, Src: Azurewav_27:b3:af (24:0a:64:27:b3:af), Dst: Broadcast (ff:ff:ff:ff:ff:ff)
+    Destination: Broadcast (ff:ff:ff:ff:ff:ff)
+    Source: Azurewav_27:b3:af (24:0a:64:27:b3:af)
+    Type: ARP (0x0806)
+Address Resolution Protocol (request)
+
+No.     Time           Source                Destination           Protocol Length Info
+     82 24.270895      192.168.1.57          239.255.255.250       SSDP     216    M-SEARCH * HTTP/1.1
+
+Frame 82: 216 bytes on wire (1728 bits), 216 bytes captured (1728 bits) on interface 0
+Ethernet II, Src: Azurewav_27:b3:af (24:0a:64:27:b3:af), Dst: IPv4mcast_7f:ff:fa (01:00:5e:7f:ff:fa)
+    Destination: IPv4mcast_7f:ff:fa (01:00:5e:7f:ff:fa)
+    Source: Azurewav_27:b3:af (24:0a:64:27:b3:af)
+    Type: IPv4 (0x0800)
+Internet Protocol Version 4, Src: 192.168.1.57, Dst: 239.255.255.250
+User Datagram Protocol, Src Port: 49650, Dst Port: 1900
+Simple Service Discovery Protocol
+
+No.     Time           Source                Destination           Protocol Length Info
+     83 25.191369      Azurewav_27:b3:af     Broadcast             ARP      42     Who has 192.168.1.191? Tell 192.168.1.57
+
+Frame 83: 42 bytes on wire (336 bits), 42 bytes captured (336 bits) on interface 0
+Ethernet II, Src: Azurewav_27:b3:af (24:0a:64:27:b3:af), Dst: Broadcast (ff:ff:ff:ff:ff:ff)
+    Destination: Broadcast (ff:ff:ff:ff:ff:ff)
+    Source: Azurewav_27:b3:af (24:0a:64:27:b3:af)
+    Type: ARP (0x0806)
+Address Resolution Protocol (request)
+
+No.     Time           Source                Destination           Protocol Length Info
+     84 25.193878      192.168.1.57          239.255.255.250       SSDP     216    M-SEARCH * HTTP/1.1
+
+Frame 84: 216 bytes on wire (1728 bits), 216 bytes captured (1728 bits) on interface 0
+Ethernet II, Src: Azurewav_27:b3:af (24:0a:64:27:b3:af), Dst: IPv4mcast_7f:ff:fa (01:00:5e:7f:ff:fa)
+    Destination: IPv4mcast_7f:ff:fa (01:00:5e:7f:ff:fa)
+    Source: Azurewav_27:b3:af (24:0a:64:27:b3:af)
+    Type: IPv4 (0x0800)
+Internet Protocol Version 4, Src: 192.168.1.57, Dst: 239.255.255.250
+User Datagram Protocol, Src Port: 49650, Dst Port: 1900
+Simple Service Discovery Protocol
+
+No.     Time           Source                Destination           Protocol Length Info
+     85 25.807614      31.13.92.10           192.168.1.44          TLSv1.2  312    Application Data
+
+Frame 85: 312 bytes on wire (2496 bits), 312 bytes captured (2496 bits) on interface 0
+Ethernet II, Src: Sagemcom_7e:6c:ee (84:a4:23:7e:6c:ee), Dst: Apple_1d:4a:73 (a0:99:9b:1d:4a:73)
+    Destination: Apple_1d:4a:73 (a0:99:9b:1d:4a:73)
+    Source: Sagemcom_7e:6c:ee (84:a4:23:7e:6c:ee)
+    Type: IPv4 (0x0800)
+Internet Protocol Version 4, Src: 31.13.92.10, Dst: 192.168.1.44
+Transmission Control Protocol, Src Port: 443, Dst Port: 59313, Seq: 865, Ack: 1334, Len: 246
+Secure Sockets Layer
+    TLSv1.2 Record Layer: Application Data Protocol: http-over-tls
+        Content Type: Application Data (23)
+        Version: TLS 1.2 (0x0303)
+        Length: 241
+        Encrypted Application Data: 6b6adfb71475e03f0f2d10fb1546dfa7063e1b7a33ef25fe...
+
+No.     Time           Source                Destination           Protocol Length Info
+     86 25.807815      192.168.1.44          31.13.92.10           TCP      66     59313→443 [ACK] Seq=1334 Ack=1111 Win=4088 Len=0 TSval=862831089 TSecr=1871712208
+
+Frame 86: 66 bytes on wire (528 bits), 66 bytes captured (528 bits) on interface 0
+Ethernet II, Src: Apple_1d:4a:73 (a0:99:9b:1d:4a:73), Dst: Sagemcom_7e:6c:ee (84:a4:23:7e:6c:ee)
+    Destination: Sagemcom_7e:6c:ee (84:a4:23:7e:6c:ee)
+    Source: Apple_1d:4a:73 (a0:99:9b:1d:4a:73)
+    Type: IPv4 (0x0800)
+Internet Protocol Version 4, Src: 192.168.1.44, Dst: 31.13.92.10
+Transmission Control Protocol, Src Port: 59313, Dst Port: 443, Seq: 1334, Ack: 1111, Len: 0
+
+No.     Time           Source                Destination           Protocol Length Info
+     87 25.808322      31.13.92.10           192.168.1.44          TLSv1.2  312    [TCP Spurious Retransmission] Application Data
+
+Frame 87: 312 bytes on wire (2496 bits), 312 bytes captured (2496 bits) on interface 0
+Ethernet II, Src: Sagemcom_7e:6c:ee (84:a4:23:7e:6c:ee), Dst: Apple_1d:4a:73 (a0:99:9b:1d:4a:73)
+    Destination: Apple_1d:4a:73 (a0:99:9b:1d:4a:73)
+    Source: Sagemcom_7e:6c:ee (84:a4:23:7e:6c:ee)
+    Type: IPv4 (0x0800)
+Internet Protocol Version 4, Src: 31.13.92.10, Dst: 192.168.1.44
+Transmission Control Protocol, Src Port: 443, Dst Port: 59313, Seq: 865, Ack: 1334, Len: 246
+Secure Sockets Layer
+    TLSv1.2 Record Layer: Application Data Protocol: http-over-tls
+        Content Type: Application Data (23)
+        Version: TLS 1.2 (0x0303)
+        Length: 241
+        Encrypted Application Data: 6b6adfb71475e03f0f2d10fb1546dfa7063e1b7a33ef25fe...
+
+No.     Time           Source                Destination           Protocol Length Info
+     88 25.808389      192.168.1.44          31.13.92.10           TCP      78     [TCP Window Update] 59313→443 [ACK] Seq=1334 Ack=1111 Win=4096 Len=0 TSval=862831089 TSecr=1871712581 SLE=865 SRE=1111
+
+Frame 88: 78 bytes on wire (624 bits), 78 bytes captured (624 bits) on interface 0
+Ethernet II, Src: Apple_1d:4a:73 (a0:99:9b:1d:4a:73), Dst: Sagemcom_7e:6c:ee (84:a4:23:7e:6c:ee)
+    Destination: Sagemcom_7e:6c:ee (84:a4:23:7e:6c:ee)
+    Source: Apple_1d:4a:73 (a0:99:9b:1d:4a:73)
+    Type: IPv4 (0x0800)
+Internet Protocol Version 4, Src: 192.168.1.44, Dst: 31.13.92.10
+Transmission Control Protocol, Src Port: 59313, Dst Port: 443, Seq: 1334, Ack: 1111, Len: 0
+
+No.     Time           Source                Destination           Protocol Length Info
+     89 25.822880      192.168.1.44          31.13.92.10           TLSv1.2  510    Application Data
+
+Frame 89: 510 bytes on wire (4080 bits), 510 bytes captured (4080 bits) on interface 0
+Ethernet II, Src: Apple_1d:4a:73 (a0:99:9b:1d:4a:73), Dst: Sagemcom_7e:6c:ee (84:a4:23:7e:6c:ee)
+    Destination: Sagemcom_7e:6c:ee (84:a4:23:7e:6c:ee)
+    Source: Apple_1d:4a:73 (a0:99:9b:1d:4a:73)
+    Type: IPv4 (0x0800)
+Internet Protocol Version 4, Src: 192.168.1.44, Dst: 31.13.92.10
+Transmission Control Protocol, Src Port: 59313, Dst Port: 443, Seq: 1334, Ack: 1111, Len: 444
+Secure Sockets Layer
+    TLSv1.2 Record Layer: Application Data Protocol: http-over-tls
+        Content Type: Application Data (23)
+        Version: TLS 1.2 (0x0303)
+        Length: 439
+        Encrypted Application Data: 4acf3b33cd586cc61b95d6cf86e836bcae4c8910b595bc48...
+
+No.     Time           Source                Destination           Protocol Length Info
+     90 25.880320      31.13.92.10           192.168.1.44          TLSv1.2  108    Application Data
+
+Frame 90: 108 bytes on wire (864 bits), 108 bytes captured (864 bits) on interface 0
+Ethernet II, Src: Sagemcom_7e:6c:ee (84:a4:23:7e:6c:ee), Dst: Apple_1d:4a:73 (a0:99:9b:1d:4a:73)
+    Destination: Apple_1d:4a:73 (a0:99:9b:1d:4a:73)
+    Source: Sagemcom_7e:6c:ee (84:a4:23:7e:6c:ee)
+    Type: IPv4 (0x0800)
+Internet Protocol Version 4, Src: 31.13.92.10, Dst: 192.168.1.44
+Transmission Control Protocol, Src Port: 443, Dst Port: 59313, Seq: 1111, Ack: 1778, Len: 42
+Secure Sockets Layer
+    TLSv1.2 Record Layer: Application Data Protocol: http-over-tls
+        Content Type: Application Data (23)
+        Version: TLS 1.2 (0x0303)
+        Length: 37
+        Encrypted Application Data: 6b6adfb71475e040a29399f60b9b426e4013d65897ea1a97...
+
+No.     Time           Source                Destination           Protocol Length Info
+     91 25.880425      192.168.1.44          31.13.92.10           TCP      66     59313→443 [ACK] Seq=1778 Ack=1153 Win=4094 Len=0 TSval=862831161 TSecr=1871712681
+
+Frame 91: 66 bytes on wire (528 bits), 66 bytes captured (528 bits) on interface 0
+Ethernet II, Src: Apple_1d:4a:73 (a0:99:9b:1d:4a:73), Dst: Sagemcom_7e:6c:ee (84:a4:23:7e:6c:ee)
+    Destination: Sagemcom_7e:6c:ee (84:a4:23:7e:6c:ee)
+    Source: Apple_1d:4a:73 (a0:99:9b:1d:4a:73)
+    Type: IPv4 (0x0800)
+Internet Protocol Version 4, Src: 192.168.1.44, Dst: 31.13.92.10
+Transmission Control Protocol, Src Port: 59313, Dst Port: 443, Seq: 1778, Ack: 1153, Len: 0
+
+No.     Time           Source                Destination           Protocol Length Info
+     92 26.110484      192.168.1.57          239.255.255.250       SSDP     216    M-SEARCH * HTTP/1.1
+
+Frame 92: 216 bytes on wire (1728 bits), 216 bytes captured (1728 bits) on interface 0
+Ethernet II, Src: Azurewav_27:b3:af (24:0a:64:27:b3:af), Dst: IPv4mcast_7f:ff:fa (01:00:5e:7f:ff:fa)
+    Destination: IPv4mcast_7f:ff:fa (01:00:5e:7f:ff:fa)
+    Source: Azurewav_27:b3:af (24:0a:64:27:b3:af)
+    Type: IPv4 (0x0800)
+Internet Protocol Version 4, Src: 192.168.1.57, Dst: 239.255.255.250
+User Datagram Protocol, Src Port: 49650, Dst Port: 1900
+Simple Service Discovery Protocol
+
+No.     Time           Source                Destination           Protocol Length Info
+     93 26.162001      192.168.1.44          131.253.14.227        TCP      78     59921→443 [SYN] Seq=0 Win=65535 Len=0 MSS=1460 WS=32 TSval=862831440 TSecr=0 SACK_PERM=1
+
+Frame 93: 78 bytes on wire (624 bits), 78 bytes captured (624 bits) on interface 0
+Ethernet II, Src: Apple_1d:4a:73 (a0:99:9b:1d:4a:73), Dst: Sagemcom_7e:6c:ee (84:a4:23:7e:6c:ee)
+    Destination: Sagemcom_7e:6c:ee (84:a4:23:7e:6c:ee)
+    Source: Apple_1d:4a:73 (a0:99:9b:1d:4a:73)
+    Type: IPv4 (0x0800)
+Internet Protocol Version 4, Src: 192.168.1.44, Dst: 131.253.14.227
+Transmission Control Protocol, Src Port: 59921, Dst Port: 443, Seq: 0, Len: 0
+
+No.     Time           Source                Destination           Protocol Length Info
+     94 26.291514      131.253.14.227        192.168.1.44          TCP      74     443→59921 [SYN, ACK] Seq=0 Ack=1 Win=8192 Len=0 MSS=1440 WS=256 SACK_PERM=1 TSval=218082784 TSecr=862831440
+
+Frame 94: 74 bytes on wire (592 bits), 74 bytes captured (592 bits) on interface 0
+Ethernet II, Src: Sagemcom_7e:6c:ee (84:a4:23:7e:6c:ee), Dst: Apple_1d:4a:73 (a0:99:9b:1d:4a:73)
+    Destination: Apple_1d:4a:73 (a0:99:9b:1d:4a:73)
+    Source: Sagemcom_7e:6c:ee (84:a4:23:7e:6c:ee)
+    Type: IPv4 (0x0800)
+Internet Protocol Version 4, Src: 131.253.14.227, Dst: 192.168.1.44
+Transmission Control Protocol, Src Port: 443, Dst Port: 59921, Seq: 0, Ack: 1, Len: 0
+
+No.     Time           Source                Destination           Protocol Length Info
+     95 26.291604      192.168.1.44          131.253.14.227        TCP      66     59921→443 [ACK] Seq=1 Ack=1 Win=131360 Len=0 TSval=862831568 TSecr=218082784
+
+Frame 95: 66 bytes on wire (528 bits), 66 bytes captured (528 bits) on interface 0
+Ethernet II, Src: Apple_1d:4a:73 (a0:99:9b:1d:4a:73), Dst: Sagemcom_7e:6c:ee (84:a4:23:7e:6c:ee)
+    Destination: Sagemcom_7e:6c:ee (84:a4:23:7e:6c:ee)
+    Source: Apple_1d:4a:73 (a0:99:9b:1d:4a:73)
+    Type: IPv4 (0x0800)
+Internet Protocol Version 4, Src: 192.168.1.44, Dst: 131.253.14.227
+Transmission Control Protocol, Src Port: 59921, Dst Port: 443, Seq: 1, Ack: 1, Len: 0
+
+No.     Time           Source                Destination           Protocol Length Info
+     96 26.292308      192.168.1.44          131.253.14.227        TLSv1.2  273    Client Hello
+
+Frame 96: 273 bytes on wire (2184 bits), 273 bytes captured (2184 bits) on interface 0
+Ethernet II, Src: Apple_1d:4a:73 (a0:99:9b:1d:4a:73), Dst: Sagemcom_7e:6c:ee (84:a4:23:7e:6c:ee)
+    Destination: Sagemcom_7e:6c:ee (84:a4:23:7e:6c:ee)
+    Source: Apple_1d:4a:73 (a0:99:9b:1d:4a:73)
+    Type: IPv4 (0x0800)
+Internet Protocol Version 4, Src: 192.168.1.44, Dst: 131.253.14.227
+Transmission Control Protocol, Src Port: 59921, Dst Port: 443, Seq: 1, Ack: 1, Len: 207
+Secure Sockets Layer
+    TLSv1.2 Record Layer: Handshake Protocol: Client Hello
+        Content Type: Handshake (22)
+        Version: TLS 1.0 (0x0301)
+        Length: 202
+        Handshake Protocol: Client Hello
+
+No.     Time           Source                Destination           Protocol Length Info
+     97 26.422642      131.253.14.227        192.168.1.44          TCP      1514   [TCP segment of a reassembled PDU]
+
+Frame 97: 1514 bytes on wire (12112 bits), 1514 bytes captured (12112 bits) on interface 0
+Ethernet II, Src: Sagemcom_7e:6c:ee (84:a4:23:7e:6c:ee), Dst: Apple_1d:4a:73 (a0:99:9b:1d:4a:73)
+    Destination: Apple_1d:4a:73 (a0:99:9b:1d:4a:73)
+    Source: Sagemcom_7e:6c:ee (84:a4:23:7e:6c:ee)
+    Type: IPv4 (0x0800)
+Internet Protocol Version 4, Src: 131.253.14.227, Dst: 192.168.1.44
+Transmission Control Protocol, Src Port: 443, Dst Port: 59921, Seq: 1, Ack: 208, Len: 1448
+
+No.     Time           Source                Destination           Protocol Length Info
+     98 26.427177      131.253.14.227        192.168.1.44          TCP      1514   [TCP segment of a reassembled PDU]
+
+Frame 98: 1514 bytes on wire (12112 bits), 1514 bytes captured (12112 bits) on interface 0
+Ethernet II, Src: Sagemcom_7e:6c:ee (84:a4:23:7e:6c:ee), Dst: Apple_1d:4a:73 (a0:99:9b:1d:4a:73)
+    Destination: Apple_1d:4a:73 (a0:99:9b:1d:4a:73)
+    Source: Sagemcom_7e:6c:ee (84:a4:23:7e:6c:ee)
+    Type: IPv4 (0x0800)
+Internet Protocol Version 4, Src: 131.253.14.227, Dst: 192.168.1.44
+Transmission Control Protocol, Src Port: 443, Dst Port: 59921, Seq: 1449, Ack: 208, Len: 1448
+
+No.     Time           Source                Destination           Protocol Length Info
+     99 26.427183      131.253.14.227        192.168.1.44          TCP      1514   [TCP segment of a reassembled PDU]
+
+Frame 99: 1514 bytes on wire (12112 bits), 1514 bytes captured (12112 bits) on interface 0
+Ethernet II, Src: Sagemcom_7e:6c:ee (84:a4:23:7e:6c:ee), Dst: Apple_1d:4a:73 (a0:99:9b:1d:4a:73)
+    Destination: Apple_1d:4a:73 (a0:99:9b:1d:4a:73)
+    Source: Sagemcom_7e:6c:ee (84:a4:23:7e:6c:ee)
+    Type: IPv4 (0x0800)
+Internet Protocol Version 4, Src: 131.253.14.227, Dst: 192.168.1.44
+Transmission Control Protocol, Src Port: 443, Dst Port: 59921, Seq: 2897, Ack: 208, Len: 1448
+
+No.     Time           Source                Destination           Protocol Length Info
+    100 26.427292      192.168.1.44          131.253.14.227        TCP      66     59921→443 [ACK] Seq=208 Ack=2897 Win=129600 Len=0 TSval=862831703 TSecr=218082797
+
+Frame 100: 66 bytes on wire (528 bits), 66 bytes captured (528 bits) on interface 0
+Ethernet II, Src: Apple_1d:4a:73 (a0:99:9b:1d:4a:73), Dst: Sagemcom_7e:6c:ee (84:a4:23:7e:6c:ee)
+    Destination: Sagemcom_7e:6c:ee (84:a4:23:7e:6c:ee)
+    Source: Apple_1d:4a:73 (a0:99:9b:1d:4a:73)
+    Type: IPv4 (0x0800)
+Internet Protocol Version 4, Src: 192.168.1.44, Dst: 131.253.14.227
+Transmission Control Protocol, Src Port: 59921, Dst Port: 443, Seq: 208, Ack: 2897, Len: 0
+
+No.     Time           Source                Destination           Protocol Length Info
+    101 26.427522      131.253.14.227        192.168.1.44          TCP      1514   [TCP segment of a reassembled PDU]
+
+Frame 101: 1514 bytes on wire (12112 bits), 1514 bytes captured (12112 bits) on interface 0
+Ethernet II, Src: Sagemcom_7e:6c:ee (84:a4:23:7e:6c:ee), Dst: Apple_1d:4a:73 (a0:99:9b:1d:4a:73)
+    Destination: Apple_1d:4a:73 (a0:99:9b:1d:4a:73)
+    Source: Sagemcom_7e:6c:ee (84:a4:23:7e:6c:ee)
+    Type: IPv4 (0x0800)
+Internet Protocol Version 4, Src: 131.253.14.227, Dst: 192.168.1.44
+Transmission Control Protocol, Src Port: 443, Dst Port: 59921, Seq: 4345, Ack: 208, Len: 1448
+
+No.     Time           Source                Destination           Protocol Length Info
+    102 26.427541      192.168.1.44          131.253.14.227        TCP      66     59921→443 [ACK] Seq=208 Ack=4345 Win=131072 Len=0 TSval=862831703 TSecr=218082797
+
+Frame 102: 66 bytes on wire (528 bits), 66 bytes captured (528 bits) on interface 0
+Ethernet II, Src: Apple_1d:4a:73 (a0:99:9b:1d:4a:73), Dst: Sagemcom_7e:6c:ee (84:a4:23:7e:6c:ee)
+    Destination: Sagemcom_7e:6c:ee (84:a4:23:7e:6c:ee)
+    Source: Apple_1d:4a:73 (a0:99:9b:1d:4a:73)
+    Type: IPv4 (0x0800)
+Internet Protocol Version 4, Src: 192.168.1.44, Dst: 131.253.14.227
+Transmission Control Protocol, Src Port: 59921, Dst Port: 443, Seq: 208, Ack: 4345, Len: 0
+
+No.     Time           Source                Destination           Protocol Length Info
+    103 26.528263      192.168.1.44          131.253.14.227        TCP      66     59921→443 [ACK] Seq=208 Ack=5793 Win=131072 Len=0 TSval=862831803 TSecr=218082797
+
+Frame 103: 66 bytes on wire (528 bits), 66 bytes captured (528 bits) on interface 0
+Ethernet II, Src: Apple_1d:4a:73 (a0:99:9b:1d:4a:73), Dst: Sagemcom_7e:6c:ee (84:a4:23:7e:6c:ee)
+    Destination: Sagemcom_7e:6c:ee (84:a4:23:7e:6c:ee)
+    Source: Apple_1d:4a:73 (a0:99:9b:1d:4a:73)
+    Type: IPv4 (0x0800)
+Internet Protocol Version 4, Src: 192.168.1.44, Dst: 131.253.14.227
+Transmission Control Protocol, Src Port: 59921, Dst Port: 443, Seq: 208, Ack: 5793, Len: 0
+
+No.     Time           Source                Destination           Protocol Length Info
+    104 26.585457      131.253.14.227        192.168.1.44          TCP      1514   [TCP segment of a reassembled PDU]
+
+Frame 104: 1514 bytes on wire (12112 bits), 1514 bytes captured (12112 bits) on interface 0
+Ethernet II, Src: Sagemcom_7e:6c:ee (84:a4:23:7e:6c:ee), Dst: Apple_1d:4a:73 (a0:99:9b:1d:4a:73)
+    Destination: Apple_1d:4a:73 (a0:99:9b:1d:4a:73)
+    Source: Sagemcom_7e:6c:ee (84:a4:23:7e:6c:ee)
+    Type: IPv4 (0x0800)
+Internet Protocol Version 4, Src: 131.253.14.227, Dst: 192.168.1.44
+Transmission Control Protocol, Src Port: 443, Dst Port: 59921, Seq: 5793, Ack: 208, Len: 1448
+
+No.     Time           Source                Destination           Protocol Length Info
+    105 26.586147      131.253.14.227        192.168.1.44          TLSv1.2  1413   Server Hello, Certificate, Certificate Status, Server Key Exchange, Server Hello Done
+
+Frame 105: 1413 bytes on wire (11304 bits), 1413 bytes captured (11304 bits) on interface 0
+Ethernet II, Src: Sagemcom_7e:6c:ee (84:a4:23:7e:6c:ee), Dst: Apple_1d:4a:73 (a0:99:9b:1d:4a:73)
+    Destination: Apple_1d:4a:73 (a0:99:9b:1d:4a:73)
+    Source: Sagemcom_7e:6c:ee (84:a4:23:7e:6c:ee)
+    Type: IPv4 (0x0800)
+Internet Protocol Version 4, Src: 131.253.14.227, Dst: 192.168.1.44
+Transmission Control Protocol, Src Port: 443, Dst Port: 59921, Seq: 7241, Ack: 208, Len: 1347
+[6 Reassembled TCP Segments (8587 bytes): #97(1448), #98(1448), #99(1448), #101(1448), #104(1448), #105(1347)]
+Secure Sockets Layer
+    TLSv1.2 Record Layer: Handshake Protocol: Multiple Handshake Messages
+        Content Type: Handshake (22)
+        Version: TLS 1.2 (0x0303)
+        Length: 8582
+        Handshake Protocol: Server Hello
+        Handshake Protocol: Certificate
+        Handshake Protocol: Certificate Status
+        Handshake Protocol: Server Key Exchange
+        Handshake Protocol: Server Hello Done
+
+No.     Time           Source                Destination           Protocol Length Info
+    106 26.586225      192.168.1.44          131.253.14.227        TCP      66     59921→443 [ACK] Seq=208 Ack=8588 Win=129696 Len=0 TSval=862831860 TSecr=218082814
+
+Frame 106: 66 bytes on wire (528 bits), 66 bytes captured (528 bits) on interface 0
+Ethernet II, Src: Apple_1d:4a:73 (a0:99:9b:1d:4a:73), Dst: Sagemcom_7e:6c:ee (84:a4:23:7e:6c:ee)
+    Destination: Sagemcom_7e:6c:ee (84:a4:23:7e:6c:ee)
+    Source: Apple_1d:4a:73 (a0:99:9b:1d:4a:73)
+    Type: IPv4 (0x0800)
+Internet Protocol Version 4, Src: 192.168.1.44, Dst: 131.253.14.227
+Transmission Control Protocol, Src Port: 59921, Dst Port: 443, Seq: 208, Ack: 8588, Len: 0
+
+No.     Time           Source                Destination           Protocol Length Info
+    107 26.602678      192.168.1.44          131.253.14.227        TLSv1.2  173    Client Key Exchange
+
+Frame 107: 173 bytes on wire (1384 bits), 173 bytes captured (1384 bits) on interface 0
+Ethernet II, Src: Apple_1d:4a:73 (a0:99:9b:1d:4a:73), Dst: Sagemcom_7e:6c:ee (84:a4:23:7e:6c:ee)
+    Destination: Sagemcom_7e:6c:ee (84:a4:23:7e:6c:ee)
+    Source: Apple_1d:4a:73 (a0:99:9b:1d:4a:73)
+    Type: IPv4 (0x0800)
+Internet Protocol Version 4, Src: 192.168.1.44, Dst: 131.253.14.227
+Transmission Control Protocol, Src Port: 59921, Dst Port: 443, Seq: 208, Ack: 8588, Len: 107
+Secure Sockets Layer
+    TLSv1.2 Record Layer: Handshake Protocol: Client Key Exchange
+        Content Type: Handshake (22)
+        Version: TLS 1.2 (0x0303)
+        Length: 102
+        Handshake Protocol: Client Key Exchange
+
+No.     Time           Source                Destination           Protocol Length Info
+    108 26.602679      192.168.1.44          131.253.14.227        TLSv1.2  72     Change Cipher Spec
+
+Frame 108: 72 bytes on wire (576 bits), 72 bytes captured (576 bits) on interface 0
+Ethernet II, Src: Apple_1d:4a:73 (a0:99:9b:1d:4a:73), Dst: Sagemcom_7e:6c:ee (84:a4:23:7e:6c:ee)
+    Destination: Sagemcom_7e:6c:ee (84:a4:23:7e:6c:ee)
+    Source: Apple_1d:4a:73 (a0:99:9b:1d:4a:73)
+    Type: IPv4 (0x0800)
+Internet Protocol Version 4, Src: 192.168.1.44, Dst: 131.253.14.227
+Transmission Control Protocol, Src Port: 59921, Dst Port: 443, Seq: 315, Ack: 8588, Len: 6
+Secure Sockets Layer
+    TLSv1.2 Record Layer: Change Cipher Spec Protocol: Change Cipher Spec
+        Content Type: Change Cipher Spec (20)
+        Version: TLS 1.2 (0x0303)
+        Length: 1
+        Change Cipher Spec Message
+
+No.     Time           Source                Destination           Protocol Length Info
+    109 26.602679      192.168.1.44          131.253.14.227        TLSv1.2  167    Encrypted Handshake Message
+
+Frame 109: 167 bytes on wire (1336 bits), 167 bytes captured (1336 bits) on interface 0
+Ethernet II, Src: Apple_1d:4a:73 (a0:99:9b:1d:4a:73), Dst: Sagemcom_7e:6c:ee (84:a4:23:7e:6c:ee)
+    Destination: Sagemcom_7e:6c:ee (84:a4:23:7e:6c:ee)
+    Source: Apple_1d:4a:73 (a0:99:9b:1d:4a:73)
+    Type: IPv4 (0x0800)
+Internet Protocol Version 4, Src: 192.168.1.44, Dst: 131.253.14.227
+Transmission Control Protocol, Src Port: 59921, Dst Port: 443, Seq: 321, Ack: 8588, Len: 101
+Secure Sockets Layer
+    TLSv1.2 Record Layer: Handshake Protocol: Encrypted Handshake Message
+        Content Type: Handshake (22)
+        Version: TLS 1.2 (0x0303)
+        Length: 96
+        Handshake Protocol: Encrypted Handshake Message
+
+No.     Time           Source                Destination           Protocol Length Info
+    110 26.704523      192.168.1.44          54.239.192.53         TCP      54     [TCP Dup ACK 20#2] 59912→80 [ACK] Seq=1 Ack=1 Win=4101 Len=0
+
+Frame 110: 54 bytes on wire (432 bits), 54 bytes captured (432 bits) on interface 0
+Ethernet II, Src: Apple_1d:4a:73 (a0:99:9b:1d:4a:73), Dst: Sagemcom_7e:6c:ee (84:a4:23:7e:6c:ee)
+    Destination: Sagemcom_7e:6c:ee (84:a4:23:7e:6c:ee)
+    Source: Apple_1d:4a:73 (a0:99:9b:1d:4a:73)
+    Type: IPv4 (0x0800)
+Internet Protocol Version 4, Src: 192.168.1.44, Dst: 54.239.192.53
+Transmission Control Protocol, Src Port: 59912, Dst Port: 80, Seq: 1, Ack: 1, Len: 0
+
+No.     Time           Source                Destination           Protocol Length Info
+    111 26.725450      131.253.14.227        192.168.1.44          TCP      66     443→59921 [ACK] Seq=8588 Ack=321 Win=131584 Len=0 TSval=218082828 TSecr=862831877
+
+Frame 111: 66 bytes on wire (528 bits), 66 bytes captured (528 bits) on interface 0
+Ethernet II, Src: Sagemcom_7e:6c:ee (84:a4:23:7e:6c:ee), Dst: Apple_1d:4a:73 (a0:99:9b:1d:4a:73)
+    Destination: Apple_1d:4a:73 (a0:99:9b:1d:4a:73)
+    Source: Sagemcom_7e:6c:ee (84:a4:23:7e:6c:ee)
+    Type: IPv4 (0x0800)
+Internet Protocol Version 4, Src: 131.253.14.227, Dst: 192.168.1.44
+Transmission Control Protocol, Src Port: 443, Dst Port: 59921, Seq: 8588, Ack: 321, Len: 0
+
+No.     Time           Source                Destination           Protocol Length Info
+    112 26.725933      131.253.14.227        192.168.1.44          TLSv1.2  173    Change Cipher Spec, Encrypted Handshake Message
+
+Frame 112: 173 bytes on wire (1384 bits), 173 bytes captured (1384 bits) on interface 0
+Ethernet II, Src: Sagemcom_7e:6c:ee (84:a4:23:7e:6c:ee), Dst: Apple_1d:4a:73 (a0:99:9b:1d:4a:73)
+    Destination: Apple_1d:4a:73 (a0:99:9b:1d:4a:73)
+    Source: Sagemcom_7e:6c:ee (84:a4:23:7e:6c:ee)
+    Type: IPv4 (0x0800)
+Internet Protocol Version 4, Src: 131.253.14.227, Dst: 192.168.1.44
+Transmission Control Protocol, Src Port: 443, Dst Port: 59921, Seq: 8588, Ack: 422, Len: 107
+Secure Sockets Layer
+    TLSv1.2 Record Layer: Change Cipher Spec Protocol: Change Cipher Spec
+        Content Type: Change Cipher Spec (20)
+        Version: TLS 1.2 (0x0303)
+        Length: 1
+        Change Cipher Spec Message
+    TLSv1.2 Record Layer: Handshake Protocol: Encrypted Handshake Message
+        Content Type: Handshake (22)
+        Version: TLS 1.2 (0x0303)
+        Length: 96
+        Handshake Protocol: Encrypted Handshake Message
+
+No.     Time           Source                Destination           Protocol Length Info
+    113 26.726018      192.168.1.44          131.253.14.227        TCP      66     59921→443 [ACK] Seq=422 Ack=8695 Win=130944 Len=0 TSval=862831999 TSecr=218082828
+
+Frame 113: 66 bytes on wire (528 bits), 66 bytes captured (528 bits) on interface 0
+Ethernet II, Src: Apple_1d:4a:73 (a0:99:9b:1d:4a:73), Dst: Sagemcom_7e:6c:ee (84:a4:23:7e:6c:ee)
+    Destination: Sagemcom_7e:6c:ee (84:a4:23:7e:6c:ee)
+    Source: Apple_1d:4a:73 (a0:99:9b:1d:4a:73)
+    Type: IPv4 (0x0800)
+Internet Protocol Version 4, Src: 192.168.1.44, Dst: 131.253.14.227
+Transmission Control Protocol, Src Port: 59921, Dst Port: 443, Seq: 422, Ack: 8695, Len: 0
+
+No.     Time           Source                Destination           Protocol Length Info
+    114 26.726475      192.168.1.44          131.253.14.227        TCP      1494   [TCP segment of a reassembled PDU]
+
+Frame 114: 1494 bytes on wire (11952 bits), 1494 bytes captured (11952 bits) on interface 0
+Ethernet II, Src: Apple_1d:4a:73 (a0:99:9b:1d:4a:73), Dst: Sagemcom_7e:6c:ee (84:a4:23:7e:6c:ee)
+    Destination: Sagemcom_7e:6c:ee (84:a4:23:7e:6c:ee)
+    Source: Apple_1d:4a:73 (a0:99:9b:1d:4a:73)
+    Type: IPv4 (0x0800)
+Internet Protocol Version 4, Src: 192.168.1.44, Dst: 131.253.14.227
+Transmission Control Protocol, Src Port: 59921, Dst Port: 443, Seq: 422, Ack: 8695, Len: 1428
+
+No.     Time           Source                Destination           Protocol Length Info
+    115 26.726476      192.168.1.44          131.253.14.227        TCP      1494   [TCP segment of a reassembled PDU]
+
+Frame 115: 1494 bytes on wire (11952 bits), 1494 bytes captured (11952 bits) on interface 0
+Ethernet II, Src: Apple_1d:4a:73 (a0:99:9b:1d:4a:73), Dst: Sagemcom_7e:6c:ee (84:a4:23:7e:6c:ee)
+    Destination: Sagemcom_7e:6c:ee (84:a4:23:7e:6c:ee)
+    Source: Apple_1d:4a:73 (a0:99:9b:1d:4a:73)
+    Type: IPv4 (0x0800)
+Internet Protocol Version 4, Src: 192.168.1.44, Dst: 131.253.14.227
+Transmission Control Protocol, Src Port: 59921, Dst Port: 443, Seq: 1850, Ack: 8695, Len: 1428
+
+No.     Time           Source                Destination           Protocol Length Info
+    116 26.726477      192.168.1.44          131.253.14.227        TLSv1.2  623    Application Data
+
+Frame 116: 623 bytes on wire (4984 bits), 623 bytes captured (4984 bits) on interface 0
+Ethernet II, Src: Apple_1d:4a:73 (a0:99:9b:1d:4a:73), Dst: Sagemcom_7e:6c:ee (84:a4:23:7e:6c:ee)
+    Destination: Sagemcom_7e:6c:ee (84:a4:23:7e:6c:ee)
+    Source: Apple_1d:4a:73 (a0:99:9b:1d:4a:73)
+    Type: IPv4 (0x0800)
+Internet Protocol Version 4, Src: 192.168.1.44, Dst: 131.253.14.227
+Transmission Control Protocol, Src Port: 59921, Dst Port: 443, Seq: 3278, Ack: 8695, Len: 557
+[3 Reassembled TCP Segments (3413 bytes): #114(1428), #115(1428), #116(557)]
+Secure Sockets Layer
+    TLSv1.2 Record Layer: Application Data Protocol: http-over-tls
+        Content Type: Application Data (23)
+        Version: TLS 1.2 (0x0303)
+        Length: 3408
+        Encrypted Application Data: edfcaf4c1d8f7a703c57e2927656c2f5af03807b518e9e80...
+
+No.     Time           Source                Destination           Protocol Length Info
+    117 26.726559      192.168.1.44          131.253.14.227        TLSv1.2  359    Application Data
+
+Frame 117: 359 bytes on wire (2872 bits), 359 bytes captured (2872 bits) on interface 0
+Ethernet II, Src: Apple_1d:4a:73 (a0:99:9b:1d:4a:73), Dst: Sagemcom_7e:6c:ee (84:a4:23:7e:6c:ee)
+    Destination: Sagemcom_7e:6c:ee (84:a4:23:7e:6c:ee)
+    Source: Apple_1d:4a:73 (a0:99:9b:1d:4a:73)
+    Type: IPv4 (0x0800)
+Internet Protocol Version 4, Src: 192.168.1.44, Dst: 131.253.14.227
+Transmission Control Protocol, Src Port: 59921, Dst Port: 443, Seq: 3835, Ack: 8695, Len: 293
+Secure Sockets Layer
+    TLSv1.2 Record Layer: Application Data Protocol: http-over-tls
+        Content Type: Application Data (23)
+        Version: TLS 1.2 (0x0303)
+        Length: 288
+        Encrypted Application Data: 79466f1878b73b0a7d5df231472c61f82542cb8d2d269705...
+
+No.     Time           Source                Destination           Protocol Length Info
+    118 26.729954      54.239.192.53         192.168.1.44          TCP      66     [TCP Dup ACK 21#2] [TCP ACKed unseen segment] 80→59912 [ACK] Seq=1 Ack=2 Win=118 Len=0 TSval=2331610701 TSecr=862751767
+
+Frame 118: 66 bytes on wire (528 bits), 66 bytes captured (528 bits) on interface 0
+Ethernet II, Src: Sagemcom_7e:6c:ee (84:a4:23:7e:6c:ee), Dst: Apple_1d:4a:73 (a0:99:9b:1d:4a:73)
+    Destination: Apple_1d:4a:73 (a0:99:9b:1d:4a:73)
+    Source: Sagemcom_7e:6c:ee (84:a4:23:7e:6c:ee)
+    Type: IPv4 (0x0800)
+Internet Protocol Version 4, Src: 54.239.192.53, Dst: 192.168.1.44
+Transmission Control Protocol, Src Port: 80, Dst Port: 59912, Seq: 1, Ack: 2, Len: 0
+
+No.     Time           Source                Destination           Protocol Length Info
+    119 26.852056      131.253.14.227        192.168.1.44          TCP      66     443→59921 [ACK] Seq=8695 Ack=3278 Win=131584 Len=0 TSval=218082841 TSecr=862831999
+
+Frame 119: 66 bytes on wire (528 bits), 66 bytes captured (528 bits) on interface 0
+Ethernet II, Src: Sagemcom_7e:6c:ee (84:a4:23:7e:6c:ee), Dst: Apple_1d:4a:73 (a0:99:9b:1d:4a:73)
+    Destination: Apple_1d:4a:73 (a0:99:9b:1d:4a:73)
+    Source: Sagemcom_7e:6c:ee (84:a4:23:7e:6c:ee)
+    Type: IPv4 (0x0800)
+Internet Protocol Version 4, Src: 131.253.14.227, Dst: 192.168.1.44
+Transmission Control Protocol, Src Port: 443, Dst Port: 59921, Seq: 8695, Ack: 3278, Len: 0
+
+No.     Time           Source                Destination           Protocol Length Info
+    120 26.862697      131.253.14.227        192.168.1.44          TCP      66     443→59921 [ACK] Seq=8695 Ack=4128 Win=130816 Len=0 TSval=218082841 TSecr=862831999
+
+Frame 120: 66 bytes on wire (528 bits), 66 bytes captured (528 bits) on interface 0
+Ethernet II, Src: Sagemcom_7e:6c:ee (84:a4:23:7e:6c:ee), Dst: Apple_1d:4a:73 (a0:99:9b:1d:4a:73)
+    Destination: Apple_1d:4a:73 (a0:99:9b:1d:4a:73)
+    Source: Sagemcom_7e:6c:ee (84:a4:23:7e:6c:ee)
+    Type: IPv4 (0x0800)
+Internet Protocol Version 4, Src: 131.253.14.227, Dst: 192.168.1.44
+Transmission Control Protocol, Src Port: 443, Dst Port: 59921, Seq: 8695, Ack: 4128, Len: 0
+
+No.     Time           Source                Destination           Protocol Length Info
+    121 26.898163      131.253.14.227        192.168.1.44          TLSv1.2  935    Application Data
+
+Frame 121: 935 bytes on wire (7480 bits), 935 bytes captured (7480 bits) on interface 0
+Ethernet II, Src: Sagemcom_7e:6c:ee (84:a4:23:7e:6c:ee), Dst: Apple_1d:4a:73 (a0:99:9b:1d:4a:73)
+    Destination: Apple_1d:4a:73 (a0:99:9b:1d:4a:73)
+    Source: Sagemcom_7e:6c:ee (84:a4:23:7e:6c:ee)
+    Type: IPv4 (0x0800)
+Internet Protocol Version 4, Src: 131.253.14.227, Dst: 192.168.1.44
+Transmission Control Protocol, Src Port: 443, Dst Port: 59921, Seq: 8695, Ack: 4128, Len: 869
+Secure Sockets Layer
+    TLSv1.2 Record Layer: Application Data Protocol: http-over-tls
+        Content Type: Application Data (23)
+        Version: TLS 1.2 (0x0303)
+        Length: 864
+        Encrypted Application Data: 60cb2a306bbd5b14ca255f617d5f360a065a1fc8c86182ef...
+
+No.     Time           Source                Destination           Protocol Length Info
+    122 26.898260      192.168.1.44          131.253.14.227        TCP      66     59921→443 [ACK] Seq=4128 Ack=9564 Win=130176 Len=0 TSval=862832170 TSecr=218082845
+
+Frame 122: 66 bytes on wire (528 bits), 66 bytes captured (528 bits) on interface 0
+Ethernet II, Src: Apple_1d:4a:73 (a0:99:9b:1d:4a:73), Dst: Sagemcom_7e:6c:ee (84:a4:23:7e:6c:ee)
+    Destination: Sagemcom_7e:6c:ee (84:a4:23:7e:6c:ee)
+    Source: Apple_1d:4a:73 (a0:99:9b:1d:4a:73)
+    Type: IPv4 (0x0800)
+Internet Protocol Version 4, Src: 192.168.1.44, Dst: 131.253.14.227
+Transmission Control Protocol, Src Port: 59921, Dst Port: 443, Seq: 4128, Ack: 9564, Len: 0
+
+No.     Time           Source                Destination           Protocol Length Info
+    123 26.899527      192.168.1.44          131.253.14.227        TCP      66     59921→443 [FIN, ACK] Seq=4128 Ack=9564 Win=131072 Len=0 TSval=862832171 TSecr=218082845
+
+Frame 123: 66 bytes on wire (528 bits), 66 bytes captured (528 bits) on interface 0
+Ethernet II, Src: Apple_1d:4a:73 (a0:99:9b:1d:4a:73), Dst: Sagemcom_7e:6c:ee (84:a4:23:7e:6c:ee)
+    Destination: Sagemcom_7e:6c:ee (84:a4:23:7e:6c:ee)
+    Source: Apple_1d:4a:73 (a0:99:9b:1d:4a:73)
+    Type: IPv4 (0x0800)
+Internet Protocol Version 4, Src: 192.168.1.44, Dst: 131.253.14.227
+Transmission Control Protocol, Src Port: 59921, Dst Port: 443, Seq: 4128, Ack: 9564, Len: 0
+
+No.     Time           Source                Destination           Protocol Length Info
+    124 27.032803      131.253.14.227        192.168.1.44          TCP      66     443→59921 [FIN, ACK] Seq=9564 Ack=4129 Win=130816 Len=0 TSval=218082858 TSecr=862832171
+
+Frame 124: 66 bytes on wire (528 bits), 66 bytes captured (528 bits) on interface 0
+Ethernet II, Src: Sagemcom_7e:6c:ee (84:a4:23:7e:6c:ee), Dst: Apple_1d:4a:73 (a0:99:9b:1d:4a:73)
+    Destination: Apple_1d:4a:73 (a0:99:9b:1d:4a:73)
+    Source: Sagemcom_7e:6c:ee (84:a4:23:7e:6c:ee)
+    Type: IPv4 (0x0800)
+Internet Protocol Version 4, Src: 131.253.14.227, Dst: 192.168.1.44
+Transmission Control Protocol, Src Port: 443, Dst Port: 59921, Seq: 9564, Ack: 4129, Len: 0
+
+No.     Time           Source                Destination           Protocol Length Info
+    125 27.032928      192.168.1.44          131.253.14.227        TCP      66     59921→443 [ACK] Seq=4129 Ack=9565 Win=131072 Len=0 TSval=862832303 TSecr=218082858
+
+Frame 125: 66 bytes on wire (528 bits), 66 bytes captured (528 bits) on interface 0
+Ethernet II, Src: Apple_1d:4a:73 (a0:99:9b:1d:4a:73), Dst: Sagemcom_7e:6c:ee (84:a4:23:7e:6c:ee)
+    Destination: Sagemcom_7e:6c:ee (84:a4:23:7e:6c:ee)
+    Source: Apple_1d:4a:73 (a0:99:9b:1d:4a:73)
+    Type: IPv4 (0x0800)
+Internet Protocol Version 4, Src: 192.168.1.44, Dst: 131.253.14.227
+Transmission Control Protocol, Src Port: 59921, Dst Port: 443, Seq: 4129, Ack: 9565, Len: 0
+
+No.     Time           Source                Destination           Protocol Length Info
+    126 27.339419      192.168.1.57          239.255.255.250       SSDP     216    M-SEARCH * HTTP/1.1
+
+Frame 126: 216 bytes on wire (1728 bits), 216 bytes captured (1728 bits) on interface 0
+Ethernet II, Src: Azurewav_27:b3:af (24:0a:64:27:b3:af), Dst: IPv4mcast_7f:ff:fa (01:00:5e:7f:ff:fa)
+    Destination: IPv4mcast_7f:ff:fa (01:00:5e:7f:ff:fa)
+    Source: Azurewav_27:b3:af (24:0a:64:27:b3:af)
+    Type: IPv4 (0x0800)
+Internet Protocol Version 4, Src: 192.168.1.57, Dst: 239.255.255.250
+User Datagram Protocol, Src Port: 49650, Dst Port: 1900
+Simple Service Discovery Protocol
+
+No.     Time           Source                Destination           Protocol Length Info
+    127 29.799479      fe80::86a4:23ff:fe7e:6cee ff02::1               ICMPv6   86     Neighbor Solicitation for fe80::73:afb5:78f8:d7be from 84:a4:23:7e:6c:ee
+
+Frame 127: 86 bytes on wire (688 bits), 86 bytes captured (688 bits) on interface 0
+Ethernet II, Src: Sagemcom_7e:6c:ee (84:a4:23:7e:6c:ee), Dst: IPv6mcast_01 (33:33:00:00:00:01)
+    Destination: IPv6mcast_01 (33:33:00:00:00:01)
+    Source: Sagemcom_7e:6c:ee (84:a4:23:7e:6c:ee)
+    Type: IPv6 (0x86dd)
+Internet Protocol Version 6, Src: fe80::86a4:23ff:fe7e:6cee, Dst: ff02::1
+Internet Control Message Protocol v6
+
+No.     Time           Source                Destination           Protocol Length Info
+    128 29.799588      fe80::73:afb5:78f8:d7be fe80::86a4:23ff:fe7e:6cee ICMPv6   86     Neighbor Advertisement fe80::73:afb5:78f8:d7be (sol, ovr) is at a0:99:9b:1d:4a:73
+
+Frame 128: 86 bytes on wire (688 bits), 86 bytes captured (688 bits) on interface 0
+Ethernet II, Src: Apple_1d:4a:73 (a0:99:9b:1d:4a:73), Dst: Sagemcom_7e:6c:ee (84:a4:23:7e:6c:ee)
+    Destination: Sagemcom_7e:6c:ee (84:a4:23:7e:6c:ee)
+    Source: Apple_1d:4a:73 (a0:99:9b:1d:4a:73)
+    Type: IPv6 (0x86dd)
+Internet Protocol Version 6, Src: fe80::73:afb5:78f8:d7be, Dst: fe80::86a4:23ff:fe7e:6cee
+Internet Control Message Protocol v6
+
+No.     Time           Source                Destination           Protocol Length Info
+    129 29.801573      Sagemcom_7e:6c:ee     Broadcast             HomePlug AV 60     MAC Management, Get Bridge Informations Request
+
+Frame 129: 60 bytes on wire (480 bits), 60 bytes captured (480 bits) on interface 0
+Ethernet II, Src: Sagemcom_7e:6c:ee (84:a4:23:7e:6c:ee), Dst: Broadcast (ff:ff:ff:ff:ff:ff)
+    Destination: Broadcast (ff:ff:ff:ff:ff:ff)
+    Source: Sagemcom_7e:6c:ee (84:a4:23:7e:6c:ee)
+    Type: Homeplug AV (0x88e1)
+HomePlug AV protocol
+
+No.     Time           Source                Destination           Protocol Length Info
+    130 32.257727      31.13.92.10           192.168.1.44          TLSv1.2  312    Application Data
+
+Frame 130: 312 bytes on wire (2496 bits), 312 bytes captured (2496 bits) on interface 0
+Ethernet II, Src: Sagemcom_7e:6c:ee (84:a4:23:7e:6c:ee), Dst: Apple_1d:4a:73 (a0:99:9b:1d:4a:73)
+    Destination: Apple_1d:4a:73 (a0:99:9b:1d:4a:73)
+    Source: Sagemcom_7e:6c:ee (84:a4:23:7e:6c:ee)
+    Type: IPv4 (0x0800)
+Internet Protocol Version 4, Src: 31.13.92.10, Dst: 192.168.1.44
+Transmission Control Protocol, Src Port: 443, Dst Port: 59313, Seq: 1153, Ack: 1778, Len: 246
+Secure Sockets Layer
+    TLSv1.2 Record Layer: Application Data Protocol: http-over-tls
+        Content Type: Application Data (23)
+        Version: TLS 1.2 (0x0303)
+        Length: 241
+        Encrypted Application Data: 6b6adfb71475e041707f810f8ef2a9071bf5f98c197fad77...
+
+No.     Time           Source                Destination           Protocol Length Info
+    131 32.257823      192.168.1.44          31.13.92.10           TCP      66     59313→443 [ACK] Seq=1778 Ack=1399 Win=4088 Len=0 TSval=862837525 TSecr=1871718894
+
+Frame 131: 66 bytes on wire (528 bits), 66 bytes captured (528 bits) on interface 0
+Ethernet II, Src: Apple_1d:4a:73 (a0:99:9b:1d:4a:73), Dst: Sagemcom_7e:6c:ee (84:a4:23:7e:6c:ee)
+    Destination: Sagemcom_7e:6c:ee (84:a4:23:7e:6c:ee)
+    Source: Apple_1d:4a:73 (a0:99:9b:1d:4a:73)
+    Type: IPv4 (0x0800)
+Internet Protocol Version 4, Src: 192.168.1.44, Dst: 31.13.92.10
+Transmission Control Protocol, Src Port: 59313, Dst Port: 443, Seq: 1778, Ack: 1399, Len: 0
+
+No.     Time           Source                Destination           Protocol Length Info
+    132 32.271265      192.168.1.44          31.13.92.10           TLSv1.2  541    Application Data
+
+Frame 132: 541 bytes on wire (4328 bits), 541 bytes captured (4328 bits) on interface 0
+Ethernet II, Src: Apple_1d:4a:73 (a0:99:9b:1d:4a:73), Dst: Sagemcom_7e:6c:ee (84:a4:23:7e:6c:ee)
+    Destination: Sagemcom_7e:6c:ee (84:a4:23:7e:6c:ee)
+    Source: Apple_1d:4a:73 (a0:99:9b:1d:4a:73)
+    Type: IPv4 (0x0800)
+Internet Protocol Version 4, Src: 192.168.1.44, Dst: 31.13.92.10
+Transmission Control Protocol, Src Port: 59313, Dst Port: 443, Seq: 1778, Ack: 1399, Len: 475
+Secure Sockets Layer
+    TLSv1.2 Record Layer: Application Data Protocol: http-over-tls
+        Content Type: Application Data (23)
+        Version: TLS 1.2 (0x0303)
+        Length: 470
+        Encrypted Application Data: 4acf3b33cd586cc7eb0e78b2c366a9ebaba028b38ecf5809...
+
+No.     Time           Source                Destination           Protocol Length Info
+    133 32.302828      31.13.92.10           192.168.1.44          TLSv1.2  108    Application Data
+
+Frame 133: 108 bytes on wire (864 bits), 108 bytes captured (864 bits) on interface 0
+Ethernet II, Src: Sagemcom_7e:6c:ee (84:a4:23:7e:6c:ee), Dst: Apple_1d:4a:73 (a0:99:9b:1d:4a:73)
+    Destination: Apple_1d:4a:73 (a0:99:9b:1d:4a:73)
+    Source: Sagemcom_7e:6c:ee (84:a4:23:7e:6c:ee)
+    Type: IPv4 (0x0800)
+Internet Protocol Version 4, Src: 31.13.92.10, Dst: 192.168.1.44
+Transmission Control Protocol, Src Port: 443, Dst Port: 59313, Seq: 1399, Ack: 2253, Len: 42
+Secure Sockets Layer
+    TLSv1.2 Record Layer: Application Data Protocol: http-over-tls
+        Content Type: Application Data (23)
+        Version: TLS 1.2 (0x0303)
+        Length: 37
+        Encrypted Application Data: 6b6adfb71475e042ce09c4208488678200215c950c2534bf...
+
+No.     Time           Source                Destination           Protocol Length Info
+    134 32.302926      192.168.1.44          31.13.92.10           TCP      66     59313→443 [ACK] Seq=2253 Ack=1441 Win=4094 Len=0 TSval=862837569 TSecr=1871719108
+
+Frame 134: 66 bytes on wire (528 bits), 66 bytes captured (528 bits) on interface 0
+Ethernet II, Src: Apple_1d:4a:73 (a0:99:9b:1d:4a:73), Dst: Sagemcom_7e:6c:ee (84:a4:23:7e:6c:ee)
+    Destination: Sagemcom_7e:6c:ee (84:a4:23:7e:6c:ee)
+    Source: Apple_1d:4a:73 (a0:99:9b:1d:4a:73)
+    Type: IPv4 (0x0800)
+Internet Protocol Version 4, Src: 192.168.1.44, Dst: 31.13.92.10
+Transmission Control Protocol, Src Port: 59313, Dst Port: 443, Seq: 2253, Ack: 1441, Len: 0
+
+No.     Time           Source                Destination           Protocol Length Info
+    135 33.789448      Azurewav_27:b3:af     Broadcast             ARP      42     Who has 192.168.1.191? Tell 192.168.1.57
+
+Frame 135: 42 bytes on wire (336 bits), 42 bytes captured (336 bits) on interface 0
+Ethernet II, Src: Azurewav_27:b3:af (24:0a:64:27:b3:af), Dst: Broadcast (ff:ff:ff:ff:ff:ff)
+    Destination: Broadcast (ff:ff:ff:ff:ff:ff)
+    Source: Azurewav_27:b3:af (24:0a:64:27:b3:af)
+    Type: ARP (0x0806)
+Address Resolution Protocol (request)
+
+No.     Time           Source                Destination           Protocol Length Info
+    136 33.844228      fe80::73:afb5:78f8:d7be fe80::86a4:23ff:fe7e:6cee ICMPv6   86     Neighbor Solicitation for fe80::86a4:23ff:fe7e:6cee from a0:99:9b:1d:4a:73
+
+Frame 136: 86 bytes on wire (688 bits), 86 bytes captured (688 bits) on interface 0
+Ethernet II, Src: Apple_1d:4a:73 (a0:99:9b:1d:4a:73), Dst: Sagemcom_7e:6c:ee (84:a4:23:7e:6c:ee)
+    Destination: Sagemcom_7e:6c:ee (84:a4:23:7e:6c:ee)
+    Source: Apple_1d:4a:73 (a0:99:9b:1d:4a:73)
+    Type: IPv6 (0x86dd)
+Internet Protocol Version 6, Src: fe80::73:afb5:78f8:d7be, Dst: fe80::86a4:23ff:fe7e:6cee
+Internet Control Message Protocol v6
+
+No.     Time           Source                Destination           Protocol Length Info
+    137 33.853169      fe80::86a4:23ff:fe7e:6cee fe80::73:afb5:78f8:d7be ICMPv6   78     Neighbor Advertisement fe80::86a4:23ff:fe7e:6cee (rtr, sol)
+
+Frame 137: 78 bytes on wire (624 bits), 78 bytes captured (624 bits) on interface 0
+Ethernet II, Src: Sagemcom_7e:6c:ee (84:a4:23:7e:6c:ee), Dst: Apple_1d:4a:73 (a0:99:9b:1d:4a:73)
+    Destination: Apple_1d:4a:73 (a0:99:9b:1d:4a:73)
+    Source: Sagemcom_7e:6c:ee (84:a4:23:7e:6c:ee)
+    Type: IPv6 (0x86dd)
+Internet Protocol Version 6, Src: fe80::86a4:23ff:fe7e:6cee, Dst: fe80::73:afb5:78f8:d7be
+Internet Control Message Protocol v6
+
+No.     Time           Source                Destination           Protocol Length Info
+    138 34.096636      fe80::86a4:23ff:fe7e:6cee ff02::1               ICMPv6   86     Neighbor Solicitation for fe80::73:afb5:78f8:d7be from 84:a4:23:7e:6c:ee
+
+Frame 138: 86 bytes on wire (688 bits), 86 bytes captured (688 bits) on interface 0
+Ethernet II, Src: Sagemcom_7e:6c:ee (84:a4:23:7e:6c:ee), Dst: IPv6mcast_01 (33:33:00:00:00:01)
+    Destination: IPv6mcast_01 (33:33:00:00:00:01)
+    Source: Sagemcom_7e:6c:ee (84:a4:23:7e:6c:ee)
+    Type: IPv6 (0x86dd)
+Internet Protocol Version 6, Src: fe80::86a4:23ff:fe7e:6cee, Dst: ff02::1
+Internet Control Message Protocol v6
+
+No.     Time           Source                Destination           Protocol Length Info
+    139 34.096717      fe80::73:afb5:78f8:d7be fe80::86a4:23ff:fe7e:6cee ICMPv6   86     Neighbor Advertisement fe80::73:afb5:78f8:d7be (sol, ovr) is at a0:99:9b:1d:4a:73
+
+Frame 139: 86 bytes on wire (688 bits), 86 bytes captured (688 bits) on interface 0
+Ethernet II, Src: Apple_1d:4a:73 (a0:99:9b:1d:4a:73), Dst: Sagemcom_7e:6c:ee (84:a4:23:7e:6c:ee)
+    Destination: Sagemcom_7e:6c:ee (84:a4:23:7e:6c:ee)
+    Source: Apple_1d:4a:73 (a0:99:9b:1d:4a:73)
+    Type: IPv6 (0x86dd)
+Internet Protocol Version 6, Src: fe80::73:afb5:78f8:d7be, Dst: fe80::86a4:23ff:fe7e:6cee
+Internet Control Message Protocol v6
+
+No.     Time           Source                Destination           Protocol Length Info
+    140 34.278466      31.13.92.10           192.168.1.44          TLSv1.2  313    Application Data
+
+Frame 140: 313 bytes on wire (2504 bits), 313 bytes captured (2504 bits) on interface 0
+Ethernet II, Src: Sagemcom_7e:6c:ee (84:a4:23:7e:6c:ee), Dst: Apple_1d:4a:73 (a0:99:9b:1d:4a:73)
+    Destination: Apple_1d:4a:73 (a0:99:9b:1d:4a:73)
+    Source: Sagemcom_7e:6c:ee (84:a4:23:7e:6c:ee)
+    Type: IPv4 (0x0800)
+Internet Protocol Version 4, Src: 31.13.92.10, Dst: 192.168.1.44
+Transmission Control Protocol, Src Port: 443, Dst Port: 59313, Seq: 1441, Ack: 2253, Len: 247
+Secure Sockets Layer
+    TLSv1.2 Record Layer: Application Data Protocol: http-over-tls
+        Content Type: Application Data (23)
+        Version: TLS 1.2 (0x0303)
+        Length: 242
+        Encrypted Application Data: 6b6adfb71475e0431d3eaec2724ab3a77120c261e81225d0...
+
+No.     Time           Source                Destination           Protocol Length Info
+    141 34.278553      192.168.1.44          31.13.92.10           TCP      66     59313→443 [ACK] Seq=2253 Ack=1688 Win=4088 Len=0 TSval=862839541 TSecr=1871721086
+
+Frame 141: 66 bytes on wire (528 bits), 66 bytes captured (528 bits) on interface 0
+Ethernet II, Src: Apple_1d:4a:73 (a0:99:9b:1d:4a:73), Dst: Sagemcom_7e:6c:ee (84:a4:23:7e:6c:ee)
+    Destination: Sagemcom_7e:6c:ee (84:a4:23:7e:6c:ee)
+    Source: Apple_1d:4a:73 (a0:99:9b:1d:4a:73)
+    Type: IPv4 (0x0800)
+Internet Protocol Version 4, Src: 192.168.1.44, Dst: 31.13.92.10
+Transmission Control Protocol, Src Port: 59313, Dst Port: 443, Seq: 2253, Ack: 1688, Len: 0
+
+No.     Time           Source                Destination           Protocol Length Info
+    142 34.283785      192.168.1.44          31.13.92.10           TLSv1.2  511    Application Data
+
+Frame 142: 511 bytes on wire (4088 bits), 511 bytes captured (4088 bits) on interface 0
+Ethernet II, Src: Apple_1d:4a:73 (a0:99:9b:1d:4a:73), Dst: Sagemcom_7e:6c:ee (84:a4:23:7e:6c:ee)
+    Destination: Sagemcom_7e:6c:ee (84:a4:23:7e:6c:ee)
+    Source: Apple_1d:4a:73 (a0:99:9b:1d:4a:73)
+    Type: IPv4 (0x0800)
+Internet Protocol Version 4, Src: 192.168.1.44, Dst: 31.13.92.10
+Transmission Control Protocol, Src Port: 59313, Dst Port: 443, Seq: 2253, Ack: 1688, Len: 445
+Secure Sockets Layer
+    TLSv1.2 Record Layer: Application Data Protocol: http-over-tls
+        Content Type: Application Data (23)
+        Version: TLS 1.2 (0x0303)
+        Length: 440
+        Encrypted Application Data: 4acf3b33cd586cc8649518351541f8fbd9b44297633549ac...
+
+No.     Time           Source                Destination           Protocol Length Info
+    143 34.315190      31.13.92.10           192.168.1.44          TLSv1.2  108    Application Data
+
+Frame 143: 108 bytes on wire (864 bits), 108 bytes captured (864 bits) on interface 0
+Ethernet II, Src: Sagemcom_7e:6c:ee (84:a4:23:7e:6c:ee), Dst: Apple_1d:4a:73 (a0:99:9b:1d:4a:73)
+    Destination: Apple_1d:4a:73 (a0:99:9b:1d:4a:73)
+    Source: Sagemcom_7e:6c:ee (84:a4:23:7e:6c:ee)
+    Type: IPv4 (0x0800)
+Internet Protocol Version 4, Src: 31.13.92.10, Dst: 192.168.1.44
+Transmission Control Protocol, Src Port: 443, Dst Port: 59313, Seq: 1688, Ack: 2698, Len: 42
+Secure Sockets Layer
+    TLSv1.2 Record Layer: Application Data Protocol: http-over-tls
+        Content Type: Application Data (23)
+        Version: TLS 1.2 (0x0303)
+        Length: 37
+        Encrypted Application Data: 6b6adfb71475e04444587a7039de9485f93f40f72e9b4cdf...
+
+No.     Time           Source                Destination           Protocol Length Info
+    144 34.315290      192.168.1.44          31.13.92.10           TCP      66     59313→443 [ACK] Seq=2698 Ack=1730 Win=4094 Len=0 TSval=862839577 TSecr=1871721121
+
+Frame 144: 66 bytes on wire (528 bits), 66 bytes captured (528 bits) on interface 0
+Ethernet II, Src: Apple_1d:4a:73 (a0:99:9b:1d:4a:73), Dst: Sagemcom_7e:6c:ee (84:a4:23:7e:6c:ee)
+    Destination: Sagemcom_7e:6c:ee (84:a4:23:7e:6c:ee)
+    Source: Apple_1d:4a:73 (a0:99:9b:1d:4a:73)
+    Type: IPv4 (0x0800)
+Internet Protocol Version 4, Src: 192.168.1.44, Dst: 31.13.92.10
+Transmission Control Protocol, Src Port: 59313, Dst Port: 443, Seq: 2698, Ack: 1730, Len: 0
+
+No.     Time           Source                Destination           Protocol Length Info
+    145 34.710935      Azurewav_27:b3:af     Broadcast             ARP      42     Who has 192.168.1.191? Tell 192.168.1.57
+
+Frame 145: 42 bytes on wire (336 bits), 42 bytes captured (336 bits) on interface 0
+Ethernet II, Src: Azurewav_27:b3:af (24:0a:64:27:b3:af), Dst: Broadcast (ff:ff:ff:ff:ff:ff)
+    Destination: Broadcast (ff:ff:ff:ff:ff:ff)
+    Source: Azurewav_27:b3:af (24:0a:64:27:b3:af)
+    Type: ARP (0x0806)
+Address Resolution Protocol (request)
+
+No.     Time           Source                Destination           Protocol Length Info
+    146 35.634551      Azurewav_27:b3:af     Broadcast             ARP      42     Who has 192.168.1.191? Tell 192.168.1.57
+
+Frame 146: 42 bytes on wire (336 bits), 42 bytes captured (336 bits) on interface 0
+Ethernet II, Src: Azurewav_27:b3:af (24:0a:64:27:b3:af), Dst: Broadcast (ff:ff:ff:ff:ff:ff)
+    Destination: Broadcast (ff:ff:ff:ff:ff:ff)
+    Source: Azurewav_27:b3:af (24:0a:64:27:b3:af)
+    Type: ARP (0x0806)
+Address Resolution Protocol (request)
+
+No.     Time           Source                Destination           Protocol Length Info
+    147 36.745503      192.168.1.44          54.239.192.53         TCP      54     [TCP Dup ACK 20#3] 59912→80 [ACK] Seq=1 Ack=1 Win=4101 Len=0
+
+Frame 147: 54 bytes on wire (432 bits), 54 bytes captured (432 bits) on interface 0
+Ethernet II, Src: Apple_1d:4a:73 (a0:99:9b:1d:4a:73), Dst: Sagemcom_7e:6c:ee (84:a4:23:7e:6c:ee)
+    Destination: Sagemcom_7e:6c:ee (84:a4:23:7e:6c:ee)
+    Source: Apple_1d:4a:73 (a0:99:9b:1d:4a:73)
+    Type: IPv4 (0x0800)
+Internet Protocol Version 4, Src: 192.168.1.44, Dst: 54.239.192.53
+Transmission Control Protocol, Src Port: 59912, Dst Port: 80, Seq: 1, Ack: 1, Len: 0
+
+No.     Time           Source                Destination           Protocol Length Info
+    148 36.769650      54.239.192.53         192.168.1.44          TCP      66     [TCP Dup ACK 21#3] [TCP ACKed unseen segment] 80→59912 [ACK] Seq=1 Ack=2 Win=118 Len=0 TSval=2331611705 TSecr=862751767
+
+Frame 148: 66 bytes on wire (528 bits), 66 bytes captured (528 bits) on interface 0
+Ethernet II, Src: Sagemcom_7e:6c:ee (84:a4:23:7e:6c:ee), Dst: Apple_1d:4a:73 (a0:99:9b:1d:4a:73)
+    Destination: Apple_1d:4a:73 (a0:99:9b:1d:4a:73)
+    Source: Sagemcom_7e:6c:ee (84:a4:23:7e:6c:ee)
+    Type: IPv4 (0x0800)
+Internet Protocol Version 4, Src: 54.239.192.53, Dst: 192.168.1.44
+Transmission Control Protocol, Src Port: 80, Dst Port: 59912, Seq: 1, Ack: 2, Len: 0
+
+No.     Time           Source                Destination           Protocol Length Info
+    149 37.478208      31.13.92.10           192.168.1.44          TLSv1.2  311    Application Data
+
+Frame 149: 311 bytes on wire (2488 bits), 311 bytes captured (2488 bits) on interface 0
+Ethernet II, Src: Sagemcom_7e:6c:ee (84:a4:23:7e:6c:ee), Dst: Apple_1d:4a:73 (a0:99:9b:1d:4a:73)
+    Destination: Apple_1d:4a:73 (a0:99:9b:1d:4a:73)
+    Source: Sagemcom_7e:6c:ee (84:a4:23:7e:6c:ee)
+    Type: IPv4 (0x0800)
+Internet Protocol Version 4, Src: 31.13.92.10, Dst: 192.168.1.44
+Transmission Control Protocol, Src Port: 443, Dst Port: 59313, Seq: 1730, Ack: 2698, Len: 245
+Secure Sockets Layer
+    TLSv1.2 Record Layer: Application Data Protocol: http-over-tls
+        Content Type: Application Data (23)
+        Version: TLS 1.2 (0x0303)
+        Length: 240
+        Encrypted Application Data: 6b6adfb71475e0450e8fc191bea27b4dc98b8fe1236789d9...
+
+No.     Time           Source                Destination           Protocol Length Info
+    150 37.478298      192.168.1.44          31.13.92.10           TCP      66     59313→443 [ACK] Seq=2698 Ack=1975 Win=4088 Len=0 TSval=862842736 TSecr=1871724175
+
+Frame 150: 66 bytes on wire (528 bits), 66 bytes captured (528 bits) on interface 0
+Ethernet II, Src: Apple_1d:4a:73 (a0:99:9b:1d:4a:73), Dst: Sagemcom_7e:6c:ee (84:a4:23:7e:6c:ee)
+    Destination: Sagemcom_7e:6c:ee (84:a4:23:7e:6c:ee)
+    Source: Apple_1d:4a:73 (a0:99:9b:1d:4a:73)
+    Type: IPv4 (0x0800)
+Internet Protocol Version 4, Src: 192.168.1.44, Dst: 31.13.92.10
+Transmission Control Protocol, Src Port: 59313, Dst Port: 443, Seq: 2698, Ack: 1975, Len: 0
+
+No.     Time           Source                Destination           Protocol Length Info
+    151 37.483343      192.168.1.44          31.13.92.10           TLSv1.2  511    Application Data
+
+Frame 151: 511 bytes on wire (4088 bits), 511 bytes captured (4088 bits) on interface 0
+Ethernet II, Src: Apple_1d:4a:73 (a0:99:9b:1d:4a:73), Dst: Sagemcom_7e:6c:ee (84:a4:23:7e:6c:ee)
+    Destination: Sagemcom_7e:6c:ee (84:a4:23:7e:6c:ee)
+    Source: Apple_1d:4a:73 (a0:99:9b:1d:4a:73)
+    Type: IPv4 (0x0800)
+Internet Protocol Version 4, Src: 192.168.1.44, Dst: 31.13.92.10
+Transmission Control Protocol, Src Port: 59313, Dst Port: 443, Seq: 2698, Ack: 1975, Len: 445
+Secure Sockets Layer
+    TLSv1.2 Record Layer: Application Data Protocol: http-over-tls
+        Content Type: Application Data (23)
+        Version: TLS 1.2 (0x0303)
+        Length: 440
+        Encrypted Application Data: 4acf3b33cd586cc90b6c78fac8ee50cde8a47579bd1442e3...
+
+No.     Time           Source                Destination           Protocol Length Info
+    152 37.518745      31.13.92.10           192.168.1.44          TLSv1.2  108    Application Data
+
+Frame 152: 108 bytes on wire (864 bits), 108 bytes captured (864 bits) on interface 0
+Ethernet II, Src: Sagemcom_7e:6c:ee (84:a4:23:7e:6c:ee), Dst: Apple_1d:4a:73 (a0:99:9b:1d:4a:73)
+    Destination: Apple_1d:4a:73 (a0:99:9b:1d:4a:73)
+    Source: Sagemcom_7e:6c:ee (84:a4:23:7e:6c:ee)
+    Type: IPv4 (0x0800)
+Internet Protocol Version 4, Src: 31.13.92.10, Dst: 192.168.1.44
+Transmission Control Protocol, Src Port: 443, Dst Port: 59313, Seq: 1975, Ack: 3143, Len: 42
+Secure Sockets Layer
+    TLSv1.2 Record Layer: Application Data Protocol: http-over-tls
+        Content Type: Application Data (23)
+        Version: TLS 1.2 (0x0303)
+        Length: 37
+        Encrypted Application Data: 6b6adfb71475e046224e8e8eab1703b6624dd4bcc57a7168...
+
+No.     Time           Source                Destination           Protocol Length Info
+    153 37.518801      192.168.1.44          31.13.92.10           TCP      66     59313→443 [ACK] Seq=3143 Ack=2017 Win=4094 Len=0 TSval=862842776 TSecr=1871724320
+
+Frame 153: 66 bytes on wire (528 bits), 66 bytes captured (528 bits) on interface 0
+Ethernet II, Src: Apple_1d:4a:73 (a0:99:9b:1d:4a:73), Dst: Sagemcom_7e:6c:ee (84:a4:23:7e:6c:ee)
+    Destination: Sagemcom_7e:6c:ee (84:a4:23:7e:6c:ee)
+    Source: Apple_1d:4a:73 (a0:99:9b:1d:4a:73)
+    Type: IPv4 (0x0800)
+Internet Protocol Version 4, Src: 192.168.1.44, Dst: 31.13.92.10
+Transmission Control Protocol, Src Port: 59313, Dst Port: 443, Seq: 3143, Ack: 2017, Len: 0

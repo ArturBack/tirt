@@ -27,25 +27,25 @@
                 <MenuItem
                         fx:id="idProtocolInLVI"
                         mnemonicParsing="false"
-                        onAction="#switchToIpSourceOut"
+                        onAction="#switchToIpSourceIn"
                         text="Ilość ramek przesyłanych z wybranego źródła do badanego węzła z podziałem na protokoły" />
                 <!--text="IP source" />-->
                 <MenuItem
                         fx:id="idProtocolOutLVI"
                         mnemonicParsing="false"
-                        onAction="#switchToIpSourceIn"
+                        onAction="#switchToIpSourceOut"
                         text="Ilość ramek przesyłanych z badanego węzła do wybranego odbiorcy z podziałem na protokoły"/>
                 <!--text="IP source" />-->
                 <MenuItem
                         fx:id="idProtocolRatioOutLVI"
                         mnemonicParsing="false"
-                        onAction="#switchToIpRatio"
+                        onAction="#switchToProtocolOutRatio"
                         text="Stosunek użytych protokołów w ruchu wychodzącym " />
                 <MenuItem
                         fx:id="idProtocolRatioLInVI"
                         mnemonicParsing="false"
                         onAction="#switchToIpRatio"
-                        text="Stosunek użytych protokołów w ruchu przyychodzącym " />
+                        text="Stosunek użytych protokołów w ruchu przychodzącym " />
             </items>
         </Menu>
 

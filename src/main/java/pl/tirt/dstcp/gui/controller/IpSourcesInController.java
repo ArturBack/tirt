@@ -13,6 +13,7 @@ import javafx.scene.control.ComboBox;
 import pl.tirt.dstcp.data.DataUtils;
 import pl.tirt.dstcp.data.model.BitsInPacketInfo;
 import pl.tirt.dstcp.data.model.IpProtocolVersionInPacketInfo;
+import pl.tirt.dstcp.data.repositories.BitsInPacketRepository;
 import pl.tirt.dstcp.data.repositories.IpProtocolVersionRepository;
 import pl.tirt.dstcp.gui.utils.TimestampType;
 import pl.tirt.dstcp.gui.utils.TimestampUtils;
@@ -37,17 +38,17 @@ public class IpSourcesInController {
 
     private HashMap<String, ObservableList<Integer>> ipSourcesMap = new HashMap<>();
     private ObservableList<Integer> timeValues;
-    private List<IpProtocolVersionInPacketInfo> data;
+    private List<BitsInPacketInfo> data;
     private TimestampType timestampType = TimestampType.SECOND;
 
     @FXML
     private void initialize() {
-        data = IpProtocolVersionRepository.getInstance().getData();
+        data = BitsInPacketRepository.getInstance().getData();
         setData(data);
         initScaleTypes();
     }
 
-    private void setData(List<IpProtocolVersionInPacketInfo> data){
+    private void setData(List<BitsInPacketInfo> data){
         timeValues = TimestampUtils.createTimeValues(timestampType,getTimestamps(data));
         fillIpSourceMap(data);
         fillIpSourcesCombo();
@@ -125,17 +126,17 @@ public class IpSourcesInController {
         ipSourceChart.getData().add(series);
     }
 
-    private void fillIpSourceMap(List<IpProtocolVersionInPacketInfo> data) {
+    private void fillIpSourceMap(List<BitsInPacketInfo> data) {
         ipSourcesMap.clear();
-        for(IpProtocolVersionInPacketInfo info : data){
-            Integer time = TimestampUtils.getTime(timestampType,info.getTimestamp());
+        for(BitsInPacketInfo info : data){
 
-            if(info.getDestination().equals(DataUtils.HOME_ADDRESS)) {
+            if(info.getDestinationIP().equals(DataUtils.HOME_ADDRESS)) {
+                Integer time = TimestampUtils.getTime(timestampType,info.getTimestamp());
 
                 for (int i = 0; i < timeValues.size(); i++) {
                     Integer timeValue = timeValues.get(i);
                     if (time <= timeValue) {
-                        String sourceIp = info.getSource();
+                        String sourceIp = info.getSourceIP();
                         if (sourceIp.isEmpty()) {
                             break;
                         }
@@ -154,6 +155,10 @@ public class IpSourcesInController {
         }
     }
 
+
+
+
+
     private ObservableList<Integer>  getListWithInitValues() {
         ObservableList<Integer> values = FXCollections.observableArrayList();
         for(int i = 0; i < timeValues.size(); i++){
@@ -163,9 +168,9 @@ public class IpSourcesInController {
         return values;
     }
 
-    private List<String> getTimestamps(List<IpProtocolVersionInPacketInfo> data){
+    private List<String> getTimestamps(List<BitsInPacketInfo> data){
         List<String> timestamps = new ArrayList<>();
-        for(IpProtocolVersionInPacketInfo info : data){
+        for(BitsInPacketInfo info : data){
             timestamps.add(info.getTimestamp());
         }
         return timestamps;

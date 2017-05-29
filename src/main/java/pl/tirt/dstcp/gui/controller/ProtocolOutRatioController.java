@@ -5,17 +5,23 @@ import javafx.beans.value.ObservableValue;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
-import javafx.scene.chart.*;
+import javafx.scene.chart.StackedBarChart;
+import javafx.scene.chart.XYChart;
 import javafx.scene.control.ComboBox;
-import pl.tirt.dstcp.data.model.IpProtocolVersionInPacketInfo;
-import pl.tirt.dstcp.data.repositories.IpProtocolVersionRepository;
+import pl.tirt.dstcp.data.DataUtils;
+import pl.tirt.dstcp.data.model.BitsInPacketInfo;
+import pl.tirt.dstcp.data.repositories.BitsInPacketRepository;
 import pl.tirt.dstcp.gui.utils.TimestampType;
 import pl.tirt.dstcp.gui.utils.TimestampUtils;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
 
-public class IpVersionChartController {
+/**
+ * Created by mac on 28.05.2017.
+ */
+public class ProtocolOutRatioController {
 
     @FXML
     private StackedBarChart<String, Integer> protocolChart;
@@ -23,17 +29,17 @@ public class IpVersionChartController {
     @FXML
     private ComboBox<String> scale_type_combo;
 
-    private ObservableList<Integer> packetValuesWithIPV4;
-    private ObservableList<Integer> packetValuesWithIPV6;
+    private HashMap<String, ObservableList<Integer>> protocolsCount = new HashMap<>();
+
     private ObservableList<Integer> timeValues;
-    private List<IpProtocolVersionInPacketInfo> data;
+    private List<BitsInPacketInfo> data;
 
     private TimestampType timestampType = TimestampType.SECOND;
 
 
     @FXML
     private void initialize() {
-        data = IpProtocolVersionRepository.getInstance().getData();
+        data = BitsInPacketRepository.getInstance().getData();
         setData(data);
         initScaleTypes();
     }
@@ -60,6 +66,7 @@ public class IpVersionChartController {
     }
 
     private void reloadData() {
+        protocolsCount = new HashMap<>();
         protocolChart.getData().clear();
         setData(data);
     }
@@ -68,10 +75,8 @@ public class IpVersionChartController {
         this.timestampType = timestampType;
     }
 
-    private void setData(List<IpProtocolVersionInPacketInfo> data){
+    private void setData(List<BitsInPacketInfo> data){
         timeValues = TimestampUtils.createTimeValues(timestampType,getTimestamps(data));
-        packetValuesWithIPV4 = getListWithInitValues();
-        packetValuesWithIPV6 = getListWithInitValues();
         fillPacketValues(data);
         fillChartWithData();
     }
@@ -89,42 +94,45 @@ public class IpVersionChartController {
     }
 
     private void fillChartWithProperData(int startIndex) {
-        XYChart.Series<String, Integer> seriesIPV4 = new XYChart.Series<>();
-        seriesIPV4.setName("IPV4");
-        for(int i = startIndex; i < timeValues.size(); i++){
-            seriesIPV4.getData().add(new XYChart.Data(timeValues.get(i).toString(), packetValuesWithIPV4.get(i)));
+        ArrayList<XYChart.Series<String, Integer>> protocolSeries = new ArrayList<>();
+        for (String protocolName : protocolsCount.keySet()) {
+            XYChart.Series<String, Integer> protocolSerie = new XYChart.Series<>();
+            protocolSerie.setName(protocolName);
+            ObservableList<Integer> protocolValues = protocolsCount.get(protocolName);
+            for(int i = startIndex; i < timeValues.size(); i++){
+                protocolSerie.getData().add(new XYChart.Data(timeValues.get(i).toString(), protocolValues.get(i)));
+            }
+            protocolSeries.add(protocolSerie);
         }
-
-        XYChart.Series<String, Integer> seriesIPV6 = new XYChart.Series<>();
-        seriesIPV6.setName("IPV6");
-        for(int i = startIndex; i < timeValues.size(); i++){
-            seriesIPV6.getData().add(new XYChart.Data(timeValues.get(i).toString(), packetValuesWithIPV6.get(i)));
-        }
-
-        protocolChart.getData().addAll(seriesIPV4,seriesIPV6);
+        protocolChart.getData().addAll(protocolSeries);
     }
 
-    private void fillPacketValues(List<IpProtocolVersionInPacketInfo> data) {
-        for(IpProtocolVersionInPacketInfo info : data){
-            Integer time = TimestampUtils.getTime(timestampType,info.getTimestamp());
-            for(int i = 0; i < timeValues.size(); i++){
-                Integer timeValue = timeValues.get(i);
-                if(time <= timeValue){
-                    if(info.getIpProtocolVersion() == 4){
-                        //packet with ipv4
-                        Integer newCount = packetValuesWithIPV4.get(i) + 1;
-                        packetValuesWithIPV4.remove(i);
-                        packetValuesWithIPV4.add(i,newCount);
-                    } else if(info.getIpProtocolVersion() == 6){
-                        //packet with ipv6
-                        Integer newCount = packetValuesWithIPV6.get(i) + 1;
-                        packetValuesWithIPV6.remove(i);
-                        packetValuesWithIPV6.add(i,newCount);
+    private void fillPacketValues(List<BitsInPacketInfo> data) {
+        for(BitsInPacketInfo info : data) {
+
+            if (info.getSourceIP().equals(DataUtils.HOME_ADDRESS)) {
+                Integer time = TimestampUtils.getTime(timestampType, info.getTimestamp());
+                for (int i = 0; i < timeValues.size(); i++) {
+                    Integer timeValue = timeValues.get(i);
+                    String protocolII = info.getProtocolII();
+                    if (time <= timeValue) {
+
+                        if (!protocolsCount.containsKey(protocolII)) {
+                            protocolsCount.put(protocolII, getListWithInitValues());
+                        }
+                        updateProtocolCount(protocolsCount, i, protocolII);
+                        break;
                     }
-                    break;
                 }
             }
         }
+    }
+
+    private void updateProtocolCount(HashMap<String, ObservableList<Integer>> protocolsCount, int i, String protocolII) {
+        ObservableList<Integer> protocolValues = protocolsCount.get(protocolII);
+        Integer newCount = protocolValues.get(i) + 1;
+        protocolValues.remove(i);
+        protocolValues.add(i, newCount);
     }
 
     private ObservableList<Integer>  getListWithInitValues() {
@@ -136,9 +144,9 @@ public class IpVersionChartController {
         return values;
     }
 
-    private List<String> getTimestamps(List<IpProtocolVersionInPacketInfo> data){
+    private List<String> getTimestamps(List<BitsInPacketInfo> data){
         List<String> timestamps = new ArrayList<>();
-        for(IpProtocolVersionInPacketInfo info : data){
+        for(BitsInPacketInfo info : data){
             timestamps.add(info.getTimestamp());
         }
         return timestamps;

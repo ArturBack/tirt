@@ -77,4 +77,17 @@ public class MenuController {
             e.printStackTrace();
         }
     }
+
+    @FXML
+    public void switchToProtocolOutRatio(ActionEvent actionEvent) {
+        BorderPane rootPane = App.getRootPane();
+
+        FXMLLoader f = new FXMLLoader();
+        try {
+            AnchorPane anchorPane = f.load(new FileInputStream(new File("src/main/resources/view/ProtocolOutRatio.fxml")));
+            rootPane.setCenter(anchorPane);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
 }

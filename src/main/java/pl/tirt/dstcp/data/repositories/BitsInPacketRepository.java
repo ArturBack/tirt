@@ -39,16 +39,21 @@ public class BitsInPacketRepository {
         if(data != null) {
             data.addAll(bitsInPacketInfos);
         }
-        try {
-            FileOutputStream fout = new FileOutputStream(DataUtils.DIRECTORY_PATH + FILENAME);
-            ObjectOutputStream oos = new ObjectOutputStream(fout);
-            if(data != null){
-                oos.writeObject(data);
-            } else {
-                oos.writeObject(bitsInPacketInfos);
+        File file = new File(DataUtils.DIRECTORY_PATH + FILENAME);
+        if(!file.exists()) {
+            try {
+                FileOutputStream fout = new FileOutputStream(DataUtils.DIRECTORY_PATH + FILENAME);
+                ObjectOutputStream oos = new ObjectOutputStream(fout);
+                if(data != null){
+                    oos.writeObject(data);
+                } else {
+                    oos.writeObject(bitsInPacketInfos);
+                }
+            } catch (Exception e) {
+                e.printStackTrace();
             }
-        } catch (Exception e) {
-           e.printStackTrace();
-       }
+        }
+
+
     }
 }
