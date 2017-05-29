@@ -15,76 +15,46 @@ public class MenuController {
 
     @FXML
     void switchToBitsOut(ActionEvent event) {
-        BorderPane rootPane = App.getRootPane();
-
-        FXMLLoader f = new FXMLLoader();
-        try {
-            AnchorPane anchorPane = f.load(new FileInputStream(new File("src/main/resources/view/TotalBytesOut.fxml")));
-            rootPane.setCenter(anchorPane);
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
+        initializeView("src/main/resources/view/TotalBytesOut.fxml");
     }
 
     @FXML
     void switchToBitsIn(ActionEvent event) {
-        BorderPane rootPane = App.getRootPane();
-
-        FXMLLoader f = new FXMLLoader();
-        try {
-            AnchorPane anchorPane = f.load(new FileInputStream(new File("src/main/resources/view/TotalBytesIn.fxml")));
-            rootPane.setCenter(anchorPane);
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
+        initializeView("src/main/resources/view/TotalBytesIn.fxml");
     }
 
     @FXML
     void switchToIpSourceOut(ActionEvent event) {
-        BorderPane rootPane = App.getRootPane();
-
-        FXMLLoader f = new FXMLLoader();
-        try {
-            AnchorPane anchorPane = f.load(new FileInputStream(new File("src/main/resources/view/IpSourcesOut.fxml")));
-            rootPane.setCenter(anchorPane);
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
+        initializeView("src/main/resources/view/IpSourcesOut.fxml");
     }
 
     @FXML
     void switchToIpSourceIn(ActionEvent event) {
-        BorderPane rootPane = App.getRootPane();
-
-        FXMLLoader f = new FXMLLoader();
-        try {
-            AnchorPane anchorPane = f.load(new FileInputStream(new File("src/main/resources/view/IpSourcesIn.fxml")));
-            rootPane.setCenter(anchorPane);
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
+        initializeView("src/main/resources/view/IpSourcesIn.fxml");
     }
 
     @FXML
     void switchToIpRatio(ActionEvent event) {
-        BorderPane rootPane = App.getRootPane();
-
-        FXMLLoader f = new FXMLLoader();
-        try {
-            AnchorPane anchorPane = f.load(new FileInputStream(new File("src/main/resources/view/IpVersionRatio.fxml")));
-            rootPane.setCenter(anchorPane);
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
+        initializeView("src/main/resources/view/IpVersionRatio.fxml");
     }
 
     @FXML
     public void switchToProtocolOutRatio(ActionEvent actionEvent) {
+        initializeView("src/main/resources/view/L2ProtocolOutRatio.fxml");
+    }
+
+    @FXML
+    public void switchToProtocolInRatio(ActionEvent actionEvent) {
+        initializeView("src/main/resources/view/L2ProtocolInRatio.fxml");
+    }
+
+    private void initializeView(String filename) {
+
         BorderPane rootPane = App.getRootPane();
 
         FXMLLoader f = new FXMLLoader();
         try {
-            AnchorPane anchorPane = f.load(new FileInputStream(new File("src/main/resources/view/ProtocolOutRatio.fxml")));
+            AnchorPane anchorPane = f.load(new FileInputStream(new File(filename)));
             rootPane.setCenter(anchorPane);
         } catch (IOException e) {
             e.printStackTrace();

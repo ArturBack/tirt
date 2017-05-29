@@ -8,7 +8,6 @@ import javafx.fxml.FXML;
 import javafx.scene.chart.StackedBarChart;
 import javafx.scene.chart.XYChart;
 import javafx.scene.control.ComboBox;
-import pl.tirt.dstcp.data.DataUtils;
 import pl.tirt.dstcp.data.model.BitsInPacketInfo;
 import pl.tirt.dstcp.data.repositories.BitsInPacketRepository;
 import pl.tirt.dstcp.gui.utils.TimestampType;
@@ -21,7 +20,7 @@ import java.util.List;
 /**
  * Created by mac on 28.05.2017.
  */
-public class ProtocolOutRatioController {
+public abstract class ProtocolRatioController {
 
     @FXML
     private StackedBarChart<String, Integer> protocolChart;
@@ -110,17 +109,17 @@ public class ProtocolOutRatioController {
     private void fillPacketValues(List<BitsInPacketInfo> data) {
         for(BitsInPacketInfo info : data) {
 
-            if (info.getSourceIP().equals(DataUtils.HOME_ADDRESS)) {
+            if (isSentToOrFromProperAddress(info)) {
                 Integer time = TimestampUtils.getTime(timestampType, info.getTimestamp());
                 for (int i = 0; i < timeValues.size(); i++) {
                     Integer timeValue = timeValues.get(i);
-                    String protocolII = info.getProtocolII();
+                    String protocolName = getProtocol(info);
                     if (time <= timeValue) {
 
-                        if (!protocolsCount.containsKey(protocolII)) {
-                            protocolsCount.put(protocolII, getListWithInitValues());
+                        if (!protocolsCount.containsKey(protocolName)) {
+                            protocolsCount.put(protocolName, getListWithInitValues());
                         }
-                        updateProtocolCount(protocolsCount, i, protocolII);
+                        updateProtocolCount(protocolsCount, i, protocolName);
                         break;
                     }
                 }
@@ -151,4 +150,11 @@ public class ProtocolOutRatioController {
         }
         return timestamps;
     }
+
+    abstract String getProtocol(BitsInPacketInfo info);
+
+    abstract boolean isSentToOrFromProperAddress(BitsInPacketInfo info);
+//    {
+//        return info.getSourceIP().equals(DataUtils.HOME_ADDRESS);
+//    }
 }

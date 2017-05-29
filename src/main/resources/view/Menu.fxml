@@ -44,7 +44,7 @@
                 <MenuItem
                         fx:id="idProtocolRatioLInVI"
                         mnemonicParsing="false"
-                        onAction="#switchToIpRatio"
+                        onAction="#switchToProtocolInRatio"
                         text="Stosunek użytych protokołów w ruchu przychodzącym " />
             </items>
         </Menu>
