@@ -5,16 +5,12 @@ import javafx.beans.value.ObservableValue;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
-import javafx.scene.chart.CategoryAxis;
 import javafx.scene.chart.LineChart;
-import javafx.scene.chart.StackedBarChart;
 import javafx.scene.chart.XYChart;
 import javafx.scene.control.ComboBox;
 import pl.tirt.dstcp.data.DataUtils;
 import pl.tirt.dstcp.data.model.BitsInPacketInfo;
-import pl.tirt.dstcp.data.model.IpProtocolVersionInPacketInfo;
 import pl.tirt.dstcp.data.repositories.BitsInPacketRepository;
-import pl.tirt.dstcp.data.repositories.IpProtocolVersionRepository;
 import pl.tirt.dstcp.gui.utils.TimestampType;
 import pl.tirt.dstcp.gui.utils.TimestampUtils;
 

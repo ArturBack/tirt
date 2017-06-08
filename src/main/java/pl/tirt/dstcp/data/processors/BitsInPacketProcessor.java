@@ -60,9 +60,7 @@ public class BitsInPacketProcessor implements DataProcessor {
                     }
                     if(layer4Line[i].equals("Dst")) {
                         sourcePort = layer4Line[i-1].replace(",","");
-                    }
-                    if(layer4Line[i].equals("Seq:")) {
-                        destinationPort = layer4Line[i-1].replace(",","");
+                        destinationPort = layer4Line[i+2].replace(",","");
                     }
                 }
 
@@ -78,33 +76,6 @@ public class BitsInPacketProcessor implements DataProcessor {
         }
         BitsInPacketRepository.getInstance().saveData(bitsInPacketInfos);
     }
-
-    private String getDestinationPort(StringPacket stringPacket) {
-
-        return "";
-    }
-
-    private String getSourcePort(StringPacket stringPacket) {
-
-        return "";
-    }
-
-    private String getProtocolII(StringPacket stringPacket) {
-
-        return "";
-    }
-
-    private String getProtocolIII(StringPacket stringPacket) {
-
-        return "";
-    }
-
-    private String getProtocolIV(StringPacket stringPacket) {
-
-        return "";
-    }
-
-    
 
     private int getBitsCountInfo(StringPacket stringPacket) {
         return Integer.parseInt(stringPacket.getData().get(1)[2]);

@@ -9,9 +9,9 @@
 <?import javafx.scene.layout.HBox?>
 
 
-<AnchorPane prefHeight="800.0" prefWidth="1024.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="pl.tirt.dstcp.gui.controller.IpVersionChartController">
+<AnchorPane prefHeight="800.0" prefWidth="1024.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="pl.tirt.dstcp.gui.controller.L3ProtocolOutRatioController">
     <children>
-        <StackedBarChart fx:id="protocolChart" layoutX="66.0" layoutY="91.0" prefHeight="736.0" prefWidth="1024.0" title="Użycie IPV4 i IPV6" AnchorPane.bottomAnchor="64.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <StackedBarChart fx:id="protocolChart" layoutX="66.0" layoutY="91.0" prefHeight="736.0" prefWidth="1024.0" title="Stosunek uzytych protokołów w ruchu wychodzącym - warstwa III" AnchorPane.bottomAnchor="64.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
             <xAxis>
                 <CategoryAxis side="BOTTOM" fx:id="xAxis" />
             </xAxis>

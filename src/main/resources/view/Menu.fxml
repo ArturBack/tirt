@@ -37,14 +37,14 @@
                         text="Ilość ramek przesyłanych z badanego węzła do wybranego odbiorcy z podziałem na protokoły"/>
                 <!--text="IP source" />-->
                 <MenuItem
-                        fx:id="idProtocolRatioOutLVI"
+                        fx:id="idProtocolRatioOutLII"
                         mnemonicParsing="false"
-                        onAction="#switchToProtocolOutRatio"
+                        onAction="#switchToProtocolOutRatioL2"
                         text="Stosunek użytych protokołów w ruchu wychodzącym " />
                 <MenuItem
-                        fx:id="idProtocolRatioLInVI"
+                        fx:id="idProtocolRatioLInLII"
                         mnemonicParsing="false"
-                        onAction="#switchToProtocolInRatio"
+                        onAction="#switchToProtocolInRatioL2"
                         text="Stosunek użytych protokołów w ruchu przychodzącym " />
             </items>
         </Menu>
@@ -64,10 +64,15 @@
                         onAction="#switchToIpSourceOut"
                         text="IP source" />
                 <MenuItem
-                        fx:id="idIpRatioLV"
+                        fx:id="idProtocolRatioOutLIII"
                         mnemonicParsing="false"
-                        onAction="#switchToIpRatio"
-                        text="IP versions ratio" />
+                        onAction="#switchToProtocolOutRatioL3"
+                        text="Stosunek użytych protokołów w ruchu wychodzącym " />
+                <MenuItem
+                        fx:id="idProtocolRatioLInLIII"
+                        mnemonicParsing="false"
+                        onAction="#switchToProtocolInRatioL3"
+                        text="Stosunek użytych protokołów w ruchu przychodzącym " />
             </items>
         </Menu>
 
@@ -88,15 +93,22 @@
                         text="IP source" />
                 <!--text="IP source" />-->
                 <MenuItem
-                        fx:id="idIpRatioLIV"
+                        fx:id="idProtocolsIncomingFromNodeLVI"
                         mnemonicParsing="false"
-                        onAction="#switchToIpRatio"
-                        text="IP versions ratio" />
+                        onAction="#switchToProtocolsIncomingFromNodeLIV"
+                        text="Ilość ramek przesyłanych z wybranego źródła do badanego węzła z podziałem na protokoły" />
+                <!--text="IP source" />-->
+                <MenuItem
+                        fx:id="idProtocolRatioOutLIV"
+                        mnemonicParsing="false"
+                        onAction="#switchToProtocolOutRatioL4"
+                        text="Stosunek użytych protokołów w ruchu wychodzącym " />
+                <MenuItem
+                        fx:id="idProtocolRatioLInLIV"
+                        mnemonicParsing="false"
+                        onAction="#switchToProtocolInRatioL4"
+                        text="Stosunek użytych protokołów w ruchu przychodzącym " />
             </items>
         </Menu>
-
-
-
-
     </menus>
 </MenuBar>

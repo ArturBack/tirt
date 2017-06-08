@@ -1075,7 +1075,7 @@ Ethernet II, Src: Azurewav_27:b3:af (24:0a:64:27:b3:af), Dst: Broadcast (ff:ff:f
 Address Resolution Protocol (request)
 
 No.     Time           Source                Destination           Protocol Length Info
-     82 24.270895      192.168.1.57          239.255.255.250       SSDP     216    M-SEARCH * HTTP/1.1 
+     82 24.270895      192.168.1.57          239.255.255.250       SSDP     216    M-SEARCH * HTTP/1.1
 
 Frame 82: 216 bytes on wire (1728 bits), 216 bytes captured (1728 bits) on interface 0
 Ethernet II, Src: Azurewav_27:b3:af (24:0a:64:27:b3:af), Dst: IPv4mcast_7f:ff:fa (01:00:5e:7f:ff:fa)
@@ -1097,7 +1097,7 @@ Ethernet II, Src: Azurewav_27:b3:af (24:0a:64:27:b3:af), Dst: Broadcast (ff:ff:f
 Address Resolution Protocol (request)
 
 No.     Time           Source                Destination           Protocol Length Info
-     84 25.193878      192.168.1.57          239.255.255.250       SSDP     216    M-SEARCH * HTTP/1.1 
+     84 25.193878      192.168.1.57          239.255.255.250       SSDP     216    M-SEARCH * HTTP/1.1
 
 Frame 84: 216 bytes on wire (1728 bits), 216 bytes captured (1728 bits) on interface 0
 Ethernet II, Src: Azurewav_27:b3:af (24:0a:64:27:b3:af), Dst: IPv4mcast_7f:ff:fa (01:00:5e:7f:ff:fa)
@@ -1210,7 +1210,7 @@ Internet Protocol Version 4, Src: 192.168.1.44, Dst: 31.13.92.10
 Transmission Control Protocol, Src Port: 59313, Dst Port: 443, Seq: 1778, Ack: 1153, Len: 0
 
 No.     Time           Source                Destination           Protocol Length Info
-     92 26.110484      192.168.1.57          239.255.255.250       SSDP     216    M-SEARCH * HTTP/1.1 
+     92 26.110484      192.168.1.57          239.255.255.250       SSDP     216    M-SEARCH * HTTP/1.1
 
 Frame 92: 216 bytes on wire (1728 bits), 216 bytes captured (1728 bits) on interface 0
 Ethernet II, Src: Azurewav_27:b3:af (24:0a:64:27:b3:af), Dst: IPv4mcast_7f:ff:fa (01:00:5e:7f:ff:fa)
@@ -1650,7 +1650,7 @@ Internet Protocol Version 4, Src: 192.168.1.44, Dst: 131.253.14.227
 Transmission Control Protocol, Src Port: 59921, Dst Port: 443, Seq: 4129, Ack: 9565, Len: 0
 
 No.     Time           Source                Destination           Protocol Length Info
-    126 27.339419      192.168.1.57          239.255.255.250       SSDP     216    M-SEARCH * HTTP/1.1 
+    126 27.339419      192.168.1.57          239.255.255.250       SSDP     216    M-SEARCH * HTTP/1.1
 
 Frame 126: 216 bytes on wire (1728 bits), 216 bytes captured (1728 bits) on interface 0
 Ethernet II, Src: Azurewav_27:b3:af (24:0a:64:27:b3:af), Dst: IPv4mcast_7f:ff:fa (01:00:5e:7f:ff:fa)

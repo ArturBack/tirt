@@ -34,17 +34,12 @@ public class MenuController {
     }
 
     @FXML
-    void switchToIpRatio(ActionEvent event) {
-        initializeView("src/main/resources/view/IpVersionRatio.fxml");
-    }
-
-    @FXML
-    public void switchToProtocolOutRatio(ActionEvent actionEvent) {
+    public void switchToProtocolOutRatioL2(ActionEvent actionEvent) {
         initializeView("src/main/resources/view/L2ProtocolOutRatio.fxml");
     }
 
     @FXML
-    public void switchToProtocolInRatio(ActionEvent actionEvent) {
+    public void switchToProtocolInRatioL2(ActionEvent actionEvent) {
         initializeView("src/main/resources/view/L2ProtocolInRatio.fxml");
     }
 
@@ -59,5 +54,25 @@ public class MenuController {
         } catch (IOException e) {
             e.printStackTrace();
         }
+    }
+
+    public void switchToProtocolOutRatioL3(ActionEvent actionEvent) {
+        initializeView("src/main/resources/view/L3ProtocolInRatio.fxml");
+    }
+
+    public void switchToProtocolInRatioL3(ActionEvent actionEvent) {
+        initializeView("src/main/resources/view/L3ProtocolOutRatio.fxml");
+    }
+
+    public void switchToProtocolOutRatioL4(ActionEvent actionEvent) {
+        initializeView("src/main/resources/view/L4ProtocolOutRatio.fxml");
+    }
+
+    public void switchToProtocolInRatioL4(ActionEvent actionEvent) {
+        initializeView("src/main/resources/view/L4ProtocolInRatio.fxml");
+    }
+
+    public void switchToProtocolsIncomingFromNodeLIV(ActionEvent actionEvent) {
+        initializeView("src/main/resources/view/L4ProtocolsIncomingFromNode.fxml");
     }
 }

@@ -50,9 +50,9 @@ public class DataProvider {
 
         Iterable<String> iterableLines = dataToProcess::iterator;
         for(String line : iterableLines){
-            String[] splitedLine = line.split(FILE_DELIMITER);
+            String[] splittedLine = line.split(FILE_DELIMITER);
 
-            if(isLinePacketBeginning(splitedLine)) {
+            if(isLinePacketBeginning(splittedLine)) {
                 if(stringPacket != null){
                     //add processed packet to data
                     data.add(stringPacket);
@@ -61,8 +61,8 @@ public class DataProvider {
                 stringPacket = new StringPacket();
             } else {
                 //skip empty lines
-                if(!isEmptyLine(splitedLine)) {
-                    stringPacket.getData().add(splitedLine);
+                if(!isEmptyLine(splittedLine)) {
+                    stringPacket.getData().add(splittedLine);
                 }
             }
             LAST_READ_LINE_INDEX++;

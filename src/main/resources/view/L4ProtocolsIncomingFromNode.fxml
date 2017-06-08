@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.chart.StackedBarChart?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.control.Label?>
+
+<AnchorPane prefHeight="800.0" prefWidth="1024.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="pl.tirt.dstcp.gui.controller.L4ProtocolsIncomingFromNodeController">
+    <children>
+        <StackedBarChart fx:id="protocol_chart" layoutX="66.0" layoutY="91.0" legendSide="BOTTOM" legendVisible="true" prefHeight="771.0" prefWidth="1024.0" title="Klasyfikacja źródłowych adresów IP" AnchorPane.bottomAnchor="200.0" AnchorPane.leftAnchor="0" AnchorPane.rightAnchor="0" AnchorPane.topAnchor="0.0">
+            <xAxis>
+                <CategoryAxis label="Czas" side="BOTTOM" fx:id="xAxis" />
+            </xAxis>
+            <yAxis>
+                <NumberAxis label="Liczba pakietów wychodzących" side="LEFT" />
+            </yAxis>
+        </StackedBarChart>
+        <GridPane xmlns:fx="http://javafx.com/fxml" alignment="center" hgap="10" vgap="10" AnchorPane.bottomAnchor="0" AnchorPane.leftAnchor="0.0">
+        <padding><Insets top="25" right="25" bottom="10" left="25"/></padding>
+
+
+
+            <Label text="Source IP:" GridPane.columnIndex="0" GridPane.rowIndex="1"/>
+
+            <ComboBox fx:id="ip_source_combo" prefHeight="42.0" prefWidth="206.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                <HBox.margin>
+                    <Insets bottom="5.0" right="10.0" />
+                </HBox.margin>
+            </ComboBox>
+
+            <Label text="Source Port:" GridPane.columnIndex="0" GridPane.rowIndex="2"/>
+
+            <ComboBox fx:id="source_port_combo" prefHeight="42.0" prefWidth="206.0" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                <HBox.margin>
+                    <Insets bottom="5.0" right="10.0" />
+                </HBox.margin>
+            </ComboBox>
+
+            <Label text="Destination Port:" GridPane.columnIndex="0" GridPane.rowIndex="3"/>
+
+            <ComboBox fx:id="destination_port_combo" prefHeight="42.0" prefWidth="193.0" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                <HBox.margin>
+                    <Insets bottom="5.0" right="15.0" />
+                </HBox.margin>
+            </ComboBox>
+
+            <Label text="Scale:" GridPane.columnIndex="0" GridPane.rowIndex="4"/>
+
+            <ComboBox fx:id="scale_type_combo" prefHeight="42.0" prefWidth="193.0" GridPane.columnIndex="1" GridPane.rowIndex="4">
+                <HBox.margin>
+                    <Insets bottom="5.0" right="15.0" />
+                </HBox.margin>
+            </ComboBox>
+        </GridPane>
+    </children>
+</AnchorPane>

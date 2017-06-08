@@ -154,7 +154,4 @@ public abstract class ProtocolRatioController {
     abstract String getProtocol(BitsInPacketInfo info);
 
     abstract boolean isSentToOrFromProperAddress(BitsInPacketInfo info);
-//    {
-//        return info.getSourceIP().equals(DataUtils.HOME_ADDRESS);
-//    }
 }
