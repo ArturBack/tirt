@@ -8,7 +8,6 @@ import javafx.fxml.FXML;
 import javafx.scene.chart.StackedBarChart;
 import javafx.scene.chart.XYChart;
 import javafx.scene.control.ComboBox;
-import pl.tirt.dstcp.data.DataUtils;
 import pl.tirt.dstcp.data.model.BitsInPacketInfo;
 import pl.tirt.dstcp.data.repositories.BitsInPacketRepository;
 import pl.tirt.dstcp.gui.utils.TimestampType;
@@ -27,34 +26,27 @@ public abstract class ProtocolsPerNode {
     private StackedBarChart<String, Integer> protocol_chart;
 
     @FXML
-    private ComboBox<String> ip_source_combo;
+    private ComboBox<String> ip_combo;
 
     @FXML
-    private ComboBox<String> destination_port_combo;
+    private ComboBox<String> first_port_combo;
 
     @FXML
-    private ComboBox<String> source_port_combo;
+    private ComboBox<String> second_port_combo;
 
     @FXML
     private ComboBox<String> scale_type_combo;
 
-
-
-    private HashMap<String, HashMap<String, HashMap<String, HashMap<String, ObservableList<Integer>>>>> sourceIpCount = new HashMap<>();
-//    private HashMap<String, ObservableList<Integer>> protocolsCount = new HashMap<>();
-
+    private HashMap<String, HashMap<String, HashMap<String, HashMap<String, ObservableList<Integer>>>>> ipCount = new HashMap<>();
     private ObservableList<Integer> timeValues;
     private List<BitsInPacketInfo> data;
 
     private TimestampType timestampType = TimestampType.SECOND;
 
-//    private boolean relodeOn = false;
-
 
     @FXML
     private void initialize() {
         data = BitsInPacketRepository.getInstance().getData();
-//        setData(data);
         timeValues = TimestampUtils.createTimeValues(timestampType,getTimestamps(data));
         fillPacketValues(data);
         initCheckBoxes();
@@ -63,53 +55,47 @@ public abstract class ProtocolsPerNode {
     }
 
     private void initCheckBoxes() {
-        ip_source_combo.getItems().clear();
-        ip_source_combo.getItems().addAll(sourceIpCount.keySet());
-        ip_source_combo.getSelectionModel().select(0);
-        ip_source_combo.getSelectionModel().selectedItemProperty().addListener(new ChangeListener<String>() {
+        ip_combo.getItems().clear();
+        ip_combo.getItems().addAll(ipCount.keySet());
+        ip_combo.getSelectionModel().select(0);
+        ip_combo.getSelectionModel().selectedItemProperty().addListener(new ChangeListener<String>() {
             @Override
             public void changed(ObservableValue<? extends String> observable, String oldValue, String newValue) {
-                System.out.println("1");
                 if (newValue != null) {
-//                    relodeOn = true;
-                    HashMap<String, HashMap<String, HashMap<String, ObservableList<Integer>>>> map = sourceIpCount.get(newValue);
+                    HashMap<String, HashMap<String, HashMap<String, ObservableList<Integer>>>> map = ipCount.get(newValue);
                     updateSourcePortCombo(map);
-//                    System.out.println("1");
+
                 }
             }
         });
-        String val = ip_source_combo.getSelectionModel().getSelectedItem();
-        HashMap<String, HashMap<String, HashMap<String, ObservableList<Integer>>>> map = sourceIpCount.get(val);
+        String val = ip_combo.getSelectionModel().getSelectedItem();
+        HashMap<String, HashMap<String, HashMap<String, ObservableList<Integer>>>> map = ipCount.get(val);
         setSourcePortCombo(map);
     }
 
 
     private void setSourcePortCombo(HashMap<String, HashMap<String, HashMap<String, ObservableList<Integer>>>> sourcePortCount) {
         updateSourcePortCombo(sourcePortCount);
-        source_port_combo.getSelectionModel().selectedItemProperty().addListener(new ChangeListener<String>() {
+        first_port_combo.getSelectionModel().selectedItemProperty().addListener(new ChangeListener<String>() {
             @Override
             public void changed(ObservableValue<? extends String> observable, String oldValue, String newValue) {
-                System.out.println("2");
-//                if (!relodeOn) {
                 if (newValue != null) {
-                    System.out.println("2.1");
-                    updateDestinationPortCombo(sourceIpCount.get(ip_source_combo.getSelectionModel().getSelectedItem()).get(newValue));
-//                    setDestinationPortCombo(sourcePortCount.get(newValue));
+                    updateDestinationPortCombo(ipCount.get(ip_combo.getSelectionModel().getSelectedItem()).get(newValue));
                 }
             }
         });
-        setDestinationPortCombo(sourcePortCount.get(source_port_combo.getSelectionModel().getSelectedItem()));
+        setDestinationPortCombo(sourcePortCount.get(first_port_combo.getSelectionModel().getSelectedItem()));
     }
 
     private void updateSourcePortCombo(HashMap<String, HashMap<String, HashMap<String, ObservableList<Integer>>>> sourcePortCount) {
-        source_port_combo.getItems().clear();
-        source_port_combo.getItems().addAll(sourcePortCount.keySet());
-        source_port_combo.getSelectionModel().select(0);
+        first_port_combo.getItems().clear();
+        first_port_combo.getItems().addAll(sourcePortCount.keySet());
+        first_port_combo.getSelectionModel().select(0);
     }
 
     private void setDestinationPortCombo(HashMap<String, HashMap<String, ObservableList<Integer>>> destinationPortCount) {
         updateDestinationPortCombo(destinationPortCount);
-        destination_port_combo.getSelectionModel().selectedItemProperty().addListener(new ChangeListener<String>() {
+        second_port_combo.getSelectionModel().selectedItemProperty().addListener(new ChangeListener<String>() {
             @Override
             public void changed(ObservableValue<? extends String> observable, String oldValue, String newValue) {
                 if (newValue != null) {
@@ -120,9 +106,9 @@ public abstract class ProtocolsPerNode {
     }
 
     private void updateDestinationPortCombo(HashMap<String, HashMap<String, ObservableList<Integer>>> destinationPortCount) {
-        destination_port_combo.getItems().clear();
-        destination_port_combo.getItems().addAll(destinationPortCount.keySet());
-        destination_port_combo.getSelectionModel().select(0);
+        second_port_combo.getItems().clear();
+        second_port_combo.getItems().addAll(destinationPortCount.keySet());
+        second_port_combo.getSelectionModel().select(0);
     }
 
     private void initScaleTypes() {
@@ -151,7 +137,7 @@ public abstract class ProtocolsPerNode {
     }
 
     private void clearAndReloadData() {
-        sourceIpCount = new HashMap<>();
+        ipCount = new HashMap<>();
         setData(data);
     }
 
@@ -181,11 +167,10 @@ public abstract class ProtocolsPerNode {
 
     private void fillChartWithProperData(int startIndex) {
 
-        String sourceIp = ip_source_combo.getSelectionModel().getSelectedItem();
-        String destinationPort = destination_port_combo.getSelectionModel().getSelectedItem();
-        String sourcePort = source_port_combo.getSelectionModel().getSelectedItem();
-        HashMap<String, ObservableList<Integer>> protocolsCount = sourceIpCount.get(sourceIp).get(sourcePort).get(destinationPort);
-        System.out.println("refil s");
+        String sourceIp = ip_combo.getSelectionModel().getSelectedItem();
+        String destinationPort = second_port_combo.getSelectionModel().getSelectedItem();
+        String sourcePort = first_port_combo.getSelectionModel().getSelectedItem();
+        HashMap<String, ObservableList<Integer>> protocolsCount = ipCount.get(sourceIp).get(sourcePort).get(destinationPort);
         ArrayList<XYChart.Series<String, Integer>> protocolSeries = new ArrayList<>();
         for (String protocolName : protocolsCount.keySet()) {
             XYChart.Series<String, Integer> protocolSerie = new XYChart.Series<>();
@@ -206,31 +191,31 @@ public abstract class ProtocolsPerNode {
 
             if (isSentToOrFromProperAddress(info)) {
                 Integer time = TimestampUtils.getTime(timestampType, info.getTimestamp());
-                String sourceIP = info.getSourceIP();
-                String destinationPort = info.getDestinationPort();
-                String sourcePort = info.getSourcePort();
+                String ip = getIpAddress(info);
+                String firstPort = getFirstPort(info);
+                String secondPort = getSecondPort(info);
                 String protocolName = getProtocol(info);
 
                 for (int i = 0; i < timeValues.size(); i++) {
                     Integer timeValue = timeValues.get(i);
                     if (time <= timeValue) {
 
-                        if(!sourceIpCount.containsKey(sourceIP)) {
-                            sourceIpCount.put(sourceIP, new HashMap<>());
+                        if(!ipCount.containsKey(ip)) {
+                            ipCount.put(ip, new HashMap<>());
                         }
-                        HashMap<String, HashMap<String, HashMap<String, ObservableList<Integer>>>> sourcePortCount = sourceIpCount.get(sourceIP);
+                        HashMap<String, HashMap<String, HashMap<String, ObservableList<Integer>>>> sourcePortCount = ipCount.get(ip);
 
-                        if(!sourcePortCount.containsKey(destinationPort)) {
-                            sourcePortCount.put(destinationPort, new HashMap<>());
-                        }
-
-                        HashMap<String, HashMap<String, ObservableList<Integer>>> destinationPortCount = sourcePortCount.get(destinationPort);
-
-                        if(!destinationPortCount.containsKey(sourcePort)) {
-                            destinationPortCount.put(sourcePort, new HashMap<>());
+                        if(!sourcePortCount.containsKey(firstPort)) {
+                            sourcePortCount.put(firstPort, new HashMap<>());
                         }
 
-                        HashMap<String, ObservableList<Integer>> protocolsCount = destinationPortCount.get(sourcePort);
+                        HashMap<String, HashMap<String, ObservableList<Integer>>> destinationPortCount = sourcePortCount.get(firstPort);
+
+                        if(!destinationPortCount.containsKey(secondPort)) {
+                            destinationPortCount.put(secondPort, new HashMap<>());
+                        }
+
+                        HashMap<String, ObservableList<Integer>> protocolsCount = destinationPortCount.get(secondPort);
                         if (!protocolsCount.containsKey(protocolName)) {
                             protocolsCount.put(protocolName, getListWithInitValues());
                         }
@@ -247,17 +232,9 @@ public abstract class ProtocolsPerNode {
         }
     }
 
-    private HashMap<String, HashMap<String, ObservableList<Integer>>> getListWithSourceIPInitValues() {
-        return null;
-    }
-
-
-    private void updateProtocolCount(HashMap<String, ObservableList<Integer>> protocolsCount, int i, String protocolII) {
-        ObservableList<Integer> protocolValues = protocolsCount.get(protocolII);
-        Integer newCount = protocolValues.get(i) + 1;
-        protocolValues.remove(i);
-        protocolValues.add(i, newCount);
-    }
+//    private HashMap<String, HashMap<String, ObservableList<Integer>>> getListWithSourceIPInitValues() {
+//        return null;
+//    }
 
     private ObservableList<Integer>  getListWithInitValues() {
         ObservableList<Integer> values = FXCollections.observableArrayList();
@@ -279,4 +256,10 @@ public abstract class ProtocolsPerNode {
     abstract String getProtocol(BitsInPacketInfo info);
 
     abstract boolean isSentToOrFromProperAddress(BitsInPacketInfo info);
+
+    protected abstract String getIpAddress(BitsInPacketInfo info);
+
+    protected abstract String getFirstPort(BitsInPacketInfo info);
+
+    protected abstract String getSecondPort(BitsInPacketInfo info);
 }

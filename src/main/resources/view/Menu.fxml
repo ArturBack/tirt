@@ -54,16 +54,6 @@
                 text="Warstwa III">
             <items>
                 <MenuItem
-                        fx:id="idBitsLV"
-                        mnemonicParsing="false"
-                        onAction="#switchToBitsOut"
-                        text="Bits count" />
-                <MenuItem
-                        fx:id="idIpSourceLV"
-                        mnemonicParsing="false"
-                        onAction="#switchToIpSourceOut"
-                        text="IP source" />
-                <MenuItem
                         fx:id="idProtocolRatioOutLIII"
                         mnemonicParsing="false"
                         onAction="#switchToProtocolOutRatioL3"
@@ -81,22 +71,16 @@
                 text="Warstwa IV">
             <items>
                 <MenuItem
-                        fx:id="idBitsLIV"
+                        fx:id="idProtocolsOutgoingToNodeLIV"
                         mnemonicParsing="false"
-                        onAction="#switchToBitsOut"
-                        text="Suma bajtów wychodzących" />
-                <!--text="Bits count" />-->
-                <MenuItem
-                        fx:id="idIpSourceLIV"
-                        mnemonicParsing="false"
-                        onAction="#switchToIpSourceOut"
-                        text="IP source" />
+                        onAction="#switchToProtocolsOutgoingToNodeLIV"
+                        text="Ilość ramek przesyłanych do wybranego źródła z podziałem na protokoły" />
                 <!--text="IP source" />-->
                 <MenuItem
-                        fx:id="idProtocolsIncomingFromNodeLVI"
+                        fx:id="idProtocolsIncomingFromNodeLIV"
                         mnemonicParsing="false"
                         onAction="#switchToProtocolsIncomingFromNodeLIV"
-                        text="Ilość ramek przesyłanych z wybranego źródła do badanego węzła z podziałem na protokoły" />
+                        text="Ilość ramek przesyłanych z wybranego źródła z podziałem na protokoły" />
                 <!--text="IP source" />-->
                 <MenuItem
                         fx:id="idProtocolRatioOutLIV"

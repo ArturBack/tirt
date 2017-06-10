@@ -75,4 +75,9 @@ public class MenuController {
     public void switchToProtocolsIncomingFromNodeLIV(ActionEvent actionEvent) {
         initializeView("src/main/resources/view/L4ProtocolsIncomingFromNode.fxml");
     }
+
+    public void switchToProtocolsOutgoingToNodeLIV(ActionEvent actionEvent) {
+        initializeView("src/main/resources/view/L4ProtocolsOutgoingToNode.fxml");
+
+    }
 }

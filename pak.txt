@@ -16,6 +16,23 @@ Secure Sockets Layer
         Encrypted Application Data: 6b6adfb71475e03edf172cddfca6d4319ee5064e00a21888...
 
 No.     Time           Source                Destination           Protocol Length Info
+     19 3.548897       192.168.1.44          31.13.92.10           TLSv1.2  108    Application Data
+
+Frame 18: 108 bytes on wire (864 bits), 108 bytes captured (864 bits) on interface 0
+Ethernet II, Src: Sagemcom_7e:6c:ee (84:a4:23:7e:6c:ee), Dst: Apple_1d:4a:73 (a0:99:9b:1d:4a:73)
+    Destination: Apple_1d:4a:73 (a0:99:9b:1d:4a:73)
+    Source: Sagemcom_7e:6c:ee (84:a4:23:7e:6c:ee)
+    Type: IPv4 (0x0800)
+Internet Protocol Version 4, Src: 31.13.92.10, Dst: 192.168.1.44
+Transmission Control Protocol, Src Port: 443, Dst Port: 59845, Seq: 823, Ack: 1334, Len: 42
+Secure Sockets Layer
+    TLSv1.2 Record Layer: Application Data Protocol: http-over-tls
+        Content Type: Application Data (23)
+        Version: TLS 1.2 (0x0303)
+        Length: 37
+        Encrypted Application Data: 6b6adfb71475e03edf172cddfca6d4319ee5064e00a21888...
+
+No.     Time           Source                Destination           Protocol Length Info
      21 6.633939       54.239.192.53         192.168.1.44          TCP      66     [TCP ACKed unseen segment] 80→59912 [ACK] Seq=1 Ack=2 Win=118 Len=0 TSval=2331608691 TSecr=862751767
 
 Frame 21: 66 bytes on wire (528 bits), 66 bytes captured (528 bits) on interface 0

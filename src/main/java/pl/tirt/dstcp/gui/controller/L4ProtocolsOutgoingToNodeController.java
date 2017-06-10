@@ -17,4 +17,19 @@ public class L4ProtocolsOutgoingToNodeController extends ProtocolsPerNode {
     boolean isSentToOrFromProperAddress(BitsInPacketInfo info) {
         return info.getSourceIP().equals(DataUtils.HOME_ADDRESS);
     }
+
+    @Override
+    protected String getIpAddress(BitsInPacketInfo info) {
+        return info.getDestinationIP();
+    }
+
+    @Override
+    protected String getFirstPort(BitsInPacketInfo info) {
+        return info.getDestinationPort();
+    }
+
+    @Override
+    protected String getSecondPort(BitsInPacketInfo info) {
+        return info.getSourcePort();
+    }
 }

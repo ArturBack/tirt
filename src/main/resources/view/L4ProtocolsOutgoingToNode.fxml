@@ -10,7 +10,7 @@
 <?import javafx.scene.layout.GridPane?>
 <?import javafx.scene.control.Label?>
 
-<AnchorPane prefHeight="800.0" prefWidth="1024.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="pl.tirt.dstcp.gui.controller.L4ProtocolsIncomingFromNodeController">
+<AnchorPane prefHeight="800.0" prefWidth="1024.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="pl.tirt.dstcp.gui.controller.L4ProtocolsOutgoingToNodeController">
     <children>
         <StackedBarChart fx:id="protocol_chart" layoutX="66.0" layoutY="91.0" legendSide="BOTTOM" legendVisible="true" prefHeight="771.0" prefWidth="1024.0" title="Klasyfikacja źródłowych adresów IP" AnchorPane.bottomAnchor="200.0" AnchorPane.leftAnchor="0" AnchorPane.rightAnchor="0" AnchorPane.topAnchor="0.0">
             <xAxis>
@@ -25,7 +25,7 @@
 
 
 
-            <Label text="Source IP:" GridPane.columnIndex="0" GridPane.rowIndex="1"/>
+            <Label text="Destination IP:" GridPane.columnIndex="0" GridPane.rowIndex="1"/>
 
             <ComboBox fx:id="ip_combo" prefHeight="42.0" prefWidth="206.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
                 <HBox.margin>
@@ -33,7 +33,7 @@
                 </HBox.margin>
             </ComboBox>
 
-            <Label text="Source Port:" GridPane.columnIndex="0" GridPane.rowIndex="2"/>
+            <Label text="Destination Port:" GridPane.columnIndex="0" GridPane.rowIndex="2"/>
 
             <ComboBox fx:id="first_port_combo" prefHeight="42.0" prefWidth="206.0" GridPane.columnIndex="1" GridPane.rowIndex="2">
                 <HBox.margin>
@@ -41,7 +41,7 @@
                 </HBox.margin>
             </ComboBox>
 
-            <Label text="Destination Port:" GridPane.columnIndex="0" GridPane.rowIndex="3"/>
+            <Label text="Source Port:" GridPane.columnIndex="0" GridPane.rowIndex="3"/>
 
             <ComboBox fx:id="second_port_combo" prefHeight="42.0" prefWidth="193.0" GridPane.columnIndex="1" GridPane.rowIndex="3">
                 <HBox.margin>
