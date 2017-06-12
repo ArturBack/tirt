@@ -14,6 +14,6 @@ public class L4ProtocolInRatioController extends ProtocolRatioController {
 
     @Override
     boolean isSentToOrFromProperAddress(BitsInPacketInfo info) {
-        return info.getDestinationIP().equals(DataUtils.HOME_ADDRESS);
+        return info.getDestinationIP().equals(DataUtils.HOME_IP_ADDRESS);
     }
 }

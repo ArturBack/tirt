@@ -8,9 +8,11 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.HBox?>
 
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.GridPane?>
 <AnchorPane prefHeight="800.0" prefWidth="1024.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="pl.tirt.dstcp.gui.controller.TotalBytesOutController">
     <children>
-        <LineChart fx:id="bitsChart" layoutX="-3.0" legendVisible="false" prefHeight="760.0" prefWidth="1024.0" title="Liczba bajtów wychodzących" AnchorPane.bottomAnchor="40.0" AnchorPane.leftAnchor="-3.0" AnchorPane.rightAnchor="3.0" AnchorPane.topAnchor="0.0">
+        <LineChart fx:id="bitsChart" layoutX="-3.0" legendVisible="false" prefHeight="760.0" prefWidth="1024.0" title="Liczba bajtów wychodzących - warstwa II" AnchorPane.bottomAnchor="40.0" AnchorPane.leftAnchor="-3.0" AnchorPane.rightAnchor="3.0" AnchorPane.topAnchor="0.0">
             <xAxis>
                 <CategoryAxis fx:id="categoryAxis" label="Czas" prefWidth="439.0" side="BOTTOM" />
             </xAxis>
@@ -18,14 +20,21 @@
                 <NumberAxis label="Liczba bajtów[B]" side="LEFT" />
             </yAxis>
         </LineChart>
-        <HBox alignment="BOTTOM_RIGHT" layoutX="728.0" layoutY="710.0" prefHeight="810.0" prefWidth="1024.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+
+        <GridPane xmlns:fx="http://javafx.com/fxml" alignment="center" hgap="10" vgap="10" AnchorPane.bottomAnchor="0" AnchorPane.leftAnchor="0.0">
+        <padding><Insets top="25" right="25" bottom="10" left="25"/></padding>
+
+        <Label text="Skala:" GridPane.columnIndex="0" GridPane.rowIndex="1"/>
+
+        <HBox GridPane.columnIndex="1" GridPane.rowIndex="1">
             <children>
-                <ComboBox fx:id="scale_type_combo" prefHeight="42.0" prefWidth="185.0" promptText="Skala">
+                <ComboBox fx:id="scale_type_combo">
                     <HBox.margin>
                         <Insets bottom="5.0" right="15.0" />
                     </HBox.margin>
                 </ComboBox>
             </children>
         </HBox>
+        </GridPane>
     </children>
 </AnchorPane>

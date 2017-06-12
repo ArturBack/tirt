@@ -5,7 +5,7 @@ import javafx.beans.value.ObservableValue;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
-import javafx.scene.chart.LineChart;
+import javafx.scene.chart.StackedBarChart;
 import javafx.scene.chart.XYChart;
 import javafx.scene.control.ComboBox;
 import pl.tirt.dstcp.data.DataUtils;
@@ -19,12 +19,12 @@ import java.util.HashMap;
 import java.util.List;
 
 /**
- * Created by AWALICZE on 22.04.2017.
+ * Created by mac on 12.06.2017.
  */
-public class IpSourcesInController {
+public class L3PacketsByProtocolInController {
 
     @FXML
-    private LineChart<String, Integer> ipSourceChart;
+    private StackedBarChart<String, Integer> protocol_per_address;
 
     @FXML
     private ComboBox<String> scale_type_combo;
@@ -32,7 +32,7 @@ public class IpSourcesInController {
     @FXML
     private ComboBox<String> ip_source_combo;
 
-    private HashMap<String, ObservableList<Integer>> ipSourcesMap = new HashMap<>();
+    private HashMap<String, HashMap<String, ObservableList<Integer>>> ipDestinationsMap = new HashMap<>();
     private ObservableList<Integer> timeValues;
     private List<BitsInPacketInfo> data;
     private TimestampType timestampType = TimestampType.SECOND;
@@ -73,7 +73,7 @@ public class IpSourcesInController {
     }
 
     private void fillIpSourcesCombo() {
-        ip_source_combo.getItems().addAll(ipSourcesMap.keySet());
+        ip_source_combo.getItems().addAll(ipDestinationsMap.keySet());
         //default value
         ip_source_combo.getSelectionModel().select(0);
 
@@ -86,7 +86,7 @@ public class IpSourcesInController {
     }
 
     private void reloadData() {
-        ipSourceChart.getData().clear();
+        protocol_per_address.getData().clear();
         timeValues = TimestampUtils.createTimeValues(timestampType,getTimestamps(data));
         fillIpSourceMap(data);
         fillChartWithData();
@@ -105,7 +105,7 @@ public class IpSourcesInController {
     }
 
     private void changeShownIp() {
-        ipSourceChart.getData().clear();
+        protocol_per_address.getData().clear();
         fillChartWithData();
     }
 
@@ -114,33 +114,50 @@ public class IpSourcesInController {
     }
 
     private void fillChartWithProperData(int startIndex) {
-        String selectedItem = ip_source_combo.getSelectionModel().getSelectedItem();
-        XYChart.Series series = new XYChart.Series();
-        for(int i = startIndex; i < timeValues.size(); i++){
-            series.getData().add(new XYChart.Data(timeValues.get(i).toString(), ipSourcesMap.get(selectedItem).get(i)));
+        String selectedMac = ip_source_combo.getSelectionModel().getSelectedItem();
+        HashMap<String, ObservableList<Integer>> protocolsCount = ipDestinationsMap.get(selectedMac);
+        ArrayList<XYChart.Series<String, Integer>> protocolSeries = new ArrayList<>();
+        for (String protocolName : protocolsCount.keySet()) {
+            XYChart.Series<String, Integer> protocolSerie = new XYChart.Series<>();
+            protocolSerie.setName(protocolName);
+            ObservableList<Integer> protocolValues = protocolsCount.get(protocolName);
+            for(int i = startIndex; i < timeValues.size(); i++){
+                protocolSerie.getData().add(new XYChart.Data(timeValues.get(i).toString(), protocolValues.get(i)));
+            }
+            protocolSeries.add(protocolSerie);
+
         }
-        ipSourceChart.getData().add(series);
+        protocol_per_address.getData().clear();
+        protocol_per_address.getData().addAll(protocolSeries);
     }
 
     private void fillIpSourceMap(List<BitsInPacketInfo> data) {
-        ipSourcesMap.clear();
+        ipDestinationsMap.clear();
         for(BitsInPacketInfo info : data){
+            if(info.getDestinationIP().equals(DataUtils.HOME_IP_ADDRESS)) {
 
-            if(info.getDestinationIP().equals(DataUtils.HOME_ADDRESS)) {
                 Integer time = TimestampUtils.getTime(timestampType,info.getTimestamp());
+                String destinationMac = info.getSourceIP();
+                String protocol = info.getProtocolIII();
 
                 for (int i = 0; i < timeValues.size(); i++) {
                     Integer timeValue = timeValues.get(i);
                     if (time <= timeValue) {
-                        String sourceIp = info.getSourceIP();
-                        if (sourceIp.isEmpty()) {
+
+                        if (destinationMac.isEmpty()) {
                             break;
                         }
 
-                        if (!ipSourcesMap.containsKey(sourceIp)) {
-                            ipSourcesMap.put(sourceIp, getListWithInitValues());
+                        if (!ipDestinationsMap.containsKey(destinationMac)) {
+                            ipDestinationsMap.put(destinationMac, new HashMap<>());
                         }
-                        ObservableList<Integer> values = ipSourcesMap.get(sourceIp);
+                        HashMap<String, ObservableList<Integer>> ipProtocolMap = ipDestinationsMap.get(destinationMac);
+
+                        if(!ipProtocolMap.containsKey(protocol)) {
+                            ipProtocolMap.put(protocol, getListWithInitValues());
+                        }
+
+                        ObservableList<Integer> values = ipProtocolMap.get(protocol);
                         Integer newCount = values.get(i) + 1;
                         values.remove(i);
                         values.add(i, newCount);
@@ -150,10 +167,6 @@ public class IpSourcesInController {
             }
         }
     }
-
-
-
-
 
     private ObservableList<Integer>  getListWithInitValues() {
         ObservableList<Integer> values = FXCollections.observableArrayList();

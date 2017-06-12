@@ -13,28 +13,28 @@
                 text="Warstwa II">
             <items>
                 <MenuItem
-                        fx:id="idBitsOutLVI"
+                        fx:id="idBitsOutLII"
                         mnemonicParsing="false"
                         onAction="#switchToBitsOut"
                         text="Suma bajtów wychodzących" />
                 <!--text="Bits count" />-->
                 <MenuItem
-                        fx:id="idBitsInLVI"
+                        fx:id="idBitsInLII"
                         mnemonicParsing="false"
                         onAction="#switchToBitsIn"
                         text="Suma bajtów przychodzących" />
                 <!--text="Bits count" />-->
                 <MenuItem
-                        fx:id="idProtocolInLVI"
+                        fx:id="idProtocolInLII"
                         mnemonicParsing="false"
-                        onAction="#switchToIpSourceIn"
-                        text="Ilość ramek przesyłanych z wybranego źródła do badanego węzła z podziałem na protokoły" />
+                        onAction="#switchToPacketsByProtocolsInL2"
+                        text="Liczba ramek przesyłanych z wybranego źródła z podziałem na protokoły" />
                 <!--text="IP source" />-->
                 <MenuItem
-                        fx:id="idProtocolOutLVI"
+                        fx:id="idProtocolOutLII"
                         mnemonicParsing="false"
-                        onAction="#switchToIpSourceOut"
-                        text="Ilość ramek przesyłanych z badanego węzła do wybranego odbiorcy z podziałem na protokoły"/>
+                        onAction="#switchToPacketsByProtocolsOutL2"
+                        text="Liczba ramek przesyłanych do wybranego odbiorcy z podziałem na protokoły"/>
                 <!--text="IP source" />-->
                 <MenuItem
                         fx:id="idProtocolRatioOutLII"
@@ -53,6 +53,18 @@
                 mnemonicParsing="false"
                 text="Warstwa III">
             <items>
+                <MenuItem
+                        fx:id="idProtocolsOutgoingToNodeLIII"
+                        mnemonicParsing="false"
+                        onAction="#switchToProtocolsOutgoingToNodeLIII"
+                        text="Liczba ramek przesyłanych do wybranego odbiorcy z podziałem na protokoły" />
+                <!--text="IP source" />-->
+                <MenuItem
+                        fx:id="idProtocolsIncomingFromNodeLIII"
+                        mnemonicParsing="false"
+                        onAction="#switchToProtocolsIncomingFromNodeLIII"
+                        text="Liczba ramek przesyłanych z wybranego źródła z podziałem na protokoły" />
+                <!--text="IP source" />-->
                 <MenuItem
                         fx:id="idProtocolRatioOutLIII"
                         mnemonicParsing="false"
@@ -74,13 +86,13 @@
                         fx:id="idProtocolsOutgoingToNodeLIV"
                         mnemonicParsing="false"
                         onAction="#switchToProtocolsOutgoingToNodeLIV"
-                        text="Ilość ramek przesyłanych do wybranego źródła z podziałem na protokoły" />
+                        text="Liczba ramek przesyłanych do wybranego odbiorcy z podziałem na protokoły" />
                 <!--text="IP source" />-->
                 <MenuItem
                         fx:id="idProtocolsIncomingFromNodeLIV"
                         mnemonicParsing="false"
                         onAction="#switchToProtocolsIncomingFromNodeLIV"
-                        text="Ilość ramek przesyłanych z wybranego źródła z podziałem na protokoły" />
+                        text="Liczba ramek przesyłanych z wybranego źródła z podziałem na protokoły" />
                 <!--text="IP source" />-->
                 <MenuItem
                         fx:id="idProtocolRatioOutLIV"

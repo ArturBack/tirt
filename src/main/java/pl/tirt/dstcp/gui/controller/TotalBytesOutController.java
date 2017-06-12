@@ -98,7 +98,7 @@ public class TotalBytesOutController {
         ObservableList<Integer> bitsValues = getListWithInitBitsValues();
         for(BitsInPacketInfo info : data){
             Integer time = TimestampUtils.getTime(timestampType,info.getTimestamp());
-            if(info.getSourceIP().equals(DataUtils.HOME_ADDRESS)) {
+            if(info.getSourceIP().equals(DataUtils.HOME_IP_ADDRESS)) {
                 for(int i = 0; i < timeValues.size(); i++){
                     Integer timeValue = timeValues.get(i);
                     if(time <= timeValue){

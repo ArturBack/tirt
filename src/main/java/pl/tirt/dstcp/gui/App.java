@@ -30,7 +30,7 @@ public class App extends Application {
         MenuBar menuBar = f.load(new FileInputStream(new File("src/main/resources/view/Menu.fxml")));
 
         FXMLLoader f1 = new FXMLLoader();
-        AnchorPane anchorPane = f1.load(new FileInputStream(new File("src/main/resources/view/TotalBytesOut.fxml")));
+        AnchorPane anchorPane = f1.load(new FileInputStream(new File("src/main/resources/view/L2TotalBytesOut.fxml")));
 
         root.setTop(menuBar);
         root.setCenter(anchorPane);

@@ -9,8 +9,9 @@
 <?import javafx.scene.layout.HBox?>
 
 
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.GridPane?>
 <AnchorPane prefHeight="800.0" prefWidth="1024.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="pl.tirt.dstcp.gui.controller.L2ProtocolOutRatioController">
-<!--<AnchorPane prefHeight="800.0" prefWidth="1024.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1">-->
     <children>
         <StackedBarChart fx:id="protocolChart" layoutX="66.0" layoutY="91.0" prefHeight="736.0" prefWidth="1024.0" title="Stosunek uzytych protokołów w ruchu wychodzącym - warstwa II" AnchorPane.bottomAnchor="64.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
             <xAxis>
@@ -20,14 +21,20 @@
                 <NumberAxis side="LEFT" />
             </yAxis>
         </StackedBarChart>
-        <HBox alignment="BOTTOM_RIGHT" layoutX="762.0" layoutY="686.0" prefHeight="800.0" prefWidth="1024.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
-            <children>
-                <ComboBox fx:id="scale_type_combo" prefHeight="42.0" prefWidth="183.0">
-                    <HBox.margin>
-                        <Insets bottom="25.0" right="15.0" />
-                    </HBox.margin>
-                </ComboBox>
-            </children>
-        </HBox>
+        <GridPane xmlns:fx="http://javafx.com/fxml" alignment="center" hgap="10" vgap="10" AnchorPane.bottomAnchor="0" AnchorPane.leftAnchor="0.0">
+            <padding><Insets top="25" right="25" bottom="10" left="25"/></padding>
+
+            <Label text="Skala:" GridPane.columnIndex="0" GridPane.rowIndex="1"/>
+
+            <HBox GridPane.columnIndex="1" GridPane.rowIndex="1">
+                <children>
+                    <ComboBox fx:id="scale_type_combo">
+                        <HBox.margin>
+                            <Insets bottom="5.0" right="15.0" />
+                        </HBox.margin>
+                    </ComboBox>
+                </children>
+            </HBox>
+        </GridPane>
     </children>
 </AnchorPane>

@@ -15,22 +15,22 @@ public class MenuController {
 
     @FXML
     void switchToBitsOut(ActionEvent event) {
-        initializeView("src/main/resources/view/TotalBytesOut.fxml");
+        initializeView("src/main/resources/view/L2TotalBytesOut.fxml");
     }
 
     @FXML
     void switchToBitsIn(ActionEvent event) {
-        initializeView("src/main/resources/view/TotalBytesIn.fxml");
+        initializeView("src/main/resources/view/L2TotalBytesIn.fxml");
     }
 
     @FXML
-    void switchToIpSourceOut(ActionEvent event) {
-        initializeView("src/main/resources/view/IpSourcesOut.fxml");
+    void switchToPacketsByProtocolsOutL2(ActionEvent event) {
+        initializeView("src/main/resources/view/L2PacketsByProtocolOut.fxml");
     }
 
     @FXML
-    void switchToIpSourceIn(ActionEvent event) {
-        initializeView("src/main/resources/view/IpSourcesIn.fxml");
+    void switchToPacketsByProtocolsInL2(ActionEvent event) {
+        initializeView("src/main/resources/view/L2PacketsPerProtocolIn.fxml");
     }
 
     @FXML
@@ -41,19 +41,6 @@ public class MenuController {
     @FXML
     public void switchToProtocolInRatioL2(ActionEvent actionEvent) {
         initializeView("src/main/resources/view/L2ProtocolInRatio.fxml");
-    }
-
-    private void initializeView(String filename) {
-
-        BorderPane rootPane = App.getRootPane();
-
-        FXMLLoader f = new FXMLLoader();
-        try {
-            AnchorPane anchorPane = f.load(new FileInputStream(new File(filename)));
-            rootPane.setCenter(anchorPane);
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
     }
 
     public void switchToProtocolOutRatioL3(ActionEvent actionEvent) {
@@ -78,6 +65,26 @@ public class MenuController {
 
     public void switchToProtocolsOutgoingToNodeLIV(ActionEvent actionEvent) {
         initializeView("src/main/resources/view/L4ProtocolsOutgoingToNode.fxml");
+    }
 
+    public void switchToProtocolsOutgoingToNodeLIII(ActionEvent actionEvent) {
+        initializeView("src/main/resources/view/L3PacketsByProtocolOut.fxml");
+    }
+
+    public void switchToProtocolsIncomingFromNodeLIII(ActionEvent actionEvent) {
+        initializeView("src/main/resources/view/L3PacketsPerProtocolIn.fxml");
+    }
+
+    private void initializeView(String filename) {
+
+        BorderPane rootPane = App.getRootPane();
+
+        FXMLLoader f = new FXMLLoader();
+        try {
+            AnchorPane anchorPane = f.load(new FileInputStream(new File(filename)));
+            rootPane.setCenter(anchorPane);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 }

@@ -23,6 +23,9 @@ public class BitsInPacketProcessor implements DataProcessor {
             int bits = getBitsCountInfo(stringPacket);
 
             List<String[]> stringPacketData = stringPacket.getData();
+
+            String sourceMac="";
+            String destinationMac="";
             
             String sourceIP = stringPacketData.get(0)[3];
             String destinationIP = stringPacketData.get(0)[4];
@@ -43,6 +46,13 @@ public class BitsInPacketProcessor implements DataProcessor {
                     for(int j = 0; j < i; j++) {
                         protocolII += (layer2Line[j]) + " ";
                     }
+                    sourceMac = layer2Line[i+2];
+                    sourceMac = sourceMac.replaceAll("\\(", "");
+                    sourceMac = sourceMac.replaceAll("\\),","");
+
+                    destinationMac = layer2Line[layer2Line.length-1];
+                    destinationMac = destinationMac.replaceAll("\\(", "");
+                    destinationMac = destinationMac.replaceAll("\\)","");
                 }
                 protocolII = protocolII.replaceAll(", ", "");
             }
@@ -70,7 +80,7 @@ public class BitsInPacketProcessor implements DataProcessor {
             System.out.println(protocol);
             
 
-            BitsInPacketInfo bitsInPacketInfo = new BitsInPacketInfo(id,bits,timestamp, sourceIP, destinationIP, sourcePort, destinationPort, protocolII, protocolIII, protocolIV);
+            BitsInPacketInfo bitsInPacketInfo = new BitsInPacketInfo(id,bits,timestamp, sourceMac, destinationMac, sourceIP, destinationIP, sourcePort, destinationPort, protocolII, protocolIII, protocolIV);
 
             bitsInPacketInfos.add(bitsInPacketInfo);
         }

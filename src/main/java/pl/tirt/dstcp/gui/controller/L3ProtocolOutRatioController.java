@@ -15,6 +15,6 @@ public class L3ProtocolOutRatioController extends ProtocolRatioController {
 
     @Override
     boolean isSentToOrFromProperAddress(BitsInPacketInfo info) {
-        return info.getSourceIP().equals(DataUtils.HOME_ADDRESS);
+        return info.getSourceIP().equals(DataUtils.HOME_IP_ADDRESS);
     }
 }

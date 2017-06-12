@@ -5,7 +5,7 @@ import javafx.beans.value.ObservableValue;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
-import javafx.scene.chart.LineChart;
+import javafx.scene.chart.StackedBarChart;
 import javafx.scene.chart.XYChart;
 import javafx.scene.control.ComboBox;
 import pl.tirt.dstcp.data.DataUtils;
@@ -21,18 +21,18 @@ import java.util.List;
 /**
  * Created by AWALICZE on 22.04.2017.
  */
-public class IpSourcesOutController {
+public class L2PacketsByProtocolInController {
 
     @FXML
-    private LineChart<String, Integer> ipSourceChart;
+    private StackedBarChart<String, Integer> protocol_per_address;
 
     @FXML
     private ComboBox<String> scale_type_combo;
 
     @FXML
-    private ComboBox<String> ip_source_combo;
+    private ComboBox<String> mac_source_combo;
 
-    private HashMap<String, ObservableList<Integer>> ipSourcesMap = new HashMap<>();
+    private HashMap<String, HashMap<String, ObservableList<Integer>>> macSourcesMap = new HashMap<>();
     private ObservableList<Integer> timeValues;
     private List<BitsInPacketInfo> data;
     private TimestampType timestampType = TimestampType.SECOND;
@@ -73,11 +73,11 @@ public class IpSourcesOutController {
     }
 
     private void fillIpSourcesCombo() {
-        ip_source_combo.getItems().addAll(ipSourcesMap.keySet());
+        mac_source_combo.getItems().addAll(macSourcesMap.keySet());
         //default value
-        ip_source_combo.getSelectionModel().select(0);
+        mac_source_combo.getSelectionModel().select(0);
 
-        ip_source_combo.getSelectionModel().selectedItemProperty().addListener(new ChangeListener<String>() {
+        mac_source_combo.getSelectionModel().selectedItemProperty().addListener(new ChangeListener<String>() {
             @Override
             public void changed(ObservableValue<? extends String> observable, String oldValue, String newValue) {
                 changeShownIp();
@@ -86,7 +86,7 @@ public class IpSourcesOutController {
     }
 
     private void reloadData() {
-        ipSourceChart.getData().clear();
+        protocol_per_address.getData().clear();
         timeValues = TimestampUtils.createTimeValues(timestampType,getTimestamps(data));
         fillIpSourceMap(data);
         fillChartWithData();
@@ -105,7 +105,7 @@ public class IpSourcesOutController {
     }
 
     private void changeShownIp() {
-        ipSourceChart.getData().clear();
+        protocol_per_address.getData().clear();
         fillChartWithData();
     }
 
@@ -114,33 +114,50 @@ public class IpSourcesOutController {
     }
 
     private void fillChartWithProperData(int startIndex) {
-        String selectedItem = ip_source_combo.getSelectionModel().getSelectedItem();
-        XYChart.Series series = new XYChart.Series();
-        for(int i = startIndex; i < timeValues.size(); i++){
-            series.getData().add(new XYChart.Data(timeValues.get(i).toString(), ipSourcesMap.get(selectedItem).get(i)));
+        String selectedMac = mac_source_combo.getSelectionModel().getSelectedItem();
+        HashMap<String, ObservableList<Integer>> protocolsCount = macSourcesMap.get(selectedMac);
+        ArrayList<XYChart.Series<String, Integer>> protocolSeries = new ArrayList<>();
+        for (String protocolName : protocolsCount.keySet()) {
+            XYChart.Series<String, Integer> protocolSerie = new XYChart.Series<>();
+            protocolSerie.setName(protocolName);
+            ObservableList<Integer> protocolValues = protocolsCount.get(protocolName);
+            for(int i = startIndex; i < timeValues.size(); i++){
+                protocolSerie.getData().add(new XYChart.Data(timeValues.get(i).toString(), protocolValues.get(i)));
+            }
+            protocolSeries.add(protocolSerie);
+
         }
-        ipSourceChart.getData().add(series);
+        protocol_per_address.getData().clear();
+        protocol_per_address.getData().addAll(protocolSeries);
     }
 
     private void fillIpSourceMap(List<BitsInPacketInfo> data) {
-        ipSourcesMap.clear();
+        macSourcesMap.clear();
         for(BitsInPacketInfo info : data){
-            Integer time = TimestampUtils.getTime(timestampType,info.getTimestamp());
 
-            if(info.getSourceIP().equals(DataUtils.HOME_ADDRESS)) {
+            if(info.getDestinationMac().equals(DataUtils.HOME_MAC_ADDRESS)) {
+                Integer time = TimestampUtils.getTime(timestampType,info.getTimestamp());
+                String sourceMac = info.getSourceMac();
+                String protocol = info.getProtocolII();
 
                 for (int i = 0; i < timeValues.size(); i++) {
                     Integer timeValue = timeValues.get(i);
                     if (time <= timeValue) {
-                        String destinationIP = info.getDestinationIP();
-                        if (destinationIP.isEmpty()) {
+
+                        if (sourceMac.isEmpty()) {
                             break;
                         }
 
-                        if (!ipSourcesMap.containsKey(destinationIP)) {
-                            ipSourcesMap.put(destinationIP, getListWithInitValues());
+                        if (!macSourcesMap.containsKey(sourceMac)) {
+                            macSourcesMap.put(sourceMac, new HashMap<>());
                         }
-                        ObservableList<Integer> values = ipSourcesMap.get(destinationIP);
+                        HashMap<String, ObservableList<Integer>> ipProtocolMap = macSourcesMap.get(sourceMac);
+
+                        if(!ipProtocolMap.containsKey(protocol)) {
+                            ipProtocolMap.put(protocol, getListWithInitValues());
+                        }
+
+                        ObservableList<Integer> values = ipProtocolMap.get(protocol);
                         Integer newCount = values.get(i) + 1;
                         values.remove(i);
                         values.add(i, newCount);
@@ -150,6 +167,10 @@ public class IpSourcesOutController {
             }
         }
     }
+
+
+
+
 
     private ObservableList<Integer>  getListWithInitValues() {
         ObservableList<Integer> values = FXCollections.observableArrayList();
