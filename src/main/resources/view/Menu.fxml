@@ -83,6 +83,18 @@
                 text="Warstwa IV">
             <items>
                 <MenuItem
+                        fx:id="idBytesOutPortIV"
+                        mnemonicParsing="false"
+                        onAction="#switchToBytesOutPortIV"
+                        text="Suma bajtów przesyłanych z wybranego portu" />
+                <!--text="IP source" />-->
+                <MenuItem
+                        fx:id="idBytesInPortIV"
+                        mnemonicParsing="false"
+                        onAction="#switchToBytesInPortIV"
+                        text="Suma bajtów przesyłanych do wybranego portu" />
+                <!--text="IP source" />-->
+                <MenuItem
                         fx:id="idProtocolsOutgoingToNodeLIV"
                         mnemonicParsing="false"
                         onAction="#switchToProtocolsOutgoingToNodeLIV"

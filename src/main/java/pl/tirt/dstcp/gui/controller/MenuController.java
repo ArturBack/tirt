@@ -75,6 +75,14 @@ public class MenuController {
         initializeView("src/main/resources/view/L3PacketsPerProtocolIn.fxml");
     }
 
+    public void switchToBytesOutPortIV(ActionEvent actionEvent) {
+        initializeView("src/main/resources/view/L4BytesOutPort.fxml");
+    }
+
+    public void switchToBytesInPortIV(ActionEvent actionEvent) {
+        initializeView("src/main/resources/view/L4BytesInPort.fxml");
+    }
+
     private void initializeView(String filename) {
 
         BorderPane rootPane = App.getRootPane();
